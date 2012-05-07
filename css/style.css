@@ -1,0 +1,18 @@
+body{
+   padding-top: 60px;
+   padding-bottom: 40px;
+   background-color: #fff;
+   background-image: url(../img/grid-18px-masked.png);
+   background-repeat: repeat-x;
+   background-position: 0 40px;
+
+}
+
+#footer{
+   font-size: .75em;
+   text-align: center;
+}
+
+#information{
+   text-align: justify;
+}
