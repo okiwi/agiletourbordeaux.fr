@@ -4,7 +4,7 @@ auto:        true
 pygments:    true
 permalink: pretty
 
-BASE_PATH : /atbIntegration/
+BASE_PATH : /agiletourbordeaux
 
 title : Agile tour Bordeaux
 author :
