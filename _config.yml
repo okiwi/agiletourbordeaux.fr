@@ -1,0 +1,11 @@
+safe:        true
+auto:        true
+
+pygments:    true
+permalink: pretty
+
+BASE_PATH : /atbIntegration/
+
+title : Agile tour Bordeaux
+author :
+  name : okiwi

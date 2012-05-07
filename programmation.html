@@ -1,135 +1,69 @@
-﻿<!DOCTYPE html>
-<html lang="fr">
-<head>
-   <meta charset="utf-8">
-   <title>Programmation</title>
-   <meta name="description" content="Site officiel de l'Agile Tour Bordeaux">
-   <meta name="author" content="Okiwi">
-
-   <!-- Le styles -->
-   <link href="css/bootstrap.css" rel="stylesheet">
-   <link href="css/style.css" rel="stylesheet">
-
-   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-   <!--[if lt IE 9]>
-   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-   <![endif]-->
-
-</head>
-
-<body>
-   <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-            </a>
-
-            <a class="brand" href="#"><img src="img/logo.jpg" alt="logo agile tour 2012" height="30" width="90" /></a>
-            <div class="nav-collapse">
-               <ul class="nav">
-                  <li><a href="index.html">Accueil</a></li>
-                  <li><a href="sponsors.html">Sponsors</a></li>
-                  <li class="active"><a href="programmation.html">Programmation</a></li>
-                  <li><a href="#enseirb-matmeca">ENSEIRB-MATMECA</a></li>
-                  <li><a href="#inscription">Inscription</a></li>
-               </ul>
-            </div><!--/.nav-collapse -->
-         </div>
-      </div>
+---
+layout: theme
+title: Programmation
+group: navigation
+---
+<div class="row">
+    <div class="span12">
+      <h1>Programmation</h1>
+      <p>Attention, la programmation peut être amenée à changer !</p>
+      <table class="table table-bordered table-striped responsive-utilities">
+        <thead>
+          <tr>
+            <th>Heure</th>
+            <th>Section Débutant</th>
+            <th>Jeux Agiles</th>
+            <th>Section retour d'expérience</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th><code>9h00-9h55 (55min)</code></th>
+            <td class="is-visible">L'agilité pour les bisounours<br>Toto lapointe</td>
+            <td class="is-hidden">Jean ducasse</td>
+            <td class="is-hidden">Emilien ducarouge</td>
+          </tr>
+          <tr>
+            <th><code>10h00-10h55 (55min)</code></th>
+            <td>Toto lapointe</td>
+            <td class="is-hidden"><a href="#role_po">Le rôle du PO dans toute sa splendeur</a><br>Jean Etienne</td>
+            <td class="is-hidden">Emilien ducarouge</td>
+          </tr>
+          <tr>
+            <th><code>11h00-11h55 (55min)</code></th>
+            <td class="is-visible">Scrum pour les noobs<br>Toto lapointe</td>
+            <td class="is-hidden">Jean ducasse</td>
+            <td class="is-hidden">Emilien ducarouge</td>
+          </tr>
+          <tr>
+            <th><code>12h00-12h55 (55min)</code></th>
+            <td class="is-visible">Toto lapointe</td>
+            <td class="is-hidden">Jean ducasse</td>
+            <td class="is-hidden"><a href="#demain">Mais que fera tu demain sans Tdd ?</a><br>Emilien ducarouge</td>
+          </tr>
+          <tr>
+            <th><code>12h55-14h00 (1h35min)</code></th>
+            <td class="alert fade in" style="text-align:center;" colspan="3">pause repas</td>
+          </tr>
+          <tr>
+            <th><code>14h00-14h55 (55min)</code></th>
+            <td class="is-visible">Toto lapointe</td>
+            <td class="is-hidden">Jean ducasse</td>
+            <td class="is-hidden">Emilien ducarouge</td>
+          </tr>
+          <tr>
+            <th><code>15h00-15h55 (55min)</code></th>
+            <td class="is-visible">Toto lapointe</td>
+            <td class="is-hidden">Jean ducasse</td>
+            <td class="is-hidden">Emilien ducarouge</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+<div class="row">
+   <div class="span12">
+      <h1>Orateurs</h1>
+      
    </div>
-
-   <div class="container">
-      <div class="row">
-         <div class="span12">
-            <h1>Programmation</h1>
-                  <p>Attention, la programmation peut être amenée à changer !</p>
-                  <table class="table table-bordered table-striped responsive-utilities">
-                    <thead>
-                      <tr>
-                        <th>Heure</th>
-                        <th>Section Débutant</th>
-                        <th>Jeux Agiles</th>
-                        <th>Section retour d'expérience</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th><code>9h00-9h55 (55min)</code></th>
-                        <td class="is-visible">L'agilité pour les bisounours<br>Toto lapointe</td>
-                        <td class="is-hidden">Jean ducasse</td>
-                        <td class="is-hidden">Emilien ducarouge</td>
-                      </tr>
-                      <tr>
-                        <th><code>10h00-10h55 (55min)</code></th>
-                        <td>Toto lapointe</td>
-                        <td class="is-hidden"><a href="#role_po">Le rôle du PO dans toute sa splendeur</a><br>Jean Etienne</td>
-                        <td class="is-hidden">Emilien ducarouge</td>
-                      </tr>
-                      <tr>
-                        <th><code>11h00-11h55 (55min)</code></th>
-                        <td class="is-visible">Scrum pour les noobs<br>Toto lapointe</td>
-                        <td class="is-hidden">Jean ducasse</td>
-                        <td class="is-hidden">Emilien ducarouge</td>
-                      </tr>
-                      <tr>
-                        <th><code>12h00-12h55 (55min)</code></th>
-                        <td class="is-visible">Toto lapointe</td>
-                        <td class="is-hidden">Jean ducasse</td>
-                        <td class="is-hidden"><a href="#demain">Mais que fera tu demain sans Tdd ?</a><br>Emilien ducarouge</td>
-                      </tr>
-                      <tr>
-                        <th><code>12h55-14h00 (1h35min)</code></th>
-                        <td class="alert fade in" style="text-align:center;" colspan="3">pause repas</td>
-                      </tr>
-                      <tr>
-                        <th><code>14h00-14h55 (55min)</code></th>
-                        <td class="is-visible">Toto lapointe</td>
-                        <td class="is-hidden">Jean ducasse</td>
-                        <td class="is-hidden">Emilien ducarouge</td>
-                      </tr>
-                      <tr>
-                        <th><code>15h00-15h55 (55min)</code></th>
-                        <td class="is-visible">Toto lapointe</td>
-                        <td class="is-hidden">Jean ducasse</td>
-                        <td class="is-hidden">Emilien ducarouge</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-         </div>
-      </div>
-      <div class="row">
-         <div class="span12">
-            <h1>Orateurs</h1>
-            
-         </div>
-      </div>
-   </div> <!-- /container -->
-    
-    
-   <div id="footer">
-     Evènement propulsé par <a href="http://okiwi.org/">Okiwi <img src="img/favicon.png"></a>
-   </div>
-   
-   <!-- Le javascript
-   ================================================== -->
-   <!-- Placed at the end of the document so the pages load faster -->
-   <script src="js/jquery.js"></script>
-   <script src="js/bootstrap-transition.js"></script>
-   <script src="js/bootstrap-alert.js"></script>
-   <script src="js/bootstrap-modal.js"></script>
-   <script src="js/bootstrap-dropdown.js"></script>
-   <script src="js/bootstrap-scrollspy.js"></script>
-   <script src="js/bootstrap-tab.js"></script>
-   <script src="js/bootstrap-tooltip.js"></script>
-   <script src="js/bootstrap-popover.js"></script>
-   <script src="js/bootstrap-button.js"></script>
-   <script src="js/bootstrap-collapse.js"></script>
-   <script src="js/bootstrap-carousel.js"></script>
-   <script src="js/bootstrap-typeahead.js"></script>
-
-</body>
-</html>
+</div>
