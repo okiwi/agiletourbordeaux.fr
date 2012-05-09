@@ -20,17 +20,17 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-top" >
       <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="{{ BASE_PATH }}"><img src="{{ BASE_PATH }}/img/logo.jpg" alt="logo agile tour 2012" height="30" width="90" /></a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              {% assign pages_list = site.pages %}
-              {% assign group = 'navigation' %}
-              {% include pages_list %}
-            </ul>
-          </div>
+        <a class="brand"  href="{{ BASE_PATH }}/"><img src="{{ BASE_PATH }}/img/logo.png" alt="logo agile tour 2012"/></a>
+        <div class="container" >
+	    <div style="height: 150px; background-image: url('{{ BASE_PATH }}/img/banniere.png'); background-repeat: no-repeat;" class="nav-collapse">
+	      <ul class="nav">
+	        {% assign pages_list = site.pages %}
+	        {% assign group = 'navigation' %}
+	        {% include pages_list %}
+	      </ul>
+	    </div>
         </div>
       </div>
     </div>
