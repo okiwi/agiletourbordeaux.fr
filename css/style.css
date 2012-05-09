@@ -8,6 +8,11 @@ body{
 
 }
 
+h1,.hero-unit h1{
+   color: #365a7a
+
+}
+
 #footer{
    font-size: .75em;
    text-align: center;
