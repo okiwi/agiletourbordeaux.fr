@@ -15,8 +15,15 @@ body{
     color: #365A7A;
     float: right; 
     background-image: url('../img/bulles.png'); 
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat; 
+}
+
+.description-at{
+    margin-bottom: 15px;
+    background-color: #eeeeee;
+    background-image: url("../img/grid-18px-masked.png");
+    background-position: 0 40px;
+    background-repeat: repeat-x;
 }
 
 

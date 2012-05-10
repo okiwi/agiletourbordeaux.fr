@@ -3370,9 +3370,12 @@ a.thumbnail:hover {
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .hero-unit {
-  padding: 30px;
+  padding: 15px;
   margin-bottom: 15px;
-  background-color: #f4d3a8;
+  background-color: #eeeeee;
+  background-image: url("../img/grid-18px-masked.png");
+  background-position: 0 40px;
+  background-repeat: repeat-x;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -3385,7 +3388,7 @@ a.thumbnail:hover {
   letter-spacing: -1px;
 }
 .hero-unit p {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 200;
   line-height: 27px;
   color: inherit;
