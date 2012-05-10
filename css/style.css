@@ -1,17 +1,25 @@
 body{
-   padding-top: 160px;
-   padding-bottom: 40px;
-   background-color: #fff;
-   background-image: url(../img/grid-18px-masked.png);
-   background-repeat: repeat-x;
-   background-position: 0 40px;
+    padding-top: 160px;
+    padding-bottom: 40px;
+    background-color: #fff;
+    background-image: url(../img/grid-18px-masked.png);
+    background-repeat: repeat-x;
+    background-position: 0 40px;
 
 }
 
-h1,.hero-unit h1{
-   color: #365a7a
-
+.index-atb2012 h1{
+    padding-left: 45px; 
+    height: 100px; 
+    font-size: 40px; 
+    color: #365A7A;
+    float: right; 
+    background-image: url('../img/bulles.png'); 
+    background-repeat: no-repeat;
+    
 }
+
+
 
 #footer{
    font-size: .75em;

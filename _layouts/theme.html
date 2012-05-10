@@ -1,19 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Agile Tour Bordeaux - {{ page.title }}</title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    {% assign BASE_PATH = site.BASE_PATH %}
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+   <!-- Le styles -->
+   <link href="{{ BASE_PATH }}/css/bootstrap.css" rel="stylesheet">
+   <link href="{{ BASE_PATH }}/css/style.css" rel="stylesheet">
+   
+   <link rel="shortcut icon" href="{{ BASE_PATH }}/img/favicon.ico">
+  </head>
 
-{% assign BASE_PATH = site.BASE_PATH %}
-<body>
-<div class="navbar navbar-fixed-top" >
-  <div class="navbar-inner">
-    <a class="brand"  href="{{ BASE_PATH }}/"><img src="{{ BASE_PATH }}/img/logo.png" alt="logo agile tour 2012"/></a>
-    <div class="container" >
-    <div style="height: 150px; background-image: url('{{ BASE_PATH }}/img/banniere.png'); background-repeat: no-repeat;" class="nav-collapse">
-      <ul class="nav">
-        {% assign pages_list = site.pages %}
-        {% assign group = 'navigation' %}
-        {% include pages_list %}
-      </ul>
-    </div>
-    </div>
-  </div>
-</div>
-{{ content }}
+  <body>
 
+    <div class="navbar navbar-fixed-top" >
+      <div class="navbar-inner">
+        <a class="brand"  href="{{ BASE_PATH }}/"><img src="{{ BASE_PATH }}/img/logo.png" alt="logo agile tour 2012"/></a>
+        <div class="container" >
+	    <div style="height: 150px; background-image: url('{{ BASE_PATH }}/img/banniere.png'); background-repeat: no-repeat;" class="nav-collapse">
+	      <ul class="nav">
+	        {% assign pages_list = site.pages %}
+	        {% assign group = 'navigation' %}
+	        {% include pages_list %}
+	      </ul>
+	    </div>
+        </div>
+      </div>
+    </div>
+   
+   
+    {{ content }}
+
+   <div id="footer">
+      <p>Evènement propulsé par <a href="http://okiwi.org/">Okiwi <img src="{{ BASE_PATH }}/img/okiwi.png"/></a> </p>
+      With help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+    </div>
+     
+    <script src="{{ BASE_PATH }}/js/jquery.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-transition.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-alert.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-modal.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-dropdown.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-scrollspy.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-tab.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-tooltip.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-popover.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-button.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-collapse.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-carousel.js"></script>
+    <script src="{{ BASE_PATH }}/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

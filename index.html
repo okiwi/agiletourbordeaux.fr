@@ -1,80 +1,35 @@
 ---
-layout: defaut
+layout: theme
 title: Acceuil
 ---
-{% assign BASE_PATH = site.BASE_PATH %}
-<body style="padding-top: 50px;">
-<div class="navbar navbar-fixed-top" >
-  <div class="navbar-inner">
-    <div class="container" >
-    <div class="nav-collapse">
-      <ul class="nav">
-        {% assign pages_list = site.pages %}
-        {% assign group = 'navigation' %}
-        {% include pages_list %}
-      </ul>
-    </div>
-    </div>
-  </div>
-</div>
-
 <div class="container-fluid">
     <div class="row-fluid">
     
-        <div class="span4" style="background-image: url('{{ BASE_PATH }}/img/banniere.png'); background-repeat: no-repeat;background-size: 500px 100px" >
-            <h1 style="white-space: nowrap;padding-left: 30px;height: 150px;font-size: 40px; float:right ;background-image: url('img/bulles.png'); background-repeat: no-repeat;">Agile Tour Bordeaux <br/><span style="color:#DF783D; float:right">2012</span></h1><br/>
+        <div class="span4" >
+            <div class ="page-header index-atb2012">
+                <h1>Agile Tour Bordeaux <br/><span style="color:#DF783D; float:right">2012</span></h1>
+            </div>
         </div>
-        <div class="span8" >
-            <p>
-                <i>Les méthodes agile sont devenues incontournables dans un SI en 2012. Elles ont prouvé 
-                leur efficacité et l'heure n'est plus aux questions mais à l'action !</i>
-            </p>
-            <p>
-                <i>La conférence agile tour Bordeaux 2012 sera encore cette année un évènement 
-                incontournable dans la région pour tous les professionnels qui souihaitent apprendre
-                , expérimenter , découvrir, échanger et approndir leurs connaissances autour des 
-                méthodes agiles.</i>
-            </p>
+        <div class="span8" style="font-size:40px;">
+            <div class="hero-unit">
+                <p>
+                    <i>Les méthodes agile sont devenues incontournables dans un SI en 2012. Elles ont prouvé 
+                    leur efficacité et l'heure n'est plus aux questions mais à l'action !</i>
+                </p>
+            </div>
+            <div class="hero-unit">
+                <p>
+                    <i>La conférence agile tour Bordeaux 2012 sera encore cette année un évènement 
+                    incontournable dans la région pour tous les professionnels qui souihaitent apprendre
+                    , expérimenter , découvrir, échanger et approndir leurs connaissances autour des 
+                    méthodes agiles.</i>
+                </p>
+            </div>
         </div>
         
     </div>
-    <hr style=""/>
+    <hr/>
     <div class="row-fluid">
-        <div class="span2" >
-            <iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/Agiletourbordeaux"
-            scrolling="no" frameborder="0"></iframe> 
-           <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-            <script>
-            new TWTR.Widget({
-              version: 2,
-              type: 'search',
-              search: '#atbdx',
-              interval: 30000,
-              title: 'agiletourbordeaux',
-              subject: '#atbdx',
-              width: '100%',
-              height: 300,
-              theme: {
-                shell: {
-                  background: '#365A7A',
-                  color: '#ffffff'
-                },
-                tweets: {
-                  background: '#ffffff',
-                  color: '#000000',
-                  links: '#df783d'
-                }
-              },
-              features: {
-                scrollbar: false,
-                loop: true,
-                live: true,
-                behavior: 'default'
-              }
-            }).render().start();
-            </script>
-           
-        </div>
         <div class="span10">
             <div class="row-fluid">
                 <div class="span4">
@@ -166,6 +121,51 @@ title: Acceuil
                     <iframe frameborder="0" scrolling="no" height="480" width="800" src="//jujo00obo2o234ungd3t8qjfcjrs3o6k-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/embed/embed.xml&amp;container=enterprise&amp;view=home&amp;lang=fr&amp;country=ALL&amp;sanitize=0&amp;v=d3c0d690a575d6f4&amp;libs=core:setprefs&amp;parent=http://agiletourbordeaux.okiwi.org/home#up_embed_snippet=%3Cobject+xmlns%3D%22http://www.w3.org/1999/xhtml%22+height%3D%22480%22+width%3D%22800%22%3E%3Cparam+name%3D%22movie%22+value%3D%22http://www.youtube.com/v/0khtz5HAabQ?version%3D3%26amp;hl%3Dfr_FR%22+/%3E%3Cparam+name%3D%22allowFullScreen%22+value%3D%22true%22+/%3E%3Cparam+name%3D%22allowscriptaccess%22+value%3D%22always%22+/%3E%3Cembed+allowfullscreen%3D%22true%22+allowscriptaccess%3D%22always%22+height%3D%22480%22+src%3D%22http://www.youtube.com/v/0khtz5HAabQ?version%3D3%26amp;hl%3Dfr_FR%22+type%3D%22application/x-shockwave-flash%22+width%3D%22800%22+/%3E%3C/object%3E&amp;st=e%3DAIHE3cDh%252F0yA17sHFQDIErjjYqWrEogLsjEc2fZLVWCh5%252B01f6D3nJe9fPR97mwsvXD%252FUAYNoKQdrZsOCacGpZN06k7nrEbqC5E3fWD%252B3e%252BimXVBnu8eKn4VyvRgajUZ2QLxdBjvkWFK%26c%3Denterprise&amp;rpctoken=2257609410875090352" class="igm" allowtransparency="true" name="416025713" id="416025713"></iframe><br/>
                     <a class="btn btn-primary btn-large" href="http://www.youtube.com/user/agiletourbordeaux">Toutes les vidéos sur youtube</a>
                 </div>
+            </div>
+            
+        </div>
+        <div class="span2" >
+            <div style="background-color: #365A7A; padding-top:20px; border-radius: 6px 6px 6px 6px">
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+                  fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                </script>
+                <div class="fb-like-box" style="margin:1px; width: 99%;background-color: #FFFFFF"data-href="http://www.facebook.com/Agiletourbordeaux" data-width="200" data-height="400"data-show-faces="true" data-border-color="#FFFFFF" data-stream="true" data-header="false"></div>
+                <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+                <script>
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'search',
+                  search: '#atbdx',
+                  interval: 30000,
+                  title: '',
+                  subject: '#atbdx sur twitter',
+                  width: '100%',
+                  height: 300,
+                  theme: {
+                    shell: {
+                      background: '#365A7A',
+                      color: '#ffffff'
+                    },
+                    tweets: {
+                      background: '#ffffff',
+                      color: '#000000',
+                      links: '#df783d'
+                    }
+                  },
+                  features: {
+                    scrollbar: false,
+                    loop: true,
+                    live: true,
+                    behavior: 'default'
+                  }
+                }).render().start();
+                </script>
             </div>
         </div>
     </div>
