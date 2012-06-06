@@ -1,5 +1,5 @@
 body{
-    padding-top: 160px;
+    padding-top: 80px;
     padding-bottom: 40px;
     background-color: #fff;
     background-image: url(../img/grid-18px-masked.png);
@@ -43,6 +43,11 @@ body{
     margin: 0;
 }
 
-ul.nav{
+.navbar ul.nav{
     margin: 10px;
+}
+
+/* Iframe video homepage */
+.span12{
+    padding-top: 20px;
 }
