@@ -1,32 +1,88 @@
----
-layout: theme
-title: Inscription
-group: navigation
----
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+		<title>Agile Tour Bordeaux</title>
 
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	</head>
 
-<div class="container">
-    <div class="content">
-        <div class="row">
-            <div class="span12">
-				<h1>Inscription</h1>
-				Les inscriptions seront ouvertes à la rentrée !
-				Restez connecté
-				<br>
-				<div class="fb-like" data-href="http://www.facebook.com/Agiletourbordeaux" data-send="true" data-width="450" data-show-faces="false" data-font="tahoma"></div>
-				<br>
-				<a href="https://twitter.com/okiwi_fr" class="twitter-follow-button" data-show-count="false" data-lang="fr">Suivre @okiwi_fr</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-    </div>
-</div>
+	<body>
+	
+		<div class="navbar navbar-fixed-top">
+		  <div class="navbar-inner">
+			<div class="container">
+			  <a class="brand" href="index.html">Agile Tour Bordeaux</a>
+			  <div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="inscription.html">Inscription</a></li>
+					<li><a href="orateurs.html">Orateurs</a></li>      
+					<li><a href="programmation.html">Programmation</a></li><li><a href="organisateurs.html">L'équipe</a></li>        
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sponsors <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="sponsors.html">Sponsors</a></li>
+							
+							<li><a href="offre_de_sponsoring.html">Devenez sponsor</a></li>
+						</ul>
+					</li>
+				</ul>
+			  </div><!--/.nav-collapse -->
+			</div>
+		  </div>
+		</div>
+		
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+		<div class="container">
+							
+			<p>Les inscriptions ne sont pas encore ouvertes
+			<br>
+			restez connecté</p>
+			
+			<div class="fb-like" data-href="http://www.facebook.com/Agiletourbordeaux" data-send="true" data-width="450" data-show-faces="false" data-font="tahoma"></div>
+			<br>
+			<a href="https://twitter.com/okiwi_fr" class="twitter-follow-button" data-show-count="false" data-lang="fr">Suivre @okiwi_fr</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        
+		</div>
 
+		<div class="container" style="magin-top: 20px;">
+			<div class="row-fuild" style="text-align:center;">           
+				<small>L'Agile Tour Bordeaux est un évènement propulsé par <a href="http://okiwi.org">Okiwi</a></small>
+			</div>			
+		</div>
+		
+		
+		<!-- jquery -->
+		<script src="js/jquery.js"></script>
+
+		<!-- bootstrap -->
+		<script src="js/bootstrap-transition.js"></script>
+		<script src="js/bootstrap-alert.js"></script>
+		<script src="js/bootstrap-modal.js"></script>
+		<script src="js/bootstrap-dropdown.js"></script>
+		<script src="js/bootstrap-scrollspy.js"></script>
+		<script src="js/bootstrap-tab.js"></script>
+		<script src="js/bootstrap-tooltip.js"></script>
+		<script src="js/bootstrap-popover.js"></script>
+		<script src="js/bootstrap-button.js"></script>
+		<script src="js/bootstrap-collapse.js"></script>
+		<script src="js/bootstrap-carousel.js"></script>
+		<script src="js/bootstrap-typeahead.js"></script>
+
+	</body>
+</html>
