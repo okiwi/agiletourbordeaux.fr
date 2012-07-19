@@ -73,5 +73,12 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
 
 #previous-years-sites {
     padding-top: 10px;
-    padding-left: 20px;
+    margin: 0;
+}
+
+#previous-years-sites a {
+    float: left;
+    height: 60px;
+    margin: 0;
+    padding: 4px;
 }
