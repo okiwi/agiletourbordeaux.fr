@@ -16,6 +16,18 @@ color: #2a2a2a;
 padding-top: 60px;
 }
 
+.main-content h1 {
+    padding: 30px 0;
+}
+
+.main-content h2 {
+    padding: 10px 0;
+}
+
+.main-content li {
+    padding: 4px;
+}
+
 .gold{
 color: #D4AF37;
 font-weight:bold;
@@ -45,3 +57,21 @@ ul.polaroids li:nth-child(11n) a { position: relative; left: -5px; top: 3px; }
 ul.polaroids li.messy a { margin-top: -375px; margin-left: 160px; -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); }
 
 ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5); -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5); position: relative; z-index: 5; }
+
+#homepage .description {
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+#homepage-sponsors a img {
+    padding: 10px 20px;
+}
+
+#homepage-video {
+    padding: 30px;
+}
+
+#previous-years-sites {
+    padding-top: 10px;
+    padding-left: 20px;
+}
