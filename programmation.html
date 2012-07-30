@@ -9,6 +9,7 @@
 
 		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/bootstrap-responsive.css" rel="stylesheet">
 		
 		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
 	</head>
@@ -18,17 +19,24 @@
 		<div class="navbar navbar-fixed-top">
 		  <div class="navbar-inner">
 			<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
 			  <a class="brand" href="index.html">Agile Tour Bordeaux</a>
 			  <div class="nav-collapse">
 				<ul class="nav">
+					<li><a href="index.html">Accueil</a></li>
 					<li><a href="inscription.html">Inscription</a></li>
 					<li><a href="orateurs.html">Orateurs</a></li>      
-					<li><a href="programmation.html">Programmation</a></li><li><a href="organisateurs.html">L'équipe</a></li>       
+					<li class="active"><a href="programmation.html">Programmation</a></li>
+					<li><a href="organisateurs.html">L'équipe</a></li>    
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Sponsors <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="sponsors.html">Sponsors</a></li>
-							
+
 							<li><a href="offre_de_sponsoring.html">Devenez sponsor</a></li>
 						</ul>
 					</li>
@@ -38,12 +46,12 @@
 		  </div>
 		</div>
 
-<div class="container">
+		<div id="homepage" class="container-fluid main-content">
                     
                         
 en construction
 
-</div>
+		</div>
 		<div class="container" style="magin-top: 20px;">
 			<div class="row-fuild" style="text-align:center;">           
 				<small>L'Agile Tour Bordeaux est un évènement propulsé par <a href="http://okiwi.org">Okiwi</a></small>
