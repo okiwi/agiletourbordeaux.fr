@@ -5,6 +5,8 @@
  * @version 1.0.0
  */
  
+html {overflow-y: scroll; overflow: -moz-scrollbars-vertical;}
+
 body{
 margin: 0px;
 font-family: 'Ubuntu', sans-serif;
