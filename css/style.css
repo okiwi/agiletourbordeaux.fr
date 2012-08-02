@@ -87,6 +87,6 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
     width: 125px;
 }
 
-img.illustrate { float:right; padding: 24px; }
+img.illustrate { float:right; padding-left: 24px;padding-bottom: 14px; }
 p { padding-top: 3px; }
 h1 { padding-bottom: 15px; }
