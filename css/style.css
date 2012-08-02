@@ -82,3 +82,11 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
     margin: 0;
     padding: 4px;
 }
+
+#previous-years-sites img {
+    width: 125px;
+}
+
+img.illustrate { float:right; padding: 24px; }
+p { padding-top: 3px; }
+h1 { padding-bottom: 15px; }
