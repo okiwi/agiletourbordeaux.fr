@@ -1,0 +1,226 @@
+---
+layout: default
+title: Programme
+---
+
+<script type="text/javascript">
+
+	function startPlanning()
+	{
+		$('td.conf').mouseenter(showToolTip);
+		$('td.conf').mouseleave(hideToolTip);
+        $('#planningSelectionNiveau li').click(highlightNiveau);
+        $('#planningSelectionSujet li').click(highlightSujet);
+	}
+
+	function showToolTip(e)
+	{
+		var conf = $(e.currentTarget);
+		var sousTitre = conf.data('sous-titre');
+		var orateur = conf.data('orateur');
+		var confOffset = conf.offset();
+		var leftPosition = confOffset.left;
+		var width = conf.outerWidth();
+
+		if( conf.hasClass('lastcol') )
+		{
+			leftPosition -= conf.outerWidth() + 2;
+			width += 9;
+			$("#toolTip").addClass('toolTipLastCol');
+		}
+		else if( conf.hasClass('toutesSalles') )
+		{
+			width = width/2;
+			leftPosition += width;
+		}
+		else
+		{
+			leftPosition += conf.outerWidth() - 6;
+			width += 5;
+			$("#toolTip").removeClass('toolTipLastCol');
+		}
+
+		conf.addClass('selectedConf')
+		$("#toolTip .sousTitre").html(sousTitre);
+		$("#toolTip .orateur").html("Par " + orateur);
+		$("#toolTip").width(width);
+		$("#toolTip").css('top', confOffset.top);
+		$("#toolTip").css('left', leftPosition);
+		$("#toolTip").show();
+	}
+
+	function hideToolTip(e)
+	{
+		var conf = $(e.currentTarget);
+
+		conf.removeClass('selectedConf');
+		$("#toolTip").hide();
+	}
+
+    function highlightNiveau( e )
+    {
+        var niveau = $(e.currentTarget);
+        var currentSelectedNiveau = $("#planningSelectionNiveau li.selected");
+
+        $("#planningSelectionNiveau li").removeClass('selected');
+        if( currentSelectedNiveau[0] != niveau[0] )
+        {
+            niveau.addClass('selected');
+        }
+
+        hightLightConfs();
+    }
+
+    function highlightSujet( e )
+    {
+        var sujet = $(e.currentTarget);
+        var currentSelectedSujet = $("#planningSelectionSujet li.selected");
+
+        $("#planningSelectionSujet li").removeClass('selected');
+        if( currentSelectedSujet[0] != sujet[0] )
+        {
+            sujet.addClass('selected');
+        }
+
+        hightLightConfs();
+    }
+
+    function hightLightConfs()
+    {
+        var currentSelectedSujet = $("#planningSelectionSujet li.selected");
+        var sujetClass = currentSelectedSujet.length>0 ? "."+currentSelectedSujet.data('sujet') : '';
+        var currentSelectedNiveau = $("#planningSelectionNiveau li.selected");
+        var niveauClass = currentSelectedNiveau.length>0 ? "."+currentSelectedNiveau.data('niveau') : '';
+
+        $("#planning .conf").removeClass("hightlight");
+        $("#planning "+sujetClass+niveauClass).addClass("hightlight");
+    }
+
+	$(document).ready(function () {
+		startPlanning()
+	});
+
+</script>
+
+
+	<div class="row">
+		<div class="span4">
+            <div id="planningMenu">
+                <div id="filtres">
+                    <span class="explications">Trouvez les conférences<br/>qui vous ressemble :</span>
+                    <ul id="planningSelectionSujet">
+                        <li data-sujet="techno">Technologie et Technique</li>
+                        <li data-sujet="equipe">Équipe et individu<li>
+                        <li data-sujet="process">Processus et Amélioration<li>
+                        <li data-sujet="client">Client et Planification<li>
+                        <li data-sujet="retex">Retour d’expérience<li>
+                    </ul>
+                    <hr>
+                    <span class="explications">Indiquez nous votre niveaux :</span>
+                    <ul id="planningSelectionNiveau">
+                        <li data-niveau="debutant">Débutant<div class="starIndication"><div class="star"></div><div class="emptyStar"></div><div class="emptyStar"></div></div></li>
+                        <li data-niveau="intermediaire">Intermédiaire<div class="starIndication"><div class="star"></div><div class="star"></div><div class="emptyStar"></div></div></li>
+                        <li data-niveau="avance">Avancé<div class="starIndication"><div class="star"></div><div class="star"></div><div class="star"></div></div></li>
+                    </ul>
+                </div>
+                <div id="reservationButton">
+                    <a href="http://www.yuticket.com/association-okiwi/ca5f3eb4-6f52-4d8e-818b-ef8847dafb3a-agile-tour-bordeaux-2012.html">réservez votre place</a>
+                </div>
+            </div>
+		</div>
+
+		<div class="span8">
+			<table id="planning" border="1" bordercolor="#CCC" cellspacing="0">
+				<tbody>
+
+				<tr class="header">
+					<td class="horaire"></td>
+					<td>Courage</td>
+					<td>Communication</td>
+					<td>Feedback</td>
+					<td>Simplicité</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">08h30<br>09h00</td>
+					<td colspan="4">Accueil et petit déjeuner</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">09h00<br>10h30</td>
+					<td data-sous-titre="Working tested software, every iteration" data-orateur="David Evans" class="conf toutesSalles intermediaire avance" colspan="4">Plénière d'ouverture<br>Keynote [english]</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">10h30<br>11h30</td>
+					<td data-sous-titre="Tout ce que vous avez toujours voulu savoir sur les tests agiles sans jamais oser le vendre à votre management." data-orateur="Gilles Mantel" class="conf techno equipe intermediaire">Tests automatisés, le mythe du ROI</td>
+					<td data-sous-titre="How to build your taskboard" data-orateur="Xavier Quesada" class="conf equipe intermediaire avance" rowspan="2">Visual Management [english]</td>
+					<td data-sous-titre="Les meilleurs agents de changement sont les bénéficiaires de ce changement" data-orateur="Oana Juncu" class="conf equipe client process intermediaire avance">Le Product Owner en catalyseur du changement Agile</td>
+					<td data-sous-titre="Scrum, méthode agile dédiée à la gestion de projets" data-orateur="Philippe Launay, Alexis Monville" class="conf process debutant lastcol">Scrum (by the book)</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">11h30<br>12h30</td>
+					<td data-sous-titre="Comment saupoudrer le dévelopement d’une dose de design d’experience pour s’assurer que l’utilisateur sera enchanté lors de son utilisation du produit" data-orateur="Sophie Freiermuth" class="conf process client intermediaire avance">Utilisateur, mon amour, ma migraine</td>
+					<td data-sous-titre="Behaviour Driven Development" data-orateur="Gabriel Le Van" class="conf techno intermediaire avance">BDD</td>
+					<td data-sous-titre="XP, méthode agile dédiée à la réalisation et la gestion de projet" data-orateur="Fabien Bezagu" class="conf techno process debutant lastcol">XP Basics</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">12h30<br>14h00</td>
+					<td data-sous-titre="Mini conférences de 5 minutes organisées et choisies par vous" data-orateur="Vous" class="conf toutesSalles" colspan="4"><i>Pause déjeuner<br>et Lightning Talks</i></td>
+				</tr>
+
+				<tr>
+					<td class="horaire">14h00<br>15h00</td>
+					<td data-sous-titre="A la fin du sprint, vient le moment de la démo : un incrément de logiciel est montré. Que se cache-t-il derrière l&#39;apparente simplicité de cette cérémonie ?" data-orateur="Emilie Franchomme" class="conf process avance">Des mots, des maux? Démo!</td>
+					<td data-sous-titre="Découverte des principes SOLID popularisés par Uncle Bob et de leur importance dans le développement logiciel." data-orateur="Olivier Azeau" class="conf techno debutant">Si t'es pas SOLID, t'es pas Agile</td>
+					<td data-sous-titre="Un produit, N devices, N équipes, N pays" data-orateur="Gough Robert" class="conf retex client debutant intermediaire">Product Owner dans un projet international</td>
+					<td data-sous-titre="Comment développer en s’aidant des tests unitaires?" data-orateur="Guillaume Vincent, Sam Cranford" class="conf techno debutant lastcol">Comment t'aider des tests!</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">15h00<br>16h00</td>
+					<td data-sous-titre="Comment être développeur professionnel dans un monde qui n’en emploie pas." data-orateur="Jean-Baptiste Dusseaut" class="conf equipe techno debutant">La voie du programmeur</td>
+					<td data-sous-titre="&#39;J&#39;ai autre chose à faire que jouer&#39;, &#39;Il y en a qui travaillent ici !&#39;, &#39;On vous paie pour ça ?&#39;" data-orateur="Gregory Alexandre, Aurelien Fauches" class="conf equipe debutant intermediaire">Comment vendre le serious gaming dans votre projet?</td>
+					<td data-sous-titre="L’expérience originale de Yaal et son approche de l’agilité." data-orateur="Colin Garriga" class="conf retex intermediaire avance">Yaal entreprise agile et motrice de startup</td>
+					<td data-sous-titre="Extension des principes du Lean au monde des systèmes d&#39;information" data-orateur="Antoine Contal" class="conf process debutant intermediaire lastcol">Lean</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">16h00<br>17h00</td>
+					<td data-sous-titre="Retour d&#39;expériences sur nos pratiques «agiles»." data-orateur="Luc Mazardo, Pascal Grange" class="conf retex intermediaire">À la chasse aux faux semblants</td>
+					<td data-sous-titre="Session de simulation permettant d’appréhender ce qu’est Scrum par le jeu." data-orateur="Alexis Monville, Philippe Launay" class="conf equipe process debutant" rowspan="2">Lego4Scrum</td>
+					<td data-sous-titre="Agile à l’échelle d’une organisation " data-orateur="Thierry Cros" class="conf equipe process intermediaire">Sociocratie: une gouvernance agile</td>
+					<td data-sous-titre="Si pour vous le Kanban se résume à un tableau de tâches sur un mur et des limites, alors cette session est la votre!" data-orateur="Laurent Morisseau" class="conf process debutant lastcol">Kanban, un tour d'horizon de la méthode</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">17h00<br>18h00</td>
+					<td data-sous-titre="La communication entre les personnes au sein d’une même équipe : un facteur de réussite !" data-orateur="Isabel Monville" class="conf equipe intermediaire">La communication au service du projet</td>
+					<td data-sous-titre="Dans un projet, au début on cadre, à la fin on met en production. Entre les deux il se passe des trucs, bref c’est l’histoire d’un product owner entre les deux." data-orateur="Jonathan Scher" class="conf retex client debutant">Bref, j'ai été Product Owner</td>
+					<td data-sous-titre="Comprendre l’intérêt de maintenir un code propre de manière continue, et apprendre quelques pratiques d’amélioration de son code" data-orateur="Jérôme Avoustin" class="conf techno debutant lastcol">Clean Code en pratique</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">18h00<br>18h30</td>
+					<td colspan="4">Clôture</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">18h30<br>00h00</td>
+					<td colspan="4"><i>Le off qui poutre !</i></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+        <div id="toolTip">
+            <div id="toolTipContent">
+                <div class="sousTitre"></div>
+                <div class="orateur"></div>
+            </div>
+        </div>
+	</div>
+
+
