@@ -611,3 +611,115 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
 }
 
+.twitter img{
+    width: 36px;
+    height: 36px;
+}
+
+.twitter {
+    text-decoration: none;
+    color:#348fb3;
+    font-weight: bold;
+}
+
+.twitter:hover {
+    text-decoration: none;
+    color:#000;
+}
+
+.menuText {
+    display: none;
+}
+
+@media (max-width: 978px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .navbar-inner .container {
+        margin: 0;
+        padding-right: 20px;
+    }
+
+    .navbar .nav-collapse {
+        padding: 0 30px;
+    }
+
+    .navbar h1 {
+        margin-right: 0;
+    }
+
+    btn btn-navbar:after {
+        content: "Menu";
+    }
+
+    .miniMenu {
+        width: 100%;
+    }
+
+    .menuIcon {
+        float: left;
+    }
+
+    .menuText {
+        display: block;
+        color: #999;
+        text-shadow: none;
+        float: left;
+        padding-left: 10px;
+    }
+
+    .nav ul {
+        margin-bottom: 0;
+    }
+
+    .navbar .nav > li > a {
+        font-size: 14px;
+        line-height: 12px;
+        padding: 8px 10px;
+    }
+
+    .navbar .nav > li > a:hover {
+        border-bottom: none;
+        background-color: #CCC;
+    }
+
+    .nav-collapse .dropdown-menu a {
+        padding: 4px 10px 3px;
+    }
+
+    #trois_ans {
+        margin-top: 0;
+    }
+
+    #venir #intro p {
+        width: 100%;
+    }
+
+    #planningMenu {
+        position: inherit;
+    }
+
+    #planningMenu #filtres {
+        width: 100%;
+    }
+
+    #planningMenu #reservationButton {
+        margin-left: 50px;
+        margin-bottom: 30px;
+    }
+
+    #content h2 {
+        font-size: 26px;
+    }
+
+    ul.polaroids {
+        width: 100%;
+        padding-left: 50px;
+    }
+
+    #planning td {
+        padding: 5px 3px;
+    }
+
+}
