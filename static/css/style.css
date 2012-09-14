@@ -723,3 +723,23 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
     }
 
 }
+
+.description-orateur{
+    padding-left: 15px;
+    text-align: justify;
+}
+
+.img-orateur img{
+    width: 135px;
+    margin-right: 10px;
+}
+.img-orateur {
+    text-align: center;
+}
+
+.training{
+    text-align: center;
+}
+.training-description{
+    text-align: left;
+}
