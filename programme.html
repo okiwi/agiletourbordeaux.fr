@@ -62,11 +62,8 @@ title: Programme
             $("#toolTip").hide();
             $('#conteneurDetailPlaning').html(detailDeLaSession);
             detailDeLaSession.fadeIn();
-            $("body").click(function(e){
-                if($(e.target).parents('#conteneurDetailPlaning').length == 0){
-                    fermerLaSession();
-                }
-            });
+			positionnerLEvenementPermettantDeFermerLaSessionSurUnClickExterneAuPlanning();
+			positionnerLEvenementPermettantDeFermerLaSessionSiLaToucheEchapEtPressee();		
         }else{
             fermerLaSession();
         }
@@ -95,6 +92,22 @@ title: Programme
     function fermerLaSession(){
         window.location='#';
     }
+	
+	function positionnerLEvenementPermettantDeFermerLaSessionSurUnClickExterneAuPlanning(){
+		$("body").click(function(e){
+			if($(e.target).parents('#conteneurDetailPlaning').length == 0){
+				fermerLaSession();
+			}
+		});
+	}
+	
+	function positionnerLEvenementPermettantDeFermerLaSessionSiLaToucheEchapEtPressee(){
+		$(document).keydown(function(evt){
+				 if (evt.keyCode == 27) {
+					fermerLaSession();
+				}
+			});
+	}
 
 	function showToolTip(e)
 	{
@@ -322,15 +335,11 @@ title: Programme
 			
 			
         <div id="UtilisateurMonAmourMaMigraine" class="hide" data-image="sof.png" data-horaire="11h30 à 12h30" data-salle="Courage">
-			<p><b>Rapide description : </b></p>
-		    <p><b>Objectif de la session : </b></p>
-			<p><b>Description : </b></p>
-			<br/>
-            <br/>
-			<br/>
-            <br/>
-			<br/>
-            <br/>
+			<p><b>Objectif de la session </b>Partager des techniques, des solutions et des procédés qui peuvent etre appliques lors de l'élaboration du produit, au niveau du PO ou de la salle de développement, pour assurer une expérience utilisateur pensée et non accidentelle.</p>
+		    <p><b>Rapide description : </b>Après plus de 10 ans de web grand public en France, ses métiers sont devenus extrêmement pointus, toutefois une discipline peine encore a percer: l'expérience utilisateur. En l’absence de spécialiste dans l'équipe, il existe des outils et techniques pour améliorer la satisfaction de vos utilisateurs au fil des itérations</p>
+			<p><b>Description : </b>Le web grand public en France a un peu plus de 12 ans (premier site de la Fnac: 1994) et a vu les équipes qui publient et maintiennent les sites évoluer vers des métiers de plus en plus pointus, des techniques nouvelles et des développeurs qui veulent avoir voix au chapitre. Les utilisateurs de ces sites, cependant, ont encore trop souvent affaire a des interfaces multiples, des modes en matière d'esthétique et d’interactions, des produits qui se cherchent parfois, des propositions inconsistantes au fil d’un site.<br/>
+				La discipline de l'expérience utilisateur, née de l’intersection de la psychologie et des sciences de l’ordinateur, brille en Amérique du Nord, en Grande-Bretagne et en Allemagne notamment, mais peine a percer en France. En l’absence de spécialiste a bord, quand le baromètre est réglé sur les compétiteurs ou le niveau d’innovation, comment garder le cap sur un utilisateur satisfait, promoteur du produit et consommateur fidèle?<br/>
+				Cette session sera dédiée a équiper les participants d’outils pratiques et de recommandations qu’ils pourront appliquer dans le cadre de leur equipe et projet, quel que soit leur rôle (PO, développeur, testeur, client, autre) et dans le cadre bien précis de projets agiles (Scrum, XP, Kanban ou autre).</p>
         </div>
         
 		
