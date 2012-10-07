@@ -374,6 +374,13 @@ hr{
     text-align: center;
 }
 
+#planning tr.header td span {
+    font-weight: normal;
+    font-style: italic;
+    display: block;
+    font-size: 0.9em;
+}
+
 #planning td {
     width: 23%;
     padding: 5px 10px;
