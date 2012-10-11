@@ -210,6 +210,15 @@ hr{
     border: none;
 }
 
+.linktostreaming {
+    margin-bottom: 20px;
+}
+
+iframe.steaming {
+    position: relative;
+    margin-left: 30px;
+}
+
 #homepage span {
     text-transform: uppercase !important;
     display: inline-block;
@@ -245,6 +254,10 @@ hr{
 #homepage a:hover {
     border-bottom: 1px solid;
     text-decoration: none;
+}
+
+#homepage .lt-provider {
+    margin: 30px 0 0 0;
 }
 
 #presentation {
