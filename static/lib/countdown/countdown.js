@@ -1,7 +1,7 @@
 $(function(){
 
 	var note = $('#note'),
-		ts = new Date(2012, 12, 10),
+		ts = new Date(2013, 8, 10),
 		newYear = true;
 
 	if((new Date()) > ts){
@@ -23,10 +23,10 @@ $(function(){
 			message += seconds + " seconde" + ( seconds==1 ? '':'s' ) + " <br />";
 
 			if(newYear){
-				message += "avant l'Agile Tour Bordeaux 2012 !";
+				message += "avant l'Agile Tour Bordeaux 2013 !";
 			}
 			else {
-				message += "moins de 10 jours avant l'Agile Tour Bordeaux 2012 !";
+				message += "moins de 10 jours avant l'Agile Tour Bordeaux 2013 !";
 			}
 
 			note.html(message);
