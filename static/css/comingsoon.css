@@ -1,0 +1,133 @@
+/* Palette http://colorschemedesigner.com/#2R31Tt-pJw0w0 */
+
+/* Palette color codes */
+
+.primary-1 { background-color: #0A9F1C }
+.primary-2 { background-color: #23772E }
+.primary-3 { background-color: #036710 }
+.primary-4 { background-color: #3ECF4F }
+.primary-5 { background-color: #64CF71 }
+
+.secondary-a-1 { background-color: #CD670D }
+.secondary-a-2 { background-color: #9A612E }
+.secondary-a-3 { background-color: #854104 }
+.secondary-a-4 { background-color: #E69044 }
+.secondary-a-5 { background-color: #E6A76F }
+
+.secondary-b-1 { background-color: #A70A5D }
+.secondary-b-2 { background-color: #7D2554 }
+.secondary-b-3 { background-color: #6D033B }
+.secondary-b-4 { background-color: #D33F8D }
+.secondary-b-5 { background-color: #D366A0 }
+
+/* end */
+
+
+
+body{ overflow-x: hidden;}
+
+html { 
+  background: url("../img/comingsoon/bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+}
+
+header{
+  margin-left: auto;
+  margin-right: auto;
+  width:66%;
+  margin-top:5%;
+  text-align:center;
+  background-color:white;
+  border-radius: 14px; 
+  -moz-border-radius: 14px; 
+  -webkit-border-radius: 14px;
+  padding:0.5em;
+}
+
+article{
+  border-radius: 14px; 
+  -moz-border-radius: 14px; 
+  -webkit-border-radius: 14px; 
+  border: 1px dashed;
+  border-color: #0A9F1C;
+  background-color:white;
+  margin: 5% 33% 5% 33%;
+  padding: 20px 0 0 0;
+}
+
+nav{
+  position:absolute;
+  top:0px;
+  right:0px;
+  padding:10px 10px 10px 20px;
+  text-align:right;
+  background:white;
+  border-radius: 0px 0px 0px 50px; 
+-moz-border-radius: 0px 0px 0px 50px; 
+-webkit-border-radius: 0px 0px 0px 50px; 
+  border-bottom: 1px solid #800000;
+}
+
+footer{
+  position:absolute;
+  bottom:0px;
+  background-color:white;
+  width:100%;
+  text-align:center;
+  border-top: 1px solid #0A9F1C;
+}
+
+#note{
+	text-align:center;
+	margin:10px;
+}
+
+.social{
+  border-radius: 14px; 
+  -moz-border-radius: 14px; 
+  -webkit-border-radius: 14px; 
+  border: 1px dashed;
+  border-color: #0A9F1C;
+  background-color:white;
+  text-align:center;
+  margin: 5% 33% 5% 33%;
+}
+
+.social a span {
+    display: none;
+}
+.social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.social a.facebook {
+    background: url("../img/social/social_icon_fb.png") no-repeat;
+}
+
+.social a.facebook:hover {
+    background: url("../img/social/social_icon_fb_ro.png") no-repeat;
+}
+
+.social a.twitter{
+    background: url("../img/social/social_icon_twitter.png") no-repeat;
+}
+
+.social a.twitter:hover{
+    background: url("../img/social/social_icon_twitter_ro.png") no-repeat;
+}
+
+.social a.googleplus {
+    background: url("../img/social/social_icon_g+.png") no-repeat;
+}
+
+.social a.googleplus:hover {
+    background: url("../img/social/social_icon_g+_ro.png") no-repeat;
+}
