@@ -35,14 +35,17 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width:100%;
-  min-height: 100%;
+  width:100% !important;
+  min-height: 100% !important;
+  position:relative;
 }
 body {
     margin: 0 0 100px; /* bottom = footer height */
 }
 #footer {
 	width:100%;
+	position:absolute;
+	bottom:0;
     height: 100px;
 	background-color:#f4f4f4;
 }
