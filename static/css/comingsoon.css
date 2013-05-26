@@ -27,6 +27,7 @@
 body{ 
 	overflow-x: hidden;
 	background-color:rgba(244,244,244,0)!important;
+	min-height:100% !important;
 }
 
 html { 
@@ -39,9 +40,12 @@ html {
   min-height: 100% !important;
   position:relative !important;
 }
+
 body {
     margin: 0 0 100px !important; /* bottom = footer height */
+	position:static !important;
 }
+
 #footer {
 	width:100%;
 	position:absolute;
