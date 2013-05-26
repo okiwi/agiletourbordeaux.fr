@@ -50,6 +50,7 @@ body {
 	width:100%;
 	position:absolute;
 	bottom:0;
+	padding-top:10px;
     height: 100px;
 	background-color:#f4f4f4;
 }
@@ -67,7 +68,7 @@ header{
   padding:0.5em;
 }
 #content{
-	margin-top:3em;
+	margin-top:10em;
 }
 article{
   border-radius: 14px; 
