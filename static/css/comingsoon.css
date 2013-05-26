@@ -33,6 +33,14 @@ html {
   -o-background-size: cover;
   background-size: cover;
   width:100%;
+  position: relative;
+  min-height: 100%;
+}
+body {
+    margin: 0 0 100px; /* bottom = footer height */
+}
+footer {
+    height: 100px;
 }
 
 header{
