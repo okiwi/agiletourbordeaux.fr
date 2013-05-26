@@ -26,7 +26,7 @@
 
 body{ 
 	overflow-x: hidden;
-	background-color:rgba(244,244,244,0);
+	background-color:rgba(244,244,244,0)!important;
 }
 
 html { 
@@ -43,6 +43,7 @@ body {
 }
 #footer {
     height: 100px;
+	background-color:#f4f4f4;
 }
 
 header{
@@ -57,7 +58,7 @@ header{
   -webkit-border-radius: 14px;
   padding:0.5em;
 }
-content{
+#content{
 	margin-top:3em;
 }
 article{
