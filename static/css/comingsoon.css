@@ -24,7 +24,10 @@
 
 
 
-body{ overflow-x: hidden;}
+body{ 
+	overflow-x: hidden;
+	background-color:rgba(244,244,244,0);
+}
 
 html { 
   background: url("../img/comingsoon/bg.jpg") no-repeat center center fixed; 
@@ -38,7 +41,7 @@ html {
 body {
     margin: 0 0 100px; /* bottom = footer height */
 }
-footer {
+#footer {
     height: 100px;
 }
 
@@ -54,7 +57,9 @@ header{
   -webkit-border-radius: 14px;
   padding:0.5em;
 }
-
+content{
+	margin-top:3em;
+}
 article{
   border-radius: 14px; 
   -moz-border-radius: 14px; 
