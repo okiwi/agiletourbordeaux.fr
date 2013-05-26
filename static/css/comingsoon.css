@@ -74,6 +74,10 @@ header{
 .navbar .nav > li >a {
     font-size: 16px
 }
+.navbar h1 a {
+    background: url('../img/logo_atbdx2013png') no-repeat;
+}
+
 article{
   border-radius: 14px; 
   -moz-border-radius: 14px; 
