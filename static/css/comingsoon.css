@@ -25,9 +25,12 @@
 
 
 body{ 
-	overflow-x: hidden;
-	background-color:rgba(244,244,244,0)!important;
-	min-height:100% !important;
+	overflow-x: hidden !important;
+	min-height:100%;
+	margin: 0 0 50px 0 !important; /* bottom = footer height */
+	position:static;
+	background:transparent!important;
+	padding:0;
 }
 
 html { 
@@ -36,60 +39,49 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width:100% !important;
-  min-height: 100% !important;
-  position:relative !important;
-}
-
-body {
-    margin: 0 0 50px !important; /* bottom = footer height */
-	position:static !important;
+  width:100%;
+  min-height: 100%;
+  position:relative;
 }
 
 #footer {
 	width:100%;
 	position:absolute;
 	bottom:0;
+	height:50px;
 	padding-top:10px;
-	padding-left:10px;
-    height: 50px;
 	background-color:#f4f4f4;
 }
-
-header{
-  margin-left: auto;
-  margin-right: auto;
-  width:66%;
-  margin-top:5%;
-  text-align:center;
-  background-color:white;
-  border-radius: 14px; 
-  -moz-border-radius: 14px; 
-  -webkit-border-radius: 14px;
-  padding:0.5em;
+#footer .span4{
+ padding-left:10px;
+ background-color:#f4f4f4;
+}
+#footer .span7{
+ padding-left:10px;
+ background-color:#f4f4f4;
+}
+#footer .span1{
+ padding-left:10px;
+ background-color:#f4f4f4;
 }
 #content{
-	margin-top:10em;
+	margin-top:10%;
+	padding:1em;
+	background-color:rgba(244,244,244,0.5);
 }
 .navbar .nav > li >a {
-    font-size: 16px
+    font-size: 16px;
 }
 .navbar h1 a {
     background: url('../img/logo_atbdx2013.png') no-repeat;
 }
 
-article{
-  border-radius: 14px; 
-  -moz-border-radius: 14px; 
-  -webkit-border-radius: 14px; 
-  border: 1px dashed;
-  border-color: #0A9F1C;
-  background-color:white;
-  margin: 5% 33% 5% 33%;
-  padding: 20px 0 0 0;
+@media (max-width: 978px){
+	.navbar-inner .container{
+		padding-left:20px;
+	}
 }
-
 #note{
 	text-align:center;
-	margin:10px;
+	padding:10px;
 }
