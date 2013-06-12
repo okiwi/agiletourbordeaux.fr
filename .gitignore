@@ -20,3 +20,7 @@ _site
 
 .idea/workspace.xml
 
+
+static/img/.DS_Store
+
+static/img/infos_pratiques/.DS_Store
