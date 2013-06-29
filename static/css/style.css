@@ -13,6 +13,12 @@ body {
     padding: 0;
 }
 
+a {
+    color:#24C50A;
+}
+a:hover {
+    color:#24740A;
+}
 .clear {
     clear: both;
 }
@@ -57,7 +63,7 @@ body {
     color: black;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 1em;
     padding: 10px 0 4px;
     margin-right: 20px;
 }
@@ -68,7 +74,7 @@ body {
 }
 
 .navbar .nav > li > a.active {
-    color: #348fb3 !important;
+    color: #24C50A !important;
 }
 
 .navbar .nav li.dropdown.open > .dropdown-toggle,
@@ -321,7 +327,7 @@ iframe.steaming {
 }
 
 #infos h3.ui-state-active a {
-    color: #348fb3;
+    color: #24C50A;
     text-decoration: none;
 }
 
@@ -379,7 +385,7 @@ iframe.steaming {
 
 #planning td.hightlight {
     background-color: #FFFFFF;
-    color: #348fb3;
+    color: #24C50A;
 }
 
 #planning tr.header {
@@ -406,7 +412,7 @@ iframe.steaming {
 #toolTip {
     display: none;
     position: absolute;
-    color: #348fb3;
+    color: #24C50A;
     background: url(../img/programme/toolTipIndication.png) no-repeat 0 10px;
 }
 
@@ -440,7 +446,7 @@ iframe.steaming {
 }
 
 #reservationButton {
-    background: #348fb3 url(../img/programme/reservation_picto.png) no-repeat 210px 30px;
+    background: #24C50A url(../img/programme/reservation_picto.png) no-repeat 210px 30px;
     color: #FFFFFF;
     width: 210px;
     padding: 20px;
@@ -508,7 +514,7 @@ iframe.steaming {
 }
 
 #planningMenu li.selected {
-    color: #348fb3;
+    color: #24C50A;
     font-weight: bold;
 }
 
@@ -527,7 +533,7 @@ iframe.steaming {
 
 @media (max-width: 979px) and (min-width: 768px) {
     #reservationButton {
-        background: #348fb3 url(../img/programme/reservation_picto.png) no-repeat 148px 22px;
+        background: #24C50A url(../img/programme/reservation_picto.png) no-repeat 148px 22px;
         width: 150px;
         padding: 15px;
         padding-right: 50px;
@@ -594,7 +600,7 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
 }
 
 #venir #phrases_tabs ul li a.active {
-    color: #348fb3;
+    color: #24C50A;
 }
 
 #venir #phrases_tabs span.question {
@@ -638,7 +644,7 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
 
 .twitter {
     text-decoration: none;
-    color:#348fb3;
+    color:#24C50A;
     font-weight: bold;
 }
 
