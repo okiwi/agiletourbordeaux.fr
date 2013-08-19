@@ -1,0 +1,573 @@
+---
+layout: default2012
+title: Programme
+---
+<script type="text/javascript">
+
+	function startPlanning()
+	{
+		$('td.conf').mouseenter(showToolTip);
+		$('td.conf').mouseleave(hideToolTip);
+        $('#planningSelectionNiveau li').click(highlightNiveau);
+        $('#planningSelectionSujet li').click(highlightSujet);
+        gererLesCliquesSurLesCasesDuProgramme();
+        afficherUneSessionDepuisLAncre();
+       
+	}
+	
+	function gererLesCliquesSurLesCasesDuProgramme(){
+	    chargerTemplatesExternes('static/template/',[ "session"]);
+	    $('td[data-detail]').each(function(index,valeur){
+            var caseDuProgramme = $(valeur);
+	        if(caseDuProgramme.click){
+	            caseDuProgramme.click(function(event){
+	                window.location=$(this).attr('data-detail');
+                    event.stopPropagation();
+	            });
+            }
+	    });
+	}
+	
+	function afficherLeProgramme(){
+        $('#conteneurDetailPlaning').html('');
+        $('#planning').fadeIn();
+    }
+	
+    function afficherUneSessionDepuisLAncre(){
+        var AfficheurSessions = Backbone.Router.extend({
+            routes: {
+                "" : "afficherLeProgrammeSiPasDeSession",
+                ":session": "afficherLaSession",  
+            },
+            afficherLaSession : function(session) {
+                afficherLeDetailDUneSession($("td[data-detail='#" + session + "']"));
+            },
+            afficherLeProgrammeSiPasDeSession : function(){
+                afficherLeProgramme();
+            }
+        });
+        var AfficheurSessions = new AfficheurSessions;
+        Backbone.history.start();
+    }
+    
+	
+	function afficherLeDetailDUneSession(caseDuProgramme){
+	    if(caseDuProgramme && caseDuProgramme.length !=0){
+	        var donneesSession = construireLesDonneesDeLaSession(caseDuProgramme);
+            var detailDeLaSession = $(ich.templateDetailDeSession(donneesSession));
+            detailDeLaSession.find(".fermer").click(function(){
+               fermerLaSession();
+            });
+            $('#planning').hide();
+            $("#toolTip").hide();
+            $('#conteneurDetailPlaning').html(detailDeLaSession);
+            detailDeLaSession.fadeIn();
+			positionnerLEvenementPermettantDeFermerLaSessionSurUnClickExterneAuPlanning();
+			positionnerLEvenementPermettantDeFermerLaSessionSiLaToucheEchapEtPressee();		
+        }else{
+            fermerLaSession();
+        }
+    }
+	
+	function construireLesDonneesDeLaSession(caseDuProgramme){
+	    var caseDetailDuProgramme = $(caseDuProgramme.attr('data-detail'));
+	    return {
+                    titre : caseDuProgramme.html(),
+                    sousTitre : caseDuProgramme.attr('data-sous-titre'),
+                    image : caseDetailDuProgramme.attr('data-image'),
+                    description : caseDetailDuProgramme.html(),
+                    orateur : caseDuProgramme.attr('data-orateur'),
+                    horaire : caseDetailDuProgramme.attr('data-horaire'),
+                    salle : caseDetailDuProgramme.attr('data-salle'),
+                    debutant : estDuNiveau(caseDuProgramme,"debutant"),
+                    intermediaire : estDuNiveau(caseDuProgramme,"intermediaire"),
+                    avance : estDuNiveau(caseDuProgramme,"avance")
+                };
+    }
+    
+    function estDuNiveau(caseDuProgramme,niveau){
+        return caseDuProgramme.hasClass(niveau);
+    }
+    
+    function fermerLaSession(){
+        window.location='#';
+    }
+	
+	function positionnerLEvenementPermettantDeFermerLaSessionSurUnClickExterneAuPlanning(){
+		$("body").click(function(e){
+			if($(e.target).parents('#conteneurDetailPlaning').length == 0){
+				fermerLaSession();
+			}
+		});
+	}
+	
+	function positionnerLEvenementPermettantDeFermerLaSessionSiLaToucheEchapEtPressee(){
+		$(document).keydown(function(evt){
+				 if (evt.keyCode == 27) {
+					fermerLaSession();
+				}
+			});
+	}
+
+	function showToolTip(e)
+	{
+		var conf = $(e.currentTarget);
+		conf.css('cursor', 'pointer')
+		var sousTitre = conf.data('sous-titre');
+		var orateur = conf.data('orateur');
+		var confOffset = conf.offset();
+		var leftPosition = confOffset.left;
+		var width = conf.outerWidth();
+
+		if( conf.hasClass('lastcol') )
+		{
+			leftPosition -= conf.outerWidth() + 2;
+			width += 9;
+			$("#toolTip").addClass('toolTipLastCol');
+		}
+		else if( conf.hasClass('toutesSalles') )
+		{
+			width = width/2;
+			leftPosition += width;
+		}
+		else
+		{
+			leftPosition += conf.outerWidth() - 6;
+			width += 5;
+			$("#toolTip").removeClass('toolTipLastCol');
+		}
+
+		conf.addClass('selectedConf')
+		$("#toolTip .sousTitre").html(sousTitre);
+		$("#toolTip .orateur").html("Par " + orateur);
+		$("#toolTip").width(width);
+		$("#toolTip").css('top', confOffset.top);
+		$("#toolTip").css('left', leftPosition);
+		$("#toolTip").show();
+	}
+
+	function hideToolTip(e)
+	{
+		var conf = $(e.currentTarget);
+
+		conf.removeClass('selectedConf');
+		$("#toolTip").hide();
+	}
+
+    function highlightNiveau( e )
+    {
+        var niveau = $(e.currentTarget);
+        var currentSelectedNiveau = $("#planningSelectionNiveau li.selected");
+
+        $("#planningSelectionNiveau li").removeClass('selected');
+        if( currentSelectedNiveau[0] != niveau[0] )
+        {
+            niveau.addClass('selected');
+        }
+
+        hightLightConfs();
+    }
+
+    function highlightSujet( e )
+    {
+        var sujet = $(e.currentTarget);
+        var currentSelectedSujet = $("#planningSelectionSujet li.selected");
+
+        $("#planningSelectionSujet li").removeClass('selected');
+        if( currentSelectedSujet[0] != sujet[0] )
+        {
+            sujet.addClass('selected');
+        }
+
+        hightLightConfs();
+    }
+
+    function hightLightConfs()
+    {
+        var currentSelectedSujet = $("#planningSelectionSujet li.selected");
+        var sujetClass = currentSelectedSujet.length>0 ? "."+currentSelectedSujet.data('sujet') : '';
+        var currentSelectedNiveau = $("#planningSelectionNiveau li.selected");
+        var niveauClass = currentSelectedNiveau.length>0 ? "."+currentSelectedNiveau.data('niveau') : '';
+
+        $("#planning .conf").removeClass("hightlight");
+        $("#planning "+sujetClass+niveauClass).addClass("hightlight");
+    }
+
+	$(document).ready(function () {
+		startPlanning();
+	});
+
+</script>
+
+
+	<div class="row">
+		<div class="span4">
+            <div id="planningMenu">
+                <div id="filtres">
+                    <span class="explications">Trouvez les conférences<br/>qui vous ressemble :</span>
+                    <ul id="planningSelectionSujet">
+                        <li data-sujet="techno">Technologie et Technique</li>
+                        <li data-sujet="equipe">Équipe et individu<li>
+                        <li data-sujet="process">Processus et Amélioration<li>
+                        <li data-sujet="client">Client et Planification<li>
+                        <li data-sujet="retex">Retour d'expérience<li>
+                    </ul>
+                    <hr>
+                    <span class="explications">Indiquez nous votre niveaux :</span>
+                    <ul id="planningSelectionNiveau">
+                        <li data-niveau="debutant">Débutant<div class="starIndication"><div class="star"></div><div class="emptyStar"></div><div class="emptyStar"></div></div></li>
+                        <li data-niveau="intermediaire">Intermédiaire<div class="starIndication"><div class="star"></div><div class="star"></div><div class="emptyStar"></div></div></li>
+                        <li data-niveau="avance">Avancé<div class="starIndication"><div class="star"></div><div class="star"></div><div class="star"></div></div></li>
+                    </ul>
+                </div>
+                <div id="reservationButton">
+                    <a href="mailto:contact@okiwi.org"><b>Evènement complet</b></a>
+                </div>
+            </div>
+		</div>
+		<div class="span8">
+			<table id="planning" border="1" bordercolor="#CCC" cellspacing="0">
+				<tbody>
+
+				<tr class="header">
+					<td class="horaire"></td>
+					<td>Courage<span>(Amphi: 200 places)</span></td>
+					<td>Communication <span>(salle 2.3: 30 places)</span></td>
+					<td>Feedback <span>(salle 2.2: 50 places)</span></td>
+					<td>Simplicité <span>(salle 2.4: 50 places)</span></td>
+				</tr>
+
+				<tr>
+					<td class="horaire">08h30<br>09h00</td>
+					<td colspan="4">Accueil et petit déjeuner</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">09h00<br>10h30</td>
+					<td data-sous-titre="What Testers and Developers Can Learn From Each Other" data-orateur="David Evans" class="conf toutesSalles avance" colspan="4" data-detail="#Pleniere">Plénière d'ouverture<br>Keynote <img src="static/img/programme/gb.png" /></td>
+				</tr>
+
+				<tr>
+					<td class="horaire">10h30<br>11h30</td>
+					<td data-sous-titre="Tout ce que vous avez toujours voulu savoir sur les tests agiles sans jamais oser le vendre à votre management." data-orateur="Gilles Mantel" class="conf techno equipe intermediaire" data-detail="#AgileTesting">Tests automatisés, le mythe du ROI</td>
+					<td data-sous-titre="How to build your taskboard" data-orateur="Xavier Quesada" class="conf equipe avance" rowspan="2" data-detail="#VisualManagement">Visual Management <img src="static/img/programme/gb.png" /></td>
+					<td data-sous-titre="Les meilleurs agents de changement sont les bénéficiaires de ce changement" data-orateur="Oana Juncu" class="conf equipe client process intermediaire avance" data-detail="#POCatalyseurDuChangement">Le Product Owner en catalyseur du changement Agile</td>
+					<td data-sous-titre="Scrum, méthode agile dédiée à la gestion de projets" data-orateur="Philippe Launay, Alexis Monville" class="conf process debutant lastcol" data-detail="#ScrumBasix">Scrum (by the book)</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">11h30<br>12h30</td>
+					<td data-sous-titre="Comment saupoudrer le dévelopement d'une dose de design d'experience pour s'assurer que l'utilisateur sera enchanté lors de son utilisation du produit" data-orateur="Sophie Freiermuth" data-detail="#UtilisateurMonAmourMaMigraine" class="conf process client intermediaire avance">Utilisateur, mon amour, ma migraine</td>
+					<td data-sous-titre="3 ans et plus d’expérience sur le BDD en général et Specflow comme outil, de la philosophie à la pratique, de quoi vous faire une idée sur l’approche comportementaliste des tests automatisés." data-orateur="Guillaume Saint-Etienne" class="conf techno avance" data-detail="#BDD">Behavior Driven Development dans le flux</td>
+					<td data-sous-titre="XP, méthode agile dédiée à la réalisation et la gestion de projet" data-orateur="Fabien Bezagu" class="conf techno process client equipe debutant lastcol" data-detail="#XPBasix">XP Basics</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">12h30<br>14h00</td>
+					<td data-sous-titre="Lorsqu'on est passionné par un sujet, on peut en parler des heures durant. Pourquoi ne pas commencer par 5 minutes? " data-orateur="Vous" class="conf toutesSalles" colspan="4" onClick="window.location='http://lightningtalk.herokuapp.com/'"><i>Pause déjeuner<br>et Lightning Talks</i></td>
+				</tr>
+
+				<tr>
+					<td class="horaire">14h00<br>15h00</td>
+					<td data-sous-titre="A la fin du sprint, vient le moment de la démo : un incrément de logiciel est montré. Que se cache-t-il derrière l&#39;apparente simplicité de cette cérémonie ?" data-orateur="Caroline Damour-Nobi et Emilie Franchomme" class="conf process intermediaire" data-detail="#DesMotsEtDesMaux">Des mots, des maux? Démo!</td>
+					<td data-sous-titre="Découverte des principes SOLID popularisés par Uncle Bob et de leur importance dans le développement logiciel." data-orateur="Olivier Azeau" class="conf techno intermediaire" data-detail="#IngenierieAgile">Si t'es pas SOLID, t'es pas Agile</td>
+					<td data-sous-titre="Un produit, N devices, N équipes, N pays" data-orateur="Gough Robert" class="conf retex client intermediaire" data-detail="#RexPO">Product Owner dans un projet international</td>
+					<td data-sous-titre="Les bases du développement piloté par les tests" data-orateur="Sam Cranford et Guillaume Vincent" class="conf techno debutant lastcol" data-detail="#TaiderTDD">Comment t'aider des tests!</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">15h00<br>16h00</td>
+					<td data-sous-titre="Comment être développeur professionnel dans un monde qui n'en emploie pas." data-orateur="Jean-Baptiste Dusseaut" class="conf equipe techno intermedaire" data-detail="#LaVoieDuProgrammeur">La voie du programmeur</td>
+					<td data-sous-titre="&#39;J&#39;ai autre chose à faire que jouer&#39;, &#39;Il y en a qui travaillent ici !&#39;, &#39;On vous paie pour ça ?&#39;" data-orateur="Gregory Alexandre et Aurelien Fauches" class="conf equipe intermediaire"data-detail="#VendreSeriousGame">Comment vendre le serious game dans votre projet?</td>
+					<td data-sous-titre="De l'idée à la mise en ligne en un peu plus de deux mois !" data-orateur="Colin Garriga-Salaün" class="conf retex intermediaire avance" data-detail="#EntrepriseAgileEtMotriceDeStartups">Yuticket, retour d'expérience</td>
+					<td data-sous-titre="Extension des principes du Lean au monde des systèmes d&#39;information" data-orateur="Antoine Contal" class="conf process debutant lastcol" data-detail="#LeanEnInformatique">Lean</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">16h00<br>17h00</td>
+					<td data-sous-titre="Retour d&#39;expériences sur nos pratiques «agiles»." data-orateur="Luc Mazardo et Pascal Grange" class="conf retex intermediaire" data-detail="#ChasseAuxFauxSemblants">À la chasse aux faux semblants</td>
+					<td data-sous-titre="Session de simulation permettant d'appréhender ce qu'est Scrum par le jeu." data-orateur="Alexis Monville, Philippe Launay" class="conf equipe process intermediaire" rowspan="2" data-detail="#Lego4Scrum">Lego4Scrum</td>
+					<td data-sous-titre="Agile à l'échelle d'une organisation " data-orateur="Thierry Cros" class="conf equipe process avance" data-detail="#Sociocratie">Sociocratie: une gouvernance agile</td>
+					<td data-sous-titre="Si pour vous le Kanban se résume à un tableau de tâches sur un mur et des limites, alors cette session est la votre!" data-orateur="Laurent Morisseau" class="conf process debutant lastcol" data-detail="#KanbanBasix">Kanban, un tour d'horizon de la méthode</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">17h00<br>18h00</td>
+					<td data-sous-titre="La communication entre les personnes au sein d'une même équipe : un facteur de réussite !" data-orateur="Isabel Monville" class="conf equipe intermediaire" data-detail="#Communication">La communication au service du projet</td>
+					<td data-sous-titre="Un retour d’expérience bourré d'anecdotes !" data-orateur="Jonathan Scher" class="conf retex client intermediaire" data-detail="#BrefJAiEtePO">Bref, j'ai été Product Owner</td>
+					<td data-sous-titre="Comprendre l'intérêt de maintenir un code propre de manière continue, et apprendre quelques pratiques d'amélioration de son code" data-orateur="Jérôme Avoustin" class="conf techno debutant lastcol" data-detail="#CleanCodeEnPratique">Clean Code en pratique</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">18h00<br>18h30</td>
+					<td colspan="4">Clôture</td>
+				</tr>
+
+				<tr>
+					<td class="horaire">18h30<br>00h00</td>
+					<td colspan="4"><i>Le off qui poutre !</i></td>
+				</tr>
+				</tbody>
+			</table>
+			<div id="conteneurDetailPlaning"></div>
+		</div>
+		
+		<div id="Pleniere" class="hide" data-image="dae.jpg" data-horaire="09h00 à 10h30" data-salle="Courage,Communication,Feedback,Simplicité">
+			<p><b>Session goal : </b>Lessons learned from cross-functional agile teams</p>
+			<p><b>Description : </b> The rise of cross-functional agile teams has helped to bring a greater sense of collaboration and mutual respect between developers and testers. But many teams still struggle with the basic issues. What is the role of the tester in an agile team? How many testers do we need? What does a team gain from having professional testers? Perhaps there is another way to approach these questions.</p>
+			<p>In this talk I present a number of lessons that testers intrinsically understand about software that would be valuable to developers, and vice versa. I also look at the lessons that we all need to learn in order to work more effectively together.</p>
+            <br/>
+            <br/>
+            <br/>
+	   </div>
+	   
+	   
+	    <!-- --------------------------------------------------------- -->
+		<!-- Salle courage -->
+		<!-- --------------------------------------------------------- -->
+		<div id="AgileTesting" class="hide" data-image="gim.jpg" data-horaire="10h30 à 11h30" data-salle="Courage">
+			<p><b>Objectif de la session : </b> Tour d'horizon des techniques de tests agiles, de la philosophie sous-jacente et des résultats attendus.
+			<p><b>Description : </b> L'automatisation des tests est souvent associée à l'idée d'obtenir un retour sur investissement (ROI) financier qui permettra de justifier la pertinence de se lancer dans cette démarche. Cette idée est d'autant plus marquée dans les organisations non agiles. A l'inverse, les équipes agiles prônent une automatisation systématique au moins au niveau unitaire et ne raisonnent pas en termes de ROI. Cette présentation vous donnera les clés pour mener votre effort de tests en projet agile.
+			</p>
+			<br/>
+			<br/>
+		</div>	
+			
+			
+        <div id="UtilisateurMonAmourMaMigraine" class="hide" data-image="sof.png" data-horaire="11h30 à 12h30" data-salle="Courage">
+			<p><b>Objectif de la session </b>Partager des techniques, des solutions et des procédés qui peuvent etre appliques lors de l'élaboration du produit, au niveau du PO ou de la salle de développement, pour assurer une expérience utilisateur pensée et non accidentelle.</p>
+		    <p><b>Rapide description : </b>Après plus de 10 ans de web grand public en France, ses métiers sont devenus extrêmement pointus, toutefois une discipline peine encore a percer: l'expérience utilisateur. En l’absence de spécialiste dans l'équipe, il existe des outils et techniques pour améliorer la satisfaction de vos utilisateurs au fil des itérations</p>
+			<p><b>Description : </b>Le web grand public en France a un peu plus de 12 ans (premier site de la Fnac: 1994) et a vu les équipes qui publient et maintiennent les sites évoluer vers des métiers de plus en plus pointus, des techniques nouvelles et des développeurs qui veulent avoir voix au chapitre. Les utilisateurs de ces sites, cependant, ont encore trop souvent affaire a des interfaces multiples, des modes en matière d'esthétique et d’interactions, des produits qui se cherchent parfois, des propositions inconsistantes au fil d’un site.<br/>
+				La discipline de l'expérience utilisateur, née de l’intersection de la psychologie et des sciences de l’ordinateur, brille en Amérique du Nord, en Grande-Bretagne et en Allemagne notamment, mais peine a percer en France. En l’absence de spécialiste a bord, quand le baromètre est réglé sur les compétiteurs ou le niveau d’innovation, comment garder le cap sur un utilisateur satisfait, promoteur du produit et consommateur fidèle?<br/>
+				Cette session sera dédiée a équiper les participants d’outils pratiques et de recommandations qu’ils pourront appliquer dans le cadre de leur equipe et projet, quel que soit leur rôle (PO, développeur, testeur, client, autre) et dans le cadre bien précis de projets agiles (Scrum, XP, Kanban ou autre).</p>
+        </div>
+        
+		
+		<div id="DesMotsEtDesMaux" class="hide" data-image="emfEtcdn.png" data-horaire="14h00 à 15h00" data-salle="Courage">
+			<p><b>Objectif de la session : </b>Qu'ils soient manager, développeur/membre de l'équipe de réalisation, Product Owner ou autre partie prenante dans la définition du projet, les participants verront au travers de cette session comment tirer le maximum de bénéfices des cérémonies de revue de sprint :
+		    <p><b>Rapide description : </b>Nous avons mené l'enquête auprès des équipes agiles et coaches qui les accompagnent, et partagerons ces témoignages. Nous nous pencherons ainsi ensemble sur différentes facettes de la revue de sprint et  proposerons quelques astuces pour la préparer et l'animer.</p>
+            <ul><li>comment la revue de sprint peut apporter davantage de visibilité sur l'avancement des projets et permettre de sentir comment va l'équipe (implication, motivation)</li>
+            <li>comment redonner du sens à son travail, et replacer toutes les tâches accomplies en équipe pendant le sprint en perspective par rapport à la réalisation d'un objectif et la satisfaction d'un client</li>
+
+            <li>comment mettre à profit la revue de sprint pour augmenter la visibilité au fur et à mesure sur le produit développé, faire évoluer les spécifications et aménager les priorités pour mieux répondre aux attentes de l'organisation et des utilisateurs.</li>
+            </ul>
+            <p>Autrement dit, comment faire de vos revues de sprint des meeting avec un ROTI à 5 doigts !</p>
+            <p><b>Description : </b> Angoissé, impatient, heureux, stressé, confiant, triste, fébrile, épuisé, cool,... Vous vous sentez comment ? Demain, c'est démo !</p>
+            <p>A la fin du sprint, vient le moment de la démo : un incrément de logiciel est montré. Que se cache-t-il derrière l'apparente simplicité de cette cérémonie ?</p>
+            <p>Nous nous pencherons ensemble sur différentes facettes de la revue de sprint et  proposerons quelques astuces pour la préparer et l'animer.</p>
+            <p>Nous avons mené l'enquête auprès des équipes agiles et coaches qui les accompagnent : parfois, ce n'est pas facile : "on n'a pas tout fini !", "on développe des APIs", "le client n'est pas là", "tout le monde râle" ... On en parlera aussi.</p>
+            <p>Bref, comment faire de vos revues de sprint des meeting avec un ROTI à 5 doigts !</p>
+       </div>
+       
+       
+   		<div id="LaVoieDuProgrammeur" class="hide" data-image="jbd.jpg" data-horaire="15h00 à 16h00" data-salle="Courage">
+		    <p><b>Objectif de la session : </b>Essayer de découvrir ce que veut dire être développeur professionnel, et comment conserver sa passion pendant sa carrière. </p>
+            <p><b>Description : </b> Le mythe du développeur pisseur de code coûte très cher. Il coûte la capacité d'innovation d'une société, et une dette technique non contrôlée. Pourtant, vouloir faire du développement sa carrière relève du défit. Comment garder sa passion intacte ? </p>
+       </div>
+       
+	   
+       <div id="ChasseAuxFauxSemblants" class="hide" data-image="" data-horaire="16h00 à 17h00" data-salle="Courage">
+            <p><b>Objectif de la session : </b>Se poser la question de pourquoi on fait les choses ?</p>
+            <p><b>Description : </b>Nous avons essayé d'appliquer le manuel à la lettre : daily, démo/rétro, itérations courtes, post-its, product owner ... Mais tout n'a pas fonctionné comme sur des roulettes :
+            <ul>
+                <li>manque de maîtrise / équipe débutante ?</li>
+                <li>problème de Product Owner ?</li>
+            </ul>
+            <p>Nous allons faire un retour d'expériences sur nos pratiques «agiles» des années précédentes. Énumérer ce qui a réussi, parler de ce qui n'a pas fonctionné. Philosopher sur les dérives d'une généralisation agile. L'agilité nous a permis de gagner des contrats, de démarrer plus vite mais nous a-t-elle permis de réussir nos projets ? Nous allons essayer de creuser pourquoi fait on les choses ?</p>
+        </div>
+        
+        
+         <div id="Communication" class="hide" data-image="ism.jpg" data-horaire="17h00 à 18h00" data-salle="Courage">
+            <p><b>Objectif de la session : </b>Quels sont les enjeux liés à la communication dans une équipe, comment évaluer la dynamique d'équipe, comment gérer la non communication. Comprendre également la structure organisationnelle, individuelle (capacités) et personnelle (valeurs) des membres de l'équipe. Si la communication est un facteur de réussite, la non-communication peut être facteur d'échec...
+            </p>
+            <p><b>Description : </b> Dans le monde des organisations, les individus vont développer des schémas comportementaux (croyances, rituels et règles). Comprendre ces schémas au sein d'une équipe, favorisera l'amélioration et l'efficacité de l'organisation. La communication et les interactions entre les personnes d'une même équipe peuvent être améliorées par la connaissance du processus, de la structure et de la dynamique d'équipe.
+            </p>
+        </div>
+		
+		
+		<!-- --------------------------------------------------------- -->
+		<!-- Salle Communication -->
+		<!-- --------------------------------------------------------- -->
+		<div id="VisualManagement" class="hide" data-horaire="10h30 à 12h30" data-salle="Communication">
+			<p>Visual Management is the practice of managing work in a visual way. It is a core component of Kanban and XP, and a highly recommended practice in Scrum. In this session we explore the commonalities and differences between the most popular agile methods from a visual management perspective, by designing and building an XP board, a Scrum board and a Kanban board.
+			</p>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+        </div>
+		
+		
+		<div id="IngenierieAgile" class="hide" data-image="ola.png" data-horaire="14h00 à 15h00" data-salle="Communication">
+			<p><b>Objectif de la session : </b>Découverte des principes SOLID popularisés par Uncle Bob et de leur importance dans le développement logiciel.
+			</p>
+			<p><b>Rapide description : </b>Votre manager ne connait pas le 9ème principe du manifeste agile ?<br/>
+			Votre commercial ne jure que par les délais au détriment de la qualité du code ?<br/>
+			Votre scrummaster ne comprend que les burdown charts et oublie de focaliser l'équipe sur sa dette technique ?<br/>
+			Invitez-les à venir sur scène pour partager une expérience collective de conception d'un logiciel "humain"...
+			</p>
+			<br/>
+			<br/>
+        </div>
+
+			
+		<div id="VendreSeriousGame" class="hide" data-horaire="15h00 à 16h00" data-salle="Communication">
+			<p><b>Objectif de la session : </b>Sortir de cette conférence avec un kit pour vendre le serious game à son équipe, son boss ou son client, d'avoir un avant-goût des jeux existants et de leur utilité.</p>
+			<p><b>Rapide description : </b>"J'ai autre chose à faire que jouer", "Il y en a qui travaillent ici !", "On vous paie pour ça ?"<br/>
+			Comprendre pourquoi le jeu est considéré comme incompatible avec le travail selon l'opinion commune ? Comment le vendre à vos équipes, à votre client ainsi qu'à vous-même ?</p>
+			<p><b>Description :</b> "J'ai autre chose à faire que jouer", "Il y en a qui travaillent ici !", "On vous paie pour ça ?". Avez-vous déjà eu ce genre de retour lorsque vous proposiez une formation, un atelier ou pire : un jeu ? L'avez-vous vous même pensé ?</p>
+			<p>Le but de cette session est de comprendre pourquoi le jeu est considéré comme incompatible avec le travail selon l'opinion commune, nous réfléchirons sur la nature du jeu et ses fonctionnalités notamment en matière de développement personnel et professionnel afin de saisir toute la richesse et les atouts de cette pratique au sein d'une entreprise. Enfin nous verrons comment le vendre à vos équipes, à votre client ainsi qu'à vous-même.</p>
+			<p>L'intérêt pour les participants est de sortir de cette conférence avec un kit pour vendre le serious game à son équipe, son boss ou son client, d'avoir un avant-goût des jeux existants et de leur utilité.</p>
+        </div>	
+        
+        
+		<div id="Lego4Scrum" class="hide" data-horaire="16h00 à 18h00" data-salle="Communication" data-image="phlaEtalm.png">
+			<p><b>Rapide Description : </b> Session de simulation permettant d'appréhender ce qu'est Scrum par le jeu.</p>
+			<p><b>Description : </b>Aborder une nouvelle technologie ou une nouvelle méthode au travers d'une présentation magistrale, sollicite l'intérêt, mais ne permet pas toujours aux participants de mesurer l'efficience, ni ne conserver dans le temps une grande partie des concepts abordés.</br>
+				Le meilleur moyen de se faire sa propre opinion est donc d'essayer la méthode SCRUM, la méthode agile la plus populaire. LEGO4Scrum, atelier créé par Alexey Krivitsky, permet de créer un espace ludique et participatif où chacun pourra se fabriquer sa propre expérience de la méthode, tout en identifiant les bonnes ou moins bonnes pratiques lors d'une implémentation de Scrum.</p>
+        </div>
+		
+		
+		<!-- --------------------------------------------------------- -->
+		<!-- Salle Feedback -->
+		<!-- --------------------------------------------------------- -->
+		<div id="POCatalyseurDuChangement" class="hide" data-horaire="10h30 à 11h30" data-salle="Feedback" data-image="oaj.jpg">
+			<p><b>Objectif de la session : </b>L'objectif de cette session est de mettre en exergue l'ampleur d'une transformation Agile en changeant la perspective "réalisation logiciel"  avec une plus intégrale, "de l'utilisateur au support"</p>
+			<p><b>Rapide description : </b>L'initiative de transformation vers Agile est souvent une "exclusivité" des organisations informatiques. Cette "exclusivité" risque de l'isoler., même si c'était la meilleure initiative possible. Cette session se propose de décrire le retour d'expérience d'une approche de transformation Agile "co-crée" avec les représentants clients, la communauté de Product Owners.</p>
+			<p><b>Description : </b> Dans notre vision , la transformation Agile des organisations doit impérativement impliquer le business pour qu'elle soit pérenne. Partant de cette vision, la  session décrit un retour d'expérience de transformation Agile - avec nos moments de victoire savourés et ceux de désenchantement amèrement avalés -  initiée avec les représentants business qui ont crée la communauté des Product Owners. Le modèle de transformation suivi - "notre pièce en 5 actes" est une adaptation d'ADKAR appuyé sur des techniques de " collaborative learning ", amélioration continue, “Appreciative Inquiry”.  La session décrit, de l'objectif à la conclusion,  notre parcours dans les 5 étapes de transformation </p>
+        </div>
+		
+		
+		<div id="BDD" class="hide" data-horaire="11h30 à 12h30" data-salle="Feedback" data-image="gse.jpg">
+			<p><b>Description : </b> Trop souvent le BDD (Behavior Driven Development) est de suite relégué au rang de Test d'Acceptance (donc au niveau des IHM) et on écrit trop vite l'équation BDD = ATDD.<br>
+Je vous propose de découvrir la face caché de l'iceberg BDD, et par la pratique de SpecFlow, voir des exemples concrets de tests "unitaires" dirigés par le comportement qui viennent renforcer, voir même devenir la base de tous les tests de vos composants logiciels, quelque soit leur rôle.<br>
+Pour cela, une étape importante, sera celle du choix du langage (le fameux Domain Language) qui permet de décrire des comportements, ceux des composants logiciels, plutôt que celui des utilisateurs humains. Une réconciliation avec le DDD? (Domain Driven Design) </p>
+        </div>
+		
+		
+		<div id="RexPOF" class="hide" data-horaire="14h00 à 15h00" data-salle="Feedback" data-image="rob.jpg">
+			<br/>
+            <br/>
+			<br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+        </div>
+		
+		
+		<div id="EntrepriseAgileEtMotriceDeStartups" class="hide" data-horaire="15h00 à 16h00" data-salle="Feedback">
+			<p><b>Objectif de la session : </b>Présenter une voie possible pour une mise en oeuvre de l’agilité au service de l'innovation.</p>
+			<p><b>Description : </b>Les débuts de la startup Yuticket propulsée par Yaal son partenaire technique : collaboration, recherche de la valeur métier, principe de responsabilité et organisation distribuée.</p>
+        </div>
+		
+		
+		<div id="Sociocratie" class="hide" data-horaire="16h00 à 17h00" data-salle="Feedback" data-image="thc.jpg">
+			<p><b>Objectif de la session : </b>Découvrir des pistes pour passer l’agile  à l’échelle d’une organisation.</p>
+			<p><b>Rapide description : </b>Les pratiques agiles s’appliquent naturellement au  niveau d’une équipe : stand-up meeting, équipe complète (Client et Développeurs). Qu’en est-il au niveau d’une organisation  ?<br/>
+				Autrement dit, comment s’auto-organiser à l’échelle de l’organisation ?<br/>
+				Agile et sociocratie sont des mots qui vont très bien ensemble, très bien ensemble.</p>
+			<p><b>Description : </b> Les pratiques agiles s’appliquent naturellement au  niveau d’une équipe : stand-up meeting, équipe complète (Client et Développeurs). Qu’en est-il au niveau d’une organisation  ?<br/>
+				Autrement dit, comment s’auto-organiser à l’échelle de l’organisation ?
+				La socicratie offre des pratiques concrètes d’auto-organisation, basées sur le consentement (terme qui sera défini pendant la session).  Ces pratiques  complètent harmonieusement les pratiques et principes agiles. Cela permet d’envisager concrètement un passage à l’échelle  de l’agilité dans une organisation. Cette présentation s’articule autour de trois thèmes :
+				<ul>
+					<li>Agile et sociocratie sont 2 mots qui vont très bien ensemble</li>
+					<li>Exemples concrets de mise en oeuvre à l’échelle</li>
+					<li>Conduite du changement : freins, opportunités...</li>
+				</ul>
+			</p>
+		</div>
+		
+		
+		<div id="BrefJAiEtePO" class="hide" data-horaire="17h00 à 18h00" data-salle="Feedback">
+			<p><b>Description : </b> Dans un projet, au début on cadre, à la fin on met en production. Entre les deux il se passe des trucs, bref c’est l’histoire d’un product owner entre les deux.</p>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+        </div>
+		
+		
+		<!-- --------------------------------------------------------- -->
+		<!--Simplicité -->
+		<!-- --------------------------------------------------------- -->
+		
+		<div id="ScrumBasix" class="hide" data-horaire="10h30 à 11h30" data-salle="Simplicité" data-image="phlaEtalm.png">
+			<p><b>Description : </b> Scrum est la méthode Agile la plus populaire. Elle est de plus en plus utilisée et adoptée dans la gestion de projets complexes.<br/>
+				Cette session permettra de présenter les concepts du Framework SCRUM, y compris les modifications de 2011, et les différences majeurs avec les méthodes de gestion de projet plus traditionelles, ce qui fait qu'elle est aussi populaire.<br/>
+				Les participants pourront ainsi se faire une idée des raisons du succès de cette méthode.</p>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+        </div>
+		
+		
+		<div id="XPBasix" class="hide" data-horaire="11h30 à 12h30" data-salle="Simplicité" data-image="fab.jpg">
+			<p><b>Objectif de la session : </b>Comprendre les raisons des échecs des projets traditionnels et les solutions proposées par XP.</p>
+			<p><b>Description : </b>Extreme Programming est certainement, avec Scrum, la plus célèbre des méthodes agiles. Mais c’est aussi la plus méconnue. En s’appuyant autant sur des changements humains et sociaux que sur l’excellence technique, la promesse d’XP est alléchante : réussir les projets en garantissant l’équilibre et le bonheur des membres de l’équipe. Nous verrons comment.</p>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+			<br/>
+            <br/>
+        </div>
+		
+		
+		<div id="TaiderTDD" class="hide" data-horaire="14h00 à 15h00" data-salle="Simplicité" data-image="scrEtguv.png">
+			<p><b>Objectif de la session : </b>Apprendre les bases du développement piloté par les tests</p>
+			<p><b>Rapide description : </b>Faire des tests aujourd’hui c’est facile, beaucoup d’outils sont à notre disposition ! Le développement piloté par les tests devient de plus en plus un pré-requis dans le développement de logiciel. Pourquoi ? Comment faire ?</p>
+			<p><b>Description : </b>Le développement piloté par les tests est une technique de développement de logiciel qui préconise d'écrire les tests unitaires avant d'écrire le code source d'un logiciel! Etrange pratique, pourtant si efficace.<br/>
+			Des bases à la pratique, cette session est orienté découverte de la technique. </p>
+			<p>La présentation est faite par deux développeurs, qui utilisent tous les jours le développement piloté par les tests dans leur travail.</p>
+        </div>
+		
+		
+		<div id="LeanEnInformatique" class="hide" data-horaire="15h00 à 16h00" data-salle="Simplicité" data-image="anc.jpg">
+			<p><b>Objectif de la session : </b>Se faire une idée de ce que veut dire pratiquer le Lean appliqué à l’informatique</p>
+			<p><b>Description : </b>Le modèle de management du Lean connaît une forte popularité dans l’informatique. Il faut dire que le Lean a de quoi séduire : améliorations spectaculaires, motivation des équipes, applicabilité dans des contextes très variés (développement, maintenance, support, production...), et compatibilité avec d’autres démarches (agile, CMMI...). Cette session pose les fondamentaux du Lean, puis présente quelques outils au travers de cas concrets. Le Lean étant avant tout une pratique, l’accent est mis sur ce que font au quotidien des équipes (agiles ou non) qui appliquent le Lean ainsi que leurs managers.</p>
+        </div>
+		
+		
+		<div id="KanbanBasix" class="hide" data-horaire="16h00 à 17h00" data-salle="Simplicité" data-image="lam.gif">
+			<p><b>Objectif de la session : </b>Découvrir la méthode Kanban</p>
+			<p><b>Description : </b>Kanban est une approche de développement logiciel issue du Lean & Agile se différenciant des méthodes itératives et incrémentales, telles que Scrum, par son approche en flux tiré, ses cadences découplées et sa priorisation à la demande. Elle permet une application concrète d’une planification Juste à Temps par la limite du travail en cours.<br/>
+				Lors de cette session, nous ferons un tour d'horizon de la démarche Kanban suivant un cycle PDSA.<br/>
+				Cette session est une synthèse de ce que vous pourrez approfondir dans le livre “Kanban pour l’IT”, aux éditions Dunod.</p>
+        </div>
+		
+		
+		<div id="CleanCodeEnPratique" class="hide" data-horaire="17h00 à 18h00" data-salle="Simplicité">
+			<p><b>Rapide description : </b>Pas d’Agilité sans qualité : c’est un peu mon maître-mot en ce moment. Maintenir un niveau de qualité élevé est essentiel pour être agile. Cela passe par les reviews, les tests, et toutes les pratiques pour obtenir un feedback au plus tôt, mais aussi par la qualité du code. Venez découvrir ou redécouvrir quelques principes et pratiques pour rendre votre code propre.</p>
+			<p><b>Description : </b>Mettre des post-its au mur, faire des réunions debout, ou estimer avec des cartes, c'est sympa, mais ça ne suffit pas pour être Agile et en tirer tous les bénéfices. L'importance de la qualité est parfois (trop souvent ?) sous-estimée dans des projets qui se disent agiles. Pourtant, le 9e principe du manifeste nous rappelle qu’il faut tendre vers l’excellence technique pour être plus agile : pas d'agilité sans qualité.</p>
+			<p>Pourquoi est-ce aussi important de maintenir un code propre ? Quels sont les "code smells" qui habituellement pourrissent notre code ? Quels principes et quelles pratiques appliquer pour rendre son code propre ? Venez trouver quelques réponses à ces questions.</p>
+        </div>
+		
+        <div id="toolTip">
+            <div id="toolTipContent">
+                <div class="sousTitre"></div>
+                <div class="orateur"></div>
+            </div>
+        </div>
+	</div>
