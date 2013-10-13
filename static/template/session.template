@@ -1,23 +1,23 @@
 <script id="templateDetailDeSession" type="text/html">
-	<div id="{{id}}" class="hide row" style="border: 1px solid #000000;">
+	<div id="{{id}}" class="hide row span9" style="border: 1px solid #000000;">
         <div class="pull-right"><a href="#" class="fermer"><strong class="hidden-desktop">fermer</strong><i class="icon-remove"></i></a></div>
         <ul class="thumbnails">
-            <li class="span2">
+            <li class="span1">
                 {{#image}}
                     <a href="#" class="thumbnail">
                         <img src="static/img/orateurs/{{image}}" alt="">
                     </a>
                 {{/image}}
             </li>
-            <li class="span5">
+            <li class="span4">
                  <h2>{{{titre}}}</h2>
                  <i class="muted">{{{sousTitre}}}</i>
             </li>
         </ul>
-        <div class="offset1 span6">
+        <div class="offset1 span5">
             {{{description}}}
         </div>
-        <div class="offset1 span6">
+        <div class="offset1 span5">
             <i class="muted">Une conférence de {{orateur}} <br/>
             De {{horaire}} dans la salle {{salle}}</i><br/>
             {{#debutant}}
