@@ -2,18 +2,39 @@
 layout: default2013
 title: Programme
 ---
+ <style>
+/* Demo Styles */
+.swiper-container {
+    width: 100%;
+    text-align: center;
+}
+.red-slide{
+    background: #ca4040;
+}
+.swiper-nested {
+      width: 100%;
+}
+.green-slide {
+      background: #49a430;
+      padding-top:3em;
+      height:100%;
+}
+.swiper-slide {
+      font-style: italic;
+      font-size: 1em;
+      margin-bottom: 0;
+      width: 100%;
+}
+</style>
 <script type="text/javascript">
 
-	function startPlanning()
-	{
-		$('td.conf').mouseenter(showToolTip);
+    function startPlanning(){
 		$('td.conf').mouseleave(hideToolTip);
         $('#planningSelectionNiveau li').click(highlightNiveau);
         $('#planningSelectionSujet li').click(highlightSujet);
         gererLesCliquesSurLesCasesDuProgramme();
         afficherUneSessionDepuisLAncre();
-       
-	}
+	};
 	
 	function gererLesCliquesSurLesCasesDuProgramme(){
 	    chargerTemplatesExternes('static/template/',[ "session"]);
@@ -24,14 +45,14 @@ title: Programme
 	                window.location=$(this).attr('data-detail');
                     event.stopPropagation();
 	            });
-            }
+            };
 	    });
-	}
+	};
 	
 	function afficherLeProgramme(){
         $('#conteneurDetailPlaning').html('');
         $('#planning').fadeIn();
-    }
+    };
 	
     function afficherUneSessionDepuisLAncre(){
         var AfficheurSessions = Backbone.Router.extend({
@@ -48,7 +69,7 @@ title: Programme
         });
         var AfficheurSessions = new AfficheurSessions;
         Backbone.history.start();
-    }
+    };
     
 	
 	function afficherLeDetailDUneSession(caseDuProgramme){
@@ -195,7 +216,51 @@ title: Programme
 
 	$(document).ready(function () {
 		startPlanning();
+        mobileTouchStyle();
 	});
+    
+    function mobileTouchStyle() {
+        var $containerWidth = $(window).width();
+            if ($containerWidth <= 600) {
+                var sc = $('<div class="swiper-container swiper-parent"></div>')
+                sc.height($(window).height()/2);
+                var wrapper= $('<div class="swiper-wrapper"></div>')
+                sc.append(wrapper);
+                var totalrow = 0;
+                $('tr.sw-row').each(function(index){
+                    var slide = $('<div class="swiper-slide red-slide"></div>')
+                    var snested = $('<div class="swiper-container swiper-nested'+index+'"></div>')
+                    snested.height(sc.height())
+                    slide.append(snested);
+                    nwrapper =$('<div class="swiper-wrapper"></div>')
+                    snested.append(nwrapper);
+
+                    $(this).find('td').each(function(){
+                        var innerslide = $('<div class="swiper-slide green-slide"></div>')
+                        innerslide.html($(this).html())
+                        nwrapper.append(innerslide);
+                    })
+                   wrapper.append(slide);
+                   totalrow = index
+                })
+                $('#content').prepend(sc);
+                
+                var swiperParent = new Swiper('.swiper-parent',{
+                  mode:'vertical',
+                })
+                for(var i= 0; i<=totalrow; i++){
+                   var swiperChildren = new Swiper(".swiper-nested"+i,{
+                       slidesPerView:2,
+                   })
+                }
+
+
+               $('#content .row').hide();
+            }
+            if ($containerWidth > 600) {
+                $('#content .row').show();
+            }
+    };
 
 </script>
 	<div class="row">
@@ -235,25 +300,25 @@ title: Programme
                     <td>Respect<span>(salle 2.5: 50 places)</span></td>
 				</tr>
 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">08h30<br>08h45</td>
 					<td colspan="5">Accueil et petit déjeuner</td>
 				</tr>
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">08h45<br>10h00</td>
 					<td data-sous-titre="Why change is hard and how to increase your chances of making change happen through coaching" data-orateur="Geoff WATTS" class="conf toutesSalles Shu Ha Ri" colspan="5" data-detail="#Pleniere">Plénière d'ouverture<br>Keynote <img src="static/img/programme/gb.png" /></td>
 				</tr>
 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">10h00<br>10h15</td>
                     <td colspan="5">Pitch fire : 30 secondes pour présenter sa session!</td>
                 </tr>
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">15min</td>
                     <td colspan="5">PAUSE</td>
                 </tr>
                 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">10h30<br>11h30</td>
                     <td data-sous-titre="Bientôt" data-orateur="Thierry Cros & Elvire Prochilo" class="conf debutant" data-detail="#">Les valeurs de l'agilité</td>
                       <td data-sous-titre="Mois d'amélioration continue au sein d'une équipe Agile dans un environement LEAN" data-orateur="Philippe Launay et Charly Lacoste" class="conf Shu retex" data-detail="#Lectra">Amélioration continue, des faits et des effets</td>
@@ -263,12 +328,12 @@ title: Programme
                     <td rowspan="3" data-sous-titre="GTD est une méthode de productivité incroyable mise au point par David Allen." data-orateur="Scott Stephen" class="conf lastcol" data-detail="#GTD">Introduction à GTD</td>
                 </tr>
                 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">15min</td>
                     <td colspan="3">PAUSE</td>
                 </tr>
                 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">11h50<br>12h50</td>
                     <td data-sous-titre="Comment choisir !" data-orateur="Alexandre Boutin" class="conf Ha" data-detail="#ScrumKanban">Scrum ou Kanban ?</td>
 
@@ -276,12 +341,12 @@ title: Programme
                     <td data-sous-titre="" data-orateur="Frédéric Faure" class="conf debutant Shu Ha" data-detail="#ProcessusOutils">Des processus et des outils pour aider les individus et favoriser leurs interactions</td>
                 </tr>
 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">12h50<br>14h20</td>
 					<td data-sous-titre="Miam!!! " data-orateur="Vous" class="conf toutesSalles" colspan="5"><i>Pause déjeuner</td>
                 </tr>
 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">14h20<br>15h20</td>
                     <td data-sous-titre="Retour d'expériences de 2 coachs agile" data-orateur="Alexis Monville & Bruno Sbille" class="conf Ha retex" data-detail="#Agilist">The Agilist</td>
                     <td data-sous-titre='"mélomanagiliste" (n.m.) Esprit malade qui entend Daft Punk, Stupeflip, The Strokes, John Williams, etc… parler manifestement d’agilité !' data-orateur="Cédric Bodin" class="conf Shu Ha Ri" data-detail="#itu">Au secours, ma bibliothèque iTu*** me parle d'agilité :)</td>
@@ -290,13 +355,13 @@ title: Programme
                     <td data-sous-titre="Comment une organisation humaine peut-elle livrer un produit dans des conditions d'extrême incertitude?" data-orateur="Bastien Gallay" class="conf Shu Ha Ri lastcol" data-detail="#LeanStartup">Introduction à Lean Startup</td>
 	            </tr>
                 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">20min</td>
                     <td colspan="3">PAUSE</td>
                     <td>PAUSE</td>
                 </tr>
                 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">15h40<br>16h40</td>
                     <td data-sous-titre="" data-orateur="Fabrice Aimetti" class="conf Shu" data-detail="#AgileEnBerne">L'agilité en Berne</td>
                     <td data-sous-titre="Value Driven Development" data-orateur="Laurent Carbonneaux" class="conf Shu Ha RI po" data-detail="#GUTS">4 étapes pour co-créer le bon produit, parlons Agile with GUTS</td>
@@ -304,12 +369,12 @@ title: Programme
                     <td rowspan="3" data-sous-titre="Craftsmanship vs. the market" data-orateur="Arnaud Bailly" class="conf dev Shu lastcol" data-detail="#XStartup">Extreme Startup</td>
         		</tr>
                 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">20min</td>
                     <td colspan="4">PAUSE</td>
                 </tr>
                 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">17h00<br>18h00</td>
                     <td data-sous-titre="" data-orateur="Jean-Baptiste Dusseaut" class="conf dev Ri" data-detail="#MytheAgile">Le mythe du framework agile</td>
                     <td data-sous-titre="" data-orateur="Sébastien Delest" class="conf retex Shu Ha" data-detail="#MaintenanceLogi">L'agilité en maintenance logicielle</td>                 
@@ -317,22 +382,22 @@ title: Programme
                     <td data-sous-titre="Trucs & Astuces pour progresser simplement vers l'Agilité" data-orateur="Bertrand et Benjamin Dour" class="conf Shu" data-detail="#PetitPoucet">Le Petit Poucet & les bottes de 7 lieues vers l'agilité</td>
              	</tr>
                 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">20min</td>
                     <td colspan="5">PAUSE</td>
                 </tr>
                 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">18h20<br>19h00</td>
                     <td colspan="5" data-sous-titre="Plus d'agilité avec le lean" data-orateur="Régis Medina" class="conf Shu Ha Ri toutesSalles" data-detail="#AgileETLean">Agile et Lean</td>
                 </tr>
                 
-                <tr>
+                <tr class="sw-row">
                     <td class="horaire">19h00<br>19h30</td>
                     <td colspan="5" data-sous-titre="Théatre et impro" data-orateur="Emmanuel Gaillot & Jonathan Perret" class="conf toutesSalles" data-detail="#">Surprise!!!</td>
                 </t/>
                 
-				<tr>
+				<tr class="sw-row">
 					<td class="horaire">19h30<br>00h00</td>
 					<td colspan="5"><i>Le off qui poutre !</i></td>
 				</tr>
