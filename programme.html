@@ -29,6 +29,7 @@ title: Programme
 <script type="text/javascript">
 
     function startPlanning(){
+		$('td.conf').mouseenter(showToolTip);
 		$('td.conf').mouseleave(hideToolTip);
         $('#planningSelectionNiveau li').click(highlightNiveau);
         $('#planningSelectionSujet li').click(highlightSujet);
