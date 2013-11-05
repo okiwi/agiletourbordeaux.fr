@@ -20,10 +20,15 @@ title: Programme
       height:100%;
 }
 .swiper-slide {
-      font-style: italic;
       font-size: 1em;
       margin-bottom: 0;
       width: 100%;
+}
+.slide-data {
+    padding: 5px;
+}
+.slide-data p{
+    font-style: italic;
 }
 </style>
 <script type="text/javascript">
@@ -217,49 +222,100 @@ title: Programme
 
 	$(document).ready(function () {
 		startPlanning();
-        mobileTouchStyle();
+        affichageMobileTouchStyle();
 	});
-    
-    function mobileTouchStyle() {
-        var $containerWidth = $(window).width();
-            if ($containerWidth <= 600) {
-                var sc = $('<div class="swiper-container swiper-parent"></div>')
-                sc.height($(window).height()/2);
-                var wrapper= $('<div class="swiper-wrapper"></div>')
-                sc.append(wrapper);
-                var totalrow = 0;
-                $('tr.sw-row').each(function(index){
-                    var slide = $('<div class="swiper-slide red-slide"></div>')
-                    var snested = $('<div class="swiper-container swiper-nested'+index+'"></div>')
-                    snested.height(sc.height())
-                    slide.append(snested);
-                    nwrapper =$('<div class="swiper-wrapper"></div>')
-                    snested.append(nwrapper);
 
-                    $(this).find('td').each(function(){
-                        var innerslide = $('<div class="swiper-slide green-slide"></div>')
-                        innerslide.html($(this).html())
-                        nwrapper.append(innerslide);
-                    })
-                   wrapper.append(slide);
-                   totalrow = index
-                })
-                $('#content').prepend(sc);
-                
-                var swiperParent = new Swiper('.swiper-parent',{
-                  mode:'vertical',
-                })
-                for(var i= 0; i<=totalrow; i++){
-                   var swiperChildren = new Swiper(".swiper-nested"+i,{
-                       slidesPerView:2,
-                   })
-                }
+    function creerUnSlide(data){
+        var slide = $('<div class="swiper-slide green-slide"></div>')
+        slide.append(data)
+        return slide
 
+    }
 
+    function formatageCelluleEnSlideMobile(cellule){
+        
+        var data = $('<div class="slide-data"></div>')
+        data.append($('<h3>'+cellule.html() +'</h3>'))
+        
+        var orateur = cellule.data('orateur')
+        if  (orateur){ data.append($('<p>Par: '+ orateur +'</p>')) }
+        
+        var soustitre = cellule.data('sous-titre')
+        if  (soustitre){data.append($('<p>'+ cellule.data('sous-titre') + '</p>'))}
+
+        return data
+    }
+ 
+    function creerUnSliderLigne(height,indexDeLaLigne,ligneCourrante){
+        var sliderligne = $('<div class="swiper-slide red-slide"></div>')
+        var snested = $('<div class="swiper-container swiper-nested'+indexDeLaLigne+'"></div>')
+        snested.height(height)
+        
+        var nwrapper =$('<div class="swiper-wrapper"></div>')
+
+        $(ligneCourrante).find('td').each(function(){
+            var conf = $(this);
+
+            data = formatageCelluleEnSlideMobile(conf);
+
+            nwrapper.append(creerUnSlide(data));
+        })
+
+        sliderligne.append(snested);
+        snested.append(nwrapper);
+
+        return sliderligne
+
+    }
+
+    function initialiserSliders(nombreDeSlidersLignes){
+        
+        var swiperParent = new Swiper('.swiper-parent',{
+            mode:'vertical',
+        })
+
+        for(var i= 0; i<=nombreDeSlidersLignes; i++){
+            var swiperChildren = new Swiper(".swiper-nested"+i,{
+                slidesPerView:2,
+            })
+        }
+
+    }
+   
+    function creerSliderMobile(){
+        
+        var sc = $('<div class="swiper-container swiper-parent"></div>')
+        sc.height($(window).height()/1.33);
+        
+        var wrapper= $('<div class="swiper-wrapper"></div>')
+        sc.append(wrapper);
+        
+        var totalrow = 0;
+        
+        $('tr.sw-row').each(function(index){
+            sliderligne = creerUnSliderLigne(sc.height(),index,this);
+            wrapper.append(sliderligne);
+            totalrow = index
+        })
+        
+        $('#content').prepend(sc);
+
+        initialiserSliders(totalrow);
+
+    }
+
+    function affichageMobileTouchStyle() {
+        var containerWidth = $(window).width();
+            if (containerWidth <= 600) {
+               creerSliderMobile();
                $('#content .row').hide();
+               $('#footer').hide();
+               $('#edition2012').hide();
             }
-            if ($containerWidth > 600) {
+            if (containerWidth > 600) {
                 $('#content .row').show();
+                $('#footer').show();
+                $('#edition2012').show();
             }
     };
 
