@@ -245,7 +245,13 @@ title: Programme
         
         var soustitre = cellule.data('sous-titre')
         if  (soustitre){data.append($('<p>'+ cellule.data('sous-titre') + '</p>'))}
+        var details = cellule.data('detail')
+        if (details){
+            var horaire = $(details).attr('data-horaire')
+            var salle = $(details).attr('data-salle')
 
+            data.append($('<p>De '+horaire+' dans la salle ' + salle +'</p>'));
+        }
         return data
     }
  
