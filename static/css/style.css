@@ -766,6 +766,9 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
         padding: 5px 3px;
     }
 
+    #edition2012 {
+        display: none;
+    }
 }
 
 .description-orateur{
