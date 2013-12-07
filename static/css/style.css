@@ -242,6 +242,10 @@ iframe.steaming {
     margin-left: 30px;
 }
 
+#homepage {
+    margin-bottom: 50px;
+}
+
 #homepage span {
     text-transform: uppercase !important;
     display: inline-block;
@@ -262,13 +266,12 @@ iframe.steaming {
 }
 
 #homepage p {
-    padding-bottom: 27px;
+    padding-bottom: 15px;
 }
 
 #homepage a {
-    text-transform: uppercase;
     font-size: 14px;
-    padding: 10px 0;
+    padding: 4px 0;
     display: inline-block;
     font-weight: bold;
     border-bottom: 1px solid #f4f4f4;
@@ -281,6 +284,18 @@ iframe.steaming {
 
 #homepage .lt-provider {
     margin: 30px 0 0 0;
+}
+
+#homepage ul {
+    margin-left: 60px;
+}
+
+#sponsors-row {
+
+}
+
+#sponsors-row img {
+    padding: 20px;
 }
 
 #presentation {
@@ -800,6 +815,15 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
     padding:10px;
 }
 
+#article-index a.more {
+    float: right;
+    margin-right: 50px;
+}
+
+#article-index h4 {
+    clear: both;
+}
+
 #edition2012 {
     position: absolute;
     background-color: #f5f5f5;
@@ -823,6 +847,6 @@ ul.polaroids li a:hover { -webkit-transform: scale(1.25); -moz-transform: scale(
     position: relative;
     display: inline-block;
     color: black;
-    font-weight: bold;
+    font-size: 12px;
     text-transform: uppercase
 }
