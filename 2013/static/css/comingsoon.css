@@ -1,0 +1,87 @@
+/* Palette http://colorschemedesigner.com/#2R31Tt-pJw0w0 */
+
+/* Palette color codes */
+
+.primary-1 { background-color: #0A9F1C }
+.primary-2 { background-color: #23772E }
+.primary-3 { background-color: #036710 }
+.primary-4 { background-color: #3ECF4F }
+.primary-5 { background-color: #64CF71 }
+
+.secondary-a-1 { background-color: #CD670D }
+.secondary-a-2 { background-color: #9A612E }
+.secondary-a-3 { background-color: #854104 }
+.secondary-a-4 { background-color: #E69044 }
+.secondary-a-5 { background-color: #E6A76F }
+
+.secondary-b-1 { background-color: #A70A5D }
+.secondary-b-2 { background-color: #7D2554 }
+.secondary-b-3 { background-color: #6D033B }
+.secondary-b-4 { background-color: #D33F8D }
+.secondary-b-5 { background-color: #D366A0 }
+
+/* end */
+
+
+
+body{ 
+	overflow-x: hidden !important;
+	min-height:100%;
+	margin: 0 0 50px 0 !important; /* bottom = footer height */
+	position:static;
+	background:transparent!important;
+	padding:0;
+}
+
+html { 
+  background: url("../img/comingsoon/bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  min-height: 100%;
+  position:relative;
+}
+
+#footer {
+	width:100%;
+	position:absolute;
+	bottom:0;
+	height:50px;
+	padding-top:10px;
+	background-color:#f4f4f4;
+}
+#footer .span4{
+ padding-left:10px;
+ background-color:#f4f4f4;
+}
+#footer .span7{
+ padding-left:10px;
+ background-color:#f4f4f4;
+}
+#footer .span1{
+ padding-left:10px;
+ background-color:#f4f4f4;
+}
+#content{
+	margin-top:10%;
+	padding:1em;
+	background-color:rgba(244,244,244,0.5);
+}
+.navbar .nav > li >a {
+    font-size: 16px;
+}
+.navbar h1 a {
+    background: url('../img/logo_at_2013.png') no-repeat;
+}
+
+@media (max-width: 978px){
+	.navbar-inner .container{
+		padding-left:20px;
+	}
+}
+#note{
+	text-align:center;
+	padding:10px;
+}
