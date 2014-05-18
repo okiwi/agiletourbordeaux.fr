@@ -38,7 +38,7 @@ a:hover {
     height: 80px;
     margin-right: 110px;
 }
-.miniMenu h1{
+.miniMenu h1 {
     position: absolute;
     float: none;
     width: 100px;
@@ -49,15 +49,15 @@ a:hover {
 
 .navbar h1 a {
     background: url('../img/logo_at_2014.png') no-repeat 0px 12px;
-    width: 190px;
+    width: 183px;
     height: 80px;
     display: inline-block;
 }
-.miniMenu h1 a{
+.miniMenu h1 a {
     background: url('../img/logo_at_2014.png') no-repeat;
-    background-size: 190px 61px;
+    background-size: 183px 61px;
     margin-left: 15px;
-    width: 190px;
+    width: 183px;
     height: 61px;
     display: inline-block;
 
