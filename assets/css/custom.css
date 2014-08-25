@@ -61,3 +61,7 @@ img.picture {
     -moz-box-shadow:    0 0 5px 2px rgba(50, 50, 50, 0.5);
     box-shadow:         0 0 5px 2px rgba(50, 50, 50, 0.5);
 }
+
+.post-excerpt .post-title {
+    color: #4478b2;
+}
