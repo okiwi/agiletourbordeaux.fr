@@ -152,7 +152,7 @@ var theme = function () {
             handleHoverClass();
             handleSuperFish();
             handleSmoothScroll();
-            handlePrettyPhoto();
+//            handlePrettyPhoto();
             handleToTopButton();
             handleAnimatedHeader();
         },
