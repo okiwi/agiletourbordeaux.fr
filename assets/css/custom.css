@@ -65,3 +65,19 @@ img.picture {
 .post-excerpt .post-title {
     color: #4478b2;
 }
+
+.post-excerpt ul {
+    list-style: disc inside;
+    margin-left: 20px;
+}
+
+.post-excerpt th, .post-excerpt td {
+    border: 1px solid #6d7a83;
+    padding: 5px;
+    border-spacing : 0;
+    border-collapse : collapse;
+}
+
+.post-excerpt table {
+    margin-bottom: 10px;
+}
