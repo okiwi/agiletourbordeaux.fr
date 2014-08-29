@@ -71,6 +71,11 @@ img.picture {
     margin-left: 20px;
 }
 
+ul.equipe {
+    list-style: none outside none;
+    margin-bottom: 20px;
+}
+
 .post-excerpt th, .post-excerpt td {
     border: 1px solid #6d7a83;
     padding: 5px;
