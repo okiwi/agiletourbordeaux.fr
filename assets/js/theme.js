@@ -5,9 +5,10 @@ var theme = function () {
     // -------------------------------------------------------------------------------------------
     $(document).ready(function () {
         if (!$('.theme-config').length) {
-            var color = 'blue-2'; //  light, dark ...
+            console.log('yes application du theme bleu !');
+            var color = 'blue-2'; //  light, dark ... #atbdx choisir "blue-2" ici
             var css = $('#theme-config-link');
-            css.attr('href', 'assets/css/theme-' + color + '.css');
+            css.attr('href', '/assets/css/theme-' + color + '.css'); //#atbdx: ajout du "/" devant assets
         }
     });
 
