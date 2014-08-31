@@ -15,6 +15,9 @@ title: Agile Tour Bordeaux 2014
                             <div class="div-cell">
                                 <h2 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>31 octobre - 1er novembre 2014</span></h2>
                                 <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300"><i class="fa fa-angle-left"></i> Agile Tour Bordeaux 2014 <i class="fa fa-angle-right"></i></h3>
+                                <div class="countdown-wrapper">
+                                    <div id="defaultCountdown" class="defaultCountdown"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -264,15 +267,21 @@ title: Agile Tour Bordeaux 2014
 </section>
 <!-- /PAGE LOCATION -->
 
+<!-- CSS Page Level -->
+
+
 <!-- JS Page Level -->
 <script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
 <script src="assets/plugins/waypoints/waypoints.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+<script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
+<script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
 
 <script type="text/javascript">
     jQuery(document).ready(function () {
         theme.init();
         theme.initMainSlider();
+        theme.initCountDown();
         theme.initPartnerSlider();
         theme.initTestimonials();
         theme.initGoogleMap();

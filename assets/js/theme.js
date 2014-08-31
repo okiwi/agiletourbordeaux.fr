@@ -181,6 +181,13 @@ var theme = function () {
                 }
             });
         },
+        // CountDown
+        initCountDown: function () {
+            var agileDay = new Date();
+            agileDay = new Date(2014, 10-1, 31, 9, 0, 0);
+            $('#defaultCountdown').countdown({until: agileDay});
+            $('#year').text(agileDay.getFullYear());
+        },
         // Partners Slider
         initPartnerSlider: function () {
             $(".partners-carousel .owl-carousel").owlCarousel({
