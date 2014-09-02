@@ -62,13 +62,16 @@
                 <!-- /Logo -->
 
                 <!-- Navigation -->
+                {% if page.url != "/index.html" %}
+                    {% assign pageUrl = "/index.html" %}
+                {% endif %}
                 <div id="mobile-menu"></div>
                 <nav class="navigation closed clearfix">
                     <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                     <ul class="sf-menu nav">
-                        <li class="active"><a href="/index.html#home">Home</a></li>
-                        <li><a href="/index.html#about">Pr&eacute;sentation</a></li>
-                        <li><a href="/index.html#location">C'est où ?</a></li>
+                        <li><a href="{{pageUrl}}#home">Home</a></li>
+                        <li><a href="{{pageUrl}}#about">Pr&eacute;sentation</a></li>
+                        <li><a href="{{pageUrl}}#location">C'est où ?</a></li>
                         <li><a href="/blog/index.html">Blog</a></li>
                     </ul>
                 </nav>

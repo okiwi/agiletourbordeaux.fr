@@ -101,5 +101,8 @@ title: Blog
     jQuery(document).ready(function () {
         jQuery('body').addClass('sub-page');
         theme.init();
+
+        // add active class to blog menu
+        jQuery('ul.sf-menu li:first-child + li + li + li').addClass('active');
     });
 </script>
