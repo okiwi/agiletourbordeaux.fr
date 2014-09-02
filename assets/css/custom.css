@@ -99,3 +99,7 @@ ul.equipe {
     width: 100%;
     height: auto;
 }
+
+.border-white {
+    border: 5px solid white;
+}
