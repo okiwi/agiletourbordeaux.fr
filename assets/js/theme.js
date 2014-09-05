@@ -162,11 +162,10 @@ var theme = function () {
             $("#main-slider").owlCarousel({
                 //items: 1,
                 autoplay: true,
-                autoplayHoverPause: true,
                 loop: true,
-                margin: 0,
+                margin: 25,
                 dots: false,
-                nav: false,
+                nav: true,
                 navText: [
                     "<i class='fa fa-angle-left'></i>",
                     "<i class='fa fa-angle-right'></i>"
