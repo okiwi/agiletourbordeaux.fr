@@ -1,25 +1,6 @@
 _site
 
-.idea/.name
-
-.idea/agiletourbordeaux.iml
-
-.idea/encodings.xml
-
-.idea/misc.xml
-
-.idea/dictionaries/mika.xml
-
-.idea/modules.xml
-
-.idea/scopes/scope_settings.xml
-
-.idea/libraries/sass_stdlib.xml
-
-.idea/vcs.xml
-
-.idea/workspace.xml
-
+.idea
 
 static/img/.DS_Store
 

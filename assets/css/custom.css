@@ -1,0 +1,105 @@
+.shrink .logo a img {
+    height: 31px;
+}
+
+.equipe li {
+    float: left;
+    margin: 0 0 0 20px;
+}
+
+.equipe img {
+    width:  200px;
+    border:  10px solid #ffffff;
+    -webkit-box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0 0 5px 2px rgba(50, 50, 50, 0.5);
+    box-shadow:         0 0 5px 2px rgba(50, 50, 50, 0.5);
+}
+
+.equipe a {
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+    -ms-transform: scale(1,1); /* IE 9 */
+    transform: scale(1,1);
+
+    display: block;
+}
+
+.equipe a:hover {
+    -webkit-transform: scale(1.1,1.1) rotate(4deg); /* Chrome, Safari, Opera */
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 150ms;
+    -moz-transform: scale(1.1,1.1) rotate(4deg);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 150ms;
+    -ms-transform: scale(1.1,1.1) rotate(4deg); /* IE 9 */
+    transform: scale(1.1,1.1) rotate(4deg);
+
+    position: relative;
+    z-index: 99;
+}
+
+.equipe div {
+    background-color: #4478b2;
+    color: #ffffff;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0 5px 0 5px;
+    margin: 0 10px 0 10px;
+    position: relative;
+    bottom:  40px;
+    border-top:  1px solid #ffffff;
+}
+
+img.picture {
+    border:  10px solid #ffffff;
+    -webkit-box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0 0 5px 2px rgba(50, 50, 50, 0.5);
+    box-shadow:         0 0 5px 2px rgba(50, 50, 50, 0.5);
+}
+
+.post-excerpt .post-title {
+    color: #4478b2;
+}
+
+.post-excerpt ul {
+    list-style: disc inside;
+    margin-left: 20px;
+}
+
+ul.equipe {
+    list-style: none outside none;
+    margin-bottom: 20px;
+}
+
+.post-excerpt th, .post-excerpt td {
+    border: 1px solid #6d7a83;
+    padding: 5px;
+    border-spacing : 0;
+    border-collapse : collapse;
+}
+
+.post-excerpt table {
+    margin-bottom: 10px;
+}
+
+#owl-clinic .item {
+    margin: 5px;
+    -webkit-box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    0 0 5px 2px rgba(50, 50, 50, 0.5);
+    box-shadow:         0 0 5px 2px rgba(50, 50, 50, 0.5);
+}
+
+#owl-clinic .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.border-white {
+    border: 5px solid white;
+}
