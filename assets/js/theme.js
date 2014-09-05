@@ -5,7 +5,6 @@ var theme = function () {
     // -------------------------------------------------------------------------------------------
     $(document).ready(function () {
         if (!$('.theme-config').length) {
-            console.log('yes application du theme bleu !');
             var color = 'blue-2'; //  light, dark ... #atbdx choisir "blue-2" ici
             var css = $('#theme-config-link');
             css.attr('href', '/assets/css/theme-' + color + '.css'); //#atbdx: ajout du "/" devant assets
@@ -252,16 +251,35 @@ var theme = function () {
         },
         // Google map
         initGoogleMap: function() {
-            var map;
+            var map,
+                marker,
+                myLatlng = new google.maps.LatLng(44.85359, -0.57493);
             function initialize() {
                 var mapOptions = {
                     scrollwheel: false,
-                    zoom: 14,
-                    center: new google.maps.LatLng(44.85359, -0.57493)
+                    zoom: 17,
+                    center: myLatlng
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
+
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE,
+                    title: 'Epitech Bordeaux'
+                });
+                google.maps.event.addListener(marker, 'click', toggleBounce);
             }
+
+            function toggleBounce() {
+                if (marker.getAnimation() != null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            }
+
             google.maps.event.addDomListener(window, 'load', initialize);
         }
 
