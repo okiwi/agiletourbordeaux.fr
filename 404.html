@@ -1,0 +1,58 @@
+---
+layout: default2014
+title: Page introuvable
+---
+
+<!-- PAGE ERROR -->
+<section class="page-section error-section light">
+    <div class="container text-center">
+
+        <h1 class="section-title">
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Erreur 404 / <small data-animation="fadeInLeft" data-animation-delay="300">La page que vous recherchez ne peut &ecirc;tre trouv&eacute;e ou n'existe plus</small></span>
+        </h1>
+
+        <span data-animation="flipInY" data-animation-delay="300" class="error-number">404</span>
+        <hr class="page-divider half"/>
+
+        <hr class="page-divider half"/>
+
+        <p><a data-animation="flipInY" data-animation-delay="500" class="btn btn-theme" href="/index.html">Retour à la home</a></p>
+        <hr class="page-divider half hidden-md"/>
+
+    </div>
+</section>
+<!-- /PAGE ERROR -->
+
+<!-- PAGE SPONSORS -->
+<section class="page-section light" id="sponsors">
+    <div class="container">
+        <h1 class="section-title">
+            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Sponsors <small> / Merci &agrave; eux</small></span>
+        </h1>
+        <div class="partners-carousel" data-animation="fadeInUp" data-animation-delay="300">
+            <div class="owl-carousel">
+                <div><a href="http://www.pole-emploi.fr"><img src="/static/img/sponsors/pole-emploi.jpg" alt="P&ocirc;le Emploi"/></a></div>
+            </div>
+        </div>
+        <div class="text-center margin-top">
+            <a data-animation="flipInY" data-animation-delay="500" href="/static/pdf/Offre%20de%20sponsoring%202014.pdf" class="btn btn-theme"><i class="fa fa-thumbs-up"></i> Devenez sponsor</a>
+        </div>
+    </div>
+</section>
+<!-- /PAGE SPONSORS -->
+
+<!-- JS Page Level -->
+<script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
+<script src="assets/plugins/waypoints/waypoints.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('body').addClass('sub-page');
+        theme.init();
+        theme.initPartnerSlider();
+    });
+    jQuery(window).load(function () {
+        theme.initAnimation();
+    });
+</script>
