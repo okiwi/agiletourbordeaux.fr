@@ -162,9 +162,9 @@ var theme = function () {
                 //items: 1,
                 autoplay: true,
                 loop: true,
-                margin: 25,
+                margin: 0,
                 dots: false,
-                nav: true,
+                nav: false,
                 navText: [
                     "<i class='fa fa-angle-left'></i>",
                     "<i class='fa fa-angle-right'></i>"
