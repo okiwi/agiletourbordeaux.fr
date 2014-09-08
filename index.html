@@ -78,7 +78,6 @@ title: Agile Tour Bordeaux 2014
                     </div>
                 </div>
             </div>
-
         </div>
 
         <!-- Event description -->
@@ -117,7 +116,6 @@ title: Agile Tour Bordeaux 2014
                 </div>
             </div>
         </div>
-        <!-- /Event description -->
 
     </section>
     <!-- /SLIDER -->
@@ -213,16 +211,16 @@ title: Agile Tour Bordeaux 2014
 </section>
 <!-- /PAGE ABOUT -->
 
-<!-- PAGE SPONSORS -->
-<section class="page-section light" id="sponsors">
+<!-- PAGE SPONSORS GOLD -->
+<section class="page-section color" id="sponsors">
     <div class="container">
         <h1 class="section-title">
             <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
-            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Sponsors <small> / Merci &agrave; eux</small></span>
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Sponsors Gold</span>
         </h1>
-        <div class="partners-carousel" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="partenaires-carousel" data-animation="fadeInUp" data-animation-delay="300">
             <div class="owl-carousel">
-                <div><a href="http://www.pole-emploi.fr"><img src="/static/img/sponsors/pole-emploi.jpg" alt="P&ocirc;le Emploi"/></a></div>
+                <div><a href="http://www.pole-emploi.fr"><img src="/static/img/sponsors/pole-emploi.jpg" alt="P&ocirc;le Emploi" /></a></div>
             </div>
         </div>
         <div class="text-center margin-top">
@@ -230,7 +228,43 @@ title: Agile Tour Bordeaux 2014
         </div>
     </div>
 </section>
-<!-- /PAGE SPONSORS -->
+<!-- /PAGE SPONSORS GOLD -->
+
+<!-- PAGE SPONSORS SILVER -->
+<section class="page-section" id="sponsors-silver">
+    <div class="container">
+        <h1 class="section-title">
+            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Sponsors Silver</span>
+        </h1>
+        <div class="sponsors-silver-carousel" data-animation="fadeInUp" data-animation-delay="300">
+            <div class="owl-carousel">
+                <div><a href="http://www.arca-computing.fr"><img src="/static/img/sponsors/arca-computing.jpg" alt="Arca Computing" /></a></div>
+                <div><a href="http://www.neotech-solutions.fr"><img src="/static/img/sponsors/neotech-solutions.jpg" alt="Neotech Solutions" /></a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /PAGE SPONSORS SILVER -->
+
+<!-- PAGE PARTENAIRES -->
+<section class="page-section light" id="partners">
+    <div class="container">
+        <h1 class="section-title">
+            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Partenaires</span>
+        </h1>
+        <div class="partners-carousel" data-animation="fadeInUp" data-animation-delay="300">
+            <div class="owl-carousel">
+                <div><a href="http://www.coolworking.fr"><img src="/static/img/partenaires/Coolworking.gif" alt="Coolworking" /></a></div>
+                <div><a href="http://www.bordeaux.fr/p63936/chartrons-et-grand-parc-et-jardin-public"><img src="/static/img/partenaires/bordeaux-logo.gif" alt="Mairie de Bordeaux, quartier des chartrons, grand parc et jardin public" /></a></div>
+                <div><a href="http://www.okiwi.org"><img src="/static/img/partenaires/okiwi.jpg" alt="Okiwi" /></a></div>
+                <div><a href="http://www.epitech.eu/bordeaux/ecole-informatique-bordeaux.aspx"><img src="/static/img/partenaires/Logo-Epitech.gif" alt="Epitech Bordeaux" /></a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /PAGE PARTENAIRES -->
 
 <!-- PAGE DERNIERES NEWS -->
 <section class="page-section">
@@ -391,6 +425,8 @@ title: Agile Tour Bordeaux 2014
         theme.initMainSlider();
         theme.initCountDown();
         theme.initPartnerSlider();
+        theme.initSponsorsSilverSlider();
+        theme.initPartenaireSlider();
         theme.initTestimonials();
         theme.initGoogleMap();
     });
