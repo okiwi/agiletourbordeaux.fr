@@ -28,7 +28,7 @@ theme.initPartenaireSlider = function () {
     });
 };
 
-// Partenaires Slider
+// Sponsors silver Slider
 theme.initSponsorsSilverSlider = function () {
     $(".sponsors-silver-carousel .owl-carousel").owlCarousel({
         autoplay: true,
