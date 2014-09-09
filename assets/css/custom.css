@@ -76,17 +76,6 @@ ul.equipe {
     margin-bottom: 20px;
 }
 
-.post-excerpt th, .post-excerpt td {
-    border: 1px solid #6d7a83;
-    padding: 5px;
-    border-spacing : 0;
-    border-collapse : collapse;
-}
-
-.post-excerpt table {
-    margin-bottom: 10px;
-}
-
 #owl-clinic .item {
     margin: 5px;
     -webkit-box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.5);
