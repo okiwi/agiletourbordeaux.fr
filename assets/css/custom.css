@@ -177,3 +177,11 @@ ul.equipe {
 .sponsors-silver-carousel .owl-next:hover  .fa {
     color: #dc143c;
 }
+
+.header.shrink {
+    background-color: #2C495A;
+}
+
+.sub-page .header {
+    background-color: #2C495A;
+}
