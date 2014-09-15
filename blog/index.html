@@ -1,6 +1,8 @@
 ---
 layout: default2014
 title: Blog
+js:
+- /static/js/blog-index.js
 ---
 
 <!-- PAGE BLOG -->
@@ -95,22 +97,3 @@ title: Blog
     </div>
 </section>
 <!-- /PAGE BLOG -->
-
-<!-- CSS Layout Level -->
-{% include css.html %}
-
-<!-- CSS Page Level -->
-
-<!-- JS Layout Level -->
-{% include scripts.html %}
-
-<!-- JS Page Level -->
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery('body').addClass('sub-page');
-        theme.init();
-
-        // add active class to blog menu
-        jQuery('ul.sf-menu li:first-child + li + li + li').addClass('active');
-    });
-</script>

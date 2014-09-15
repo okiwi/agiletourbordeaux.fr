@@ -1,6 +1,13 @@
 ---
 layout: default2014
 title: Agile Tour Bordeaux 2014
+js:
+- /assets/plugins/owlcarousel2/owl.carousel.min.js
+- /assets/plugins/waypoints/waypoints.min.js
+- https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false
+- /assets/plugins/countdown/jquery.plugin.min.js
+- /assets/plugins/countdown/jquery.countdown.min.js
+- /static/js/index.js
 ---
 <div id="main">
     <!-- SLIDER -->
@@ -394,56 +401,3 @@ title: Agile Tour Bordeaux 2014
     </div>
 </section>
 <!-- /PAGE CONTACT -->
-
-<!-- CSS Layout Level -->
-{% include css.html %}
-
-<!-- CSS Page Level -->
-
-<!-- JS Layout Level -->
-{% include scripts.html %}
-
-<!-- JS Page Level -->
-<script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
-<script src="assets/plugins/waypoints/waypoints.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
-<script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
-
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        theme.init();
-        theme.initMainSlider();
-        theme.initCountDown();
-        theme.initSponsorsSilverSlider();
-        theme.initPartenaireSlider();
-        theme.initTestimonials();
-        theme.initGoogleMap();
-    });
-    jQuery(window).load(function () {
-        theme.initAnimation();
-    });
-
-    jQuery(window).load(function () { jQuery('body').scrollspy({offset: 100, target: '.navigation'}); });
-    jQuery(window).load(function () { jQuery('body').scrollspy('refresh'); });
-    jQuery(window).resize(function () { jQuery('body').scrollspy('refresh'); });
-
-    jQuery(document).ready(function () { jQuery('.page').css('min-height', jQuery(window).height()); });
-    jQuery(window).load(function(){ jQuery('.page').css('min-height', jQuery(window).height()); });
-    jQuery(window).resize(function(){ jQuery('.page').css('min-height', jQuery(window).height()); });
-
-    jQuery(window).load(function() {
-        if (location.hash != '') {
-            var hash = '#' + window.location.hash.substr(1);
-            if (hash.length) {
-                jQuery('html,body').delay(0).animate({
-                    scrollTop: jQuery(hash).offset().top - 44 + 'px'
-                }, {
-                    duration: 1200,
-                    easing: "easeInOutExpo"
-                });
-            }
-        }
-    });
-
-</script>

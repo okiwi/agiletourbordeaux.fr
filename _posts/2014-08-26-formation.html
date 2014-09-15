@@ -4,6 +4,9 @@ title: Improve your user stories!
 txt: Une occasion unique de suivre une formation dispens&eacute;e par Gojko Adzic
 image: formation.jpg
 wide-image: formation-wide.jpg
+js:
+- /static/js/post.js
+- /static/js/post-formation.js
 ---
 
 <!-- PAGE BLOG -->
@@ -159,43 +162,7 @@ wide-image: formation-wide.jpg
             </section>
             <!-- Content -->
 
-
-
         </div>
     </div>
 </section>
 <!-- /PAGE BLOG -->
-
-<!-- CSS Layout Level -->
-{% include css.html %}
-
-<!-- CSS Page Level -->
-
-<!-- JS Layout Level -->
-{% include scripts.html %}
-
-<!-- JS Page Level -->
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery('body').addClass('sub-page');
-        theme.init();
-
-        // add active class to blog menu
-        jQuery('ul.sf-menu li:first-child + li').addClass('active');
-
-
-        $('input[name=language]:radio').change(
-            function(){
-                var other;
-                if ($(this).val() == 'fr') {
-                    other = 'en';
-                } else {
-                    other = 'fr';
-                }
-
-                $('#formation-' + $(this).val()).removeClass('hide');
-                $('#formation-' + other).addClass('hide');
-            }
-        );
-    });
-</script>

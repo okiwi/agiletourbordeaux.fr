@@ -1,6 +1,10 @@
 ---
 layout: default2014
 title: Page introuvable
+js:
+- /assets/plugins/owlcarousel2/owl.carousel.min.js
+- /assets/plugins/waypoints/waypoints.min.js
+- /static/js/404.js
 ---
 
 <!-- PAGE ERROR -->
@@ -41,26 +45,3 @@ title: Page introuvable
     </div>
 </section>
 <!-- /PAGE SPONSORS -->
-
-<!-- CSS Layout Level -->
-{% include css.html %}
-
-<!-- CSS Page Level -->
-
-<!-- JS Layout Level -->
-{% include scripts.html %}
-
-<!-- JS Page Level -->
-<script src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
-<script src="assets/plugins/waypoints/waypoints.min.js"></script>
-
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery('body').addClass('sub-page');
-        theme.init();
-        theme.initPartnerSlider();
-    });
-    jQuery(window).load(function () {
-        theme.initAnimation();
-    });
-</script>

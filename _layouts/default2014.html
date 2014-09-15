@@ -97,7 +97,28 @@
 </div>
 <!-- /Wrap all content -->
 
+<!-- CSS Global -->
+<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/plugins/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="/assets/plugins/bootstrap-select/bootstrap-select.min.css" rel="stylesheet">
+<link href="/assets/plugins/owlcarousel2/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="/assets/plugins/owlcarousel2/assets/owl.theme.default.min.css" rel="stylesheet">
+<link href="/assets/plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet">
+<link href="/assets/plugins/animate/animate.min.css" rel="stylesheet">
+<link href="/assets/plugins/countdown/jquery.countdown.css" rel="stylesheet">
+
+<link href="/assets/css/theme.css" rel="stylesheet">
+<link href="/assets/css/theme-blue-2.css" rel="stylesheet" id="theme-config-link">
+<link href="/assets/css/custom.css" rel="stylesheet">
+
+<!-- CSS Page Level -->
+{% for cssFile in page.css %}
+<link href="{{ cssFile }}" rel="stylesheet">
+{% endfor %}
+
 <!-- JS Global -->
+<!--[if lt IE 9]><script src="/assets/plugins/jquery/jquery-1.11.1.min.js"></script><![endif]-->
+<!--[if gte IE 9]><!--><script src="/assets/plugins/jquery/jquery-2.1.1.min.js"></script><!--<![endif]-->
 
 <script src="/assets/plugins/modernizr.custom.js"></script>
 <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -107,7 +128,6 @@
 <script src="/assets/plugins/placeholdem.min.js"></script>
 <script src="/assets/plugins/jquery.smoothscroll.min.js"></script>
 <script src="/assets/plugins/jquery.easing.min.js"></script>
-
 
 <script src="/assets/js/theme.js"></script>
 <script src="/assets/js/custom.js"></script>
@@ -122,6 +142,11 @@
     ga('send', 'pageview');
 
 </script>
+
+<!-- JS Page Level -->
+{% for jsFile in page.js %}
+<script src="{{ jsFile }}"></script>
+{% endfor %}
 
 </body>
 </html>

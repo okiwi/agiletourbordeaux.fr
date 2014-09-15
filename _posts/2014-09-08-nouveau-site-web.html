@@ -4,6 +4,8 @@ title: Nouveau site web
 txt: C'est avec un immense plaisir que nous vous annonçons que notre site web fait peau neuve !
 image: nouveausite.jpg
 wide-image: nouveausite-wide.jpg
+js:
+- /static/js/post.js
 ---
 
 <!-- PAGE BLOG -->
@@ -54,19 +56,3 @@ wide-image: nouveausite-wide.jpg
     </div>
 </section>
 <!-- /PAGE BLOG -->
-
-<!-- CSS Layout Level -->
-{% include css.html %}
-
-<!-- CSS Page Level -->
-
-<!-- JS Layout Level -->
-{% include scripts.html %}
-
-<!-- JS Page Level -->
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery('body').addClass('sub-page');
-        theme.init();
-    });
-</script>

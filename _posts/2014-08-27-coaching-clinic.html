@@ -4,6 +4,10 @@ title: Coaching clinic !
 txt: Une &eacute;quipe de coachs sera &agrave; votre disposition gratuitement pendant la journ&eacute;e
 image: coachingclinic.jpg
 wide-image: coachingclinic-wide.jpg
+js:
+- /assets/plugins/owlcarousel2/owl.carousel.min.js
+- /static/js/post.js
+- /static/js/post-coaching-clinic.js
 ---
 
 <!-- PAGE BLOG -->
@@ -100,28 +104,3 @@ wide-image: coachingclinic-wide.jpg
     </div>
 </section>
 <!-- /PAGE BLOG -->
-
-<!-- CSS Layout Level -->
-{% include css.html %}
-
-<!-- CSS Page Level -->
-
-<!-- JS Layout Level -->
-{% include scripts.html %}
-
-<!-- JS Page Level -->
-<script src="/assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
-
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        jQuery('body').addClass('sub-page');
-        theme.init();
-
-        $("#owl-clinic").owlCarousel({
-            autoPlay: 3000, //Set AutoPlay to 3 seconds
-            items : 1,
-            itemsDesktop : [1199,1],
-            itemsDesktopSmall : [979,1]
-        });
-    });
-</script>
