@@ -48,6 +48,7 @@ theme.initSponsorsGoldSlider = function () {
             1024: {items: 6}
         }
     });
+};
 
 // Sponsors silver Slider
 theme.initSponsorsSilverSlider = function () {
