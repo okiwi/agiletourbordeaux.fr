@@ -135,6 +135,48 @@ ul.equipe {
     color: #435469;
 }
 
+.sponsors-gold-carousel .owl-carousel div a {display: block; text-align: center; background-color: #f3f4f5; border-radius: 10px; padding: 10px;}
+.sponsors-gold-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
+.sponsors-gold-carousel .owl-carousel .owl-item img {width: auto;}
+.sponsors-gold-carousel .owl-theme .owl-controls {}
+.sponsors-gold-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
+@media (max-width: 767px) {
+    .sponsors-gold-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
+}
+.sponsors-gold-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
+    background-color: transparent;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+.sponsors-gold-carousel .owl-prev,
+.sponsors-gold-carousel .owl-next {
+    border: solid 1px #435469;
+    border-radius: 10px !important;
+    color: #435469;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.sponsors-gold-carousel .owl-next {margin-left: 10px !important;}
+.sponsors-gold-carousel .owl-prev .fa,
+.sponsors-gold-carousel .owl-next .fa {
+    color: #435469;
+    font-size: 33px !important;
+    line-height: 50px;
+}
+.sponsors-gold-carousel .owl-prev:hover ,
+.sponsors-gold-carousel .owl-next:hover  {
+    border-color: #dc143c;
+    color: #dc143c;
+}
+.sponsors-gold-carousel .owl-prev:hover .fa,
+.sponsors-gold-carousel .owl-next:hover  .fa {
+    color: #dc143c;
+}
+
 
 .sponsors-silver-carousel .owl-carousel div a {display: block; text-align: center; background-color: #f3f4f5; border-radius: 10px; padding: 10px;}
 .sponsors-silver-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
