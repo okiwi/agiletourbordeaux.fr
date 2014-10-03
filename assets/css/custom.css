@@ -178,7 +178,8 @@ ul.equipe {
 }
 
 
-.sponsors-silver-carousel .owl-carousel div a {display: block; text-align: center; background-color: #eeeeee; border-radius: 10px; padding: 10px;}
+.sponsors-silver-carousel .owl-carousel div a {display: block; text-align: center; background-color: #CECECE; border-radius: 10px; padding: 10px;}
+.sponsors-silver-carousel .owl-carousel div a.gold {display: block; text-align: center; background-color: #FFDE75; border-radius: 10px; padding: 10px;}
 .sponsors-silver-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
 .sponsors-silver-carousel .owl-carousel .owl-item img {width: auto;}
 .sponsors-silver-carousel .owl-theme .owl-controls {}
@@ -226,4 +227,12 @@ ul.equipe {
 
 .sub-page .header {
     background-color: #2C495A;
+}
+
+#sponsors-silver .title-inner .gold {
+    color: #FFDE75;
+}
+
+#sponsors-silver .title-inner .silver {
+    color: #CECECE;
 }
