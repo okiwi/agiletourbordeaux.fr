@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
     // add active class to blog menu
-    jQuery('ul.sf-menu li:first-child + li').addClass('active');
+    jQuery('ul.sf-menu li:first-child').addClass('active');
 
     $('input[name=language]:radio').change(
         function(){
