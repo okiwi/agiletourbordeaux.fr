@@ -371,6 +371,8 @@ js:
         <!-- Contact form -->
         <form name="af-form" method="post" action="http://forms.brace.io/contact@agiletourbordeaux.fr" class="af-form row" id="af-form">
 
+            <input type="hidden" name="_subject" value="Formulaire de contact agiletourbordeaux.fr" />
+
             <div class="col-sm-12 af-outer af-required">
                 <div class="form-group af-inner">
                     <input
@@ -383,7 +385,7 @@ js:
             <div class="col-sm-12 af-outer af-required">
                 <div class="form-group af-inner">
                     <input
-                            type="text" name="email" id="email" placeholder="Votre email..." value="" size="30"
+                            type="text" name="_replyto" id="email" placeholder="Votre email..." value="" size="30"
                             data-toggle="tooltip" title="L'email est obligatoire"
                             class="form-control placeholder"/>
                 </div>
