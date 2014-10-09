@@ -236,3 +236,11 @@ ul.equipe {
 #sponsors-silver .title-inner .silver {
     color: #CECECE;
 }
+
+.price-value {
+    font-size: 60px;
+}
+
+.icon-invisible {
+    color: #f5f5f5;
+}
