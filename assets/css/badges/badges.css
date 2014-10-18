@@ -1,0 +1,50 @@
+body {
+	font-family: sans-serif;
+}
+li{
+	width: 8cm;
+	height: 5cm;
+	float: left;
+	border: 1px solid #000;
+	background: url(/assets/img/logo_at_2014.png);
+	background-position: 95% 5% ;
+	background-repeat: no-repeat;
+	background-size: 25%;
+}
+p {
+	text-align: center;
+	width: 100%;
+	margin: .2cm 0;
+}
+.info {
+	margin-top: .7cm; 
+	height: 3.3cm;
+	overflow: hidden;
+}
+.fullname {
+	font-size: .7cm;
+	color: #009fe3;
+}
+.twitter, .site_web {
+	color: #AAA;
+}
+.intitule_du_poste, .entreprise {
+	color: #bccf02;
+}
+.intitule_du_poste {
+	font-size: .4cm;
+}
+.entreprise {
+	font-size: .5cm;
+}
+.sponsors {
+	height: 1cm;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+}
+.sponsors img {
+	width: auto;
+	height: 100%;
+	margin: 0 .5cm;
+}
