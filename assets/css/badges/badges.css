@@ -45,6 +45,7 @@ p {
             transform: rotate(270deg);
 	font-size: larger;
 	font-weight: bolder;
+	color: #EEE;
 	position: relative;
 	top: 4.5cm;
 	left: 0.4cm;

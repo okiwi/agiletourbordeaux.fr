@@ -8,7 +8,8 @@ title: badges des participants
 </head>
 <body>
 <ul>
-{% for inscrit in site.data.inscrits %}
+  {% assign inscrits = (site.data.inscrits | sort: 'type_de_billet') %}
+  {% for inscrit in inscrits %}
   <li>
     <div class="type inscrit">
       <span>Participant<span>
@@ -31,7 +32,7 @@ title: badges des participants
 	    <img src="/static/img/sponsors/lectra.gif" class="lectra" alt="Lectra" />
 	  </div>
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>
 <link href="/assets/css/badges/badges.css" rel="stylesheet">
 </body>
