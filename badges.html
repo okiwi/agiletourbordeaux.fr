@@ -11,9 +11,24 @@ title: badges des participants
   {% assign inscrits = (site.data.inscrits | sort: 'type_de_billet') %}
   {% for inscrit in inscrits %}
   <li>
+    {% capture taille_type_de_billet %}{{ inscrit.type_de_billet | size | minus:16 }}{% endcapture %}
+    {% if inscrit.type_de_billet contains 'Organisat' or inscrit.type_de_billet contains 'Bénévole' or inscrit.type_de_billet contains 'Photo' %}
+    <div class="type benevole{% unless taille_type_de_billet contains '-' %} small{% endunless %}">
+      <span>{{ inscrit.type_de_billet }}<span>
+    </div>
+    {% elsif inscrit.type_de_billet contains 'Orateur' or inscrit.type_de_billet contains 'Coach' %}
+    <div class="type orateur{% unless taille_type_de_billet contains '-' %} small{% endunless %}">
+      <span>{{ inscrit.type_de_billet }}<span>
+    </div>
+    {% elsif inscrit.type_de_billet contains 'Sponsor' %}
+    <div class="type sponsor{% unless taille_type_de_billet contains '-' %} small{% endunless %}">
+      <span>{{ inscrit.type_de_billet }}<span>
+    </div>
+    {% else %}
     <div class="type inscrit">
       <span>Participant<span>
     </div>
+    {% endif %}
   	<div class="info">
       <p class="fullname">{{ inscrit.prenom | capitalize }} {{ inscrit.nom | capitalize }}</p>
       {% if inscrit.twitter %}
