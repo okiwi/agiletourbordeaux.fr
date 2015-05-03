@@ -8,7 +8,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{page.title}}</title>
+    <title>Nouveau site web</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/2014/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -63,18 +63,18 @@
                 <!-- /Logo -->
 
                 <!-- Navigation -->
-                {% if page.url != "/2014/index.html" %}
-                    {% assign pageUrl = "/2014/index.html" %}
-                {% endif %}
+                
+                    
+                
                 <div id="mobile-menu"></div>
                 <nav class="navigation closed clearfix">
                     <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                     <ul class="sf-menu nav">
-                        <li><a href="{{pageUrl}}#sponsors-silver">Sponsors</a></li>
+                        <li><a href="/2014/index.html#sponsors-silver">Sponsors</a></li>
                         <li><a href="http://lanyrd.com/2014/agile-tour-bordeaux/schedule/">Programme</a></li>
                         <li><a href="http://lanyrd.com/2014/agile-tour-bordeaux/speakers/">Orateurs</a></li>
                         <li><a href="/2014/blog/index.html">Blog</a></li>
-                        <li><a href="{{pageUrl}}#contact">Contact</a></li>
+                        <li><a href="/2014/index.html#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <!-- /Navigation -->
@@ -87,7 +87,55 @@
     <!-- Content area -->
     <div class="content-area">
 
-        {{content}}
+        <!-- PAGE BLOG -->
+<section class="page-section with-sidebar sidebar-right">
+    <div class="container">
+        <div class="row">
+
+            <!-- Content -->
+            <section id="content" class="content col-sm-12 col-md-12">
+
+                <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                    <div class="post-header">
+                        <h2 class="post-title"><a href="#">Nouveau site web</a></h2>
+                        <div class="post-meta">
+                <span class="post-date">
+                    Post&eacute;
+                    <span class="day">8</span>
+                    <span class="month">septembre</span>
+                    <span class="year">2014</span>
+                </span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-excerpt">
+                            <p>Bienvenue !</p>
+
+                            <p>C'est avec un immense plaisir que nous vous annonçons que notre site web fait peau neuve !</p>
+
+                            <p>L'Agile Tour Bordeaux 2014 approche, et c'est sur ce site que nous vous d&eacute;voilerons bientôt le programme de cette &eacute;dition 2014, qui on le rappelle se d&eacute;roulera pour la premi&egrave;re fois sur 2 jours les vendredi 31 octobre et samedi 1er novembre prochains. Plus moderne avec une navigation repens&eacute;e, un design revu et "responsive", ce site web s'adapte maintenant &agrave; nos nouveaux usages et &eacute;quipements, nous offrant une navigation plus confortable.</p>
+
+                            <p>Nouveau site web, 2 journ&eacute;es au lieu d'une, une coaching clinic, d&eacute;j&agrave; beaucoup de nouveaut&eacute;s et croyez-nous, on ne va pas s'arr&ecirc;ter en si bon chemin !</p>
+
+                            <p>Nous avons encore des nouveaut&eacute;s &agrave; vous faire partager, alors afin de rester inform&eacute;(e) de nos actualit&eacute;s, et pourquoi pas nous faire part de vos retours sur ce nouveau site, nous vous invitons &agrave; nous suivre sur <a href="http://www.facebook.com/Agiletourbordeaux">Facebook</a>, <a href="https://twitter.com/atbdx">Twitter</a> et <a href="https://plus.google.com/u/0/106702197287496889358/posts">Google+</a>.</p>
+
+                            <p>Bonne navigation !</p>
+
+                            <div class="content col-sm-12 col-md-4"><img src="/static/img/blog/nouveau-site-mac.jpg" class="img-responsive" /></div>
+                            <div class="content col-sm-12 col-md-4"><img src="/static/img/blog/nouveau-site-comparaison.jpg" class="img-responsive" /></div>
+                            <div class="content col-sm-12 col-md-4"><img src="/static/img/blog/nouveau-site-smartphone.jpg" class="img-responsive" /></div>
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+            <!-- Content -->
+
+        </div>
+    </div>
+</section>
+<!-- /PAGE BLOG -->
+
 
     </div>
     <!-- /Content area -->
@@ -115,9 +163,7 @@
 <!-- /Wrap all content -->
 
 <!-- CSS Page Level -->
-{% for cssFile in page.css %}
-<link href="{{ cssFile }}" rel="stylesheet">
-{% endfor %}
+
 
 <!-- JS Global -->
 
@@ -145,9 +191,9 @@
 </script>
 
 <!-- JS Page Level -->
-{% for jsFile in page.js %}
-<script src="{{ jsFile }}"></script>
-{% endfor %}
+
+<script src="/static/js/post.js"></script>
+
 
 </body>
 </html>

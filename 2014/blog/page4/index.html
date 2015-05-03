@@ -8,7 +8,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{page.title}}</title>
+    <title>Blog</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/2014/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -63,18 +63,18 @@
                 <!-- /Logo -->
 
                 <!-- Navigation -->
-                {% if page.url != "/2014/index.html" %}
-                    {% assign pageUrl = "/2014/index.html" %}
-                {% endif %}
+
+
+
                 <div id="mobile-menu"></div>
                 <nav class="navigation closed clearfix">
                     <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                     <ul class="sf-menu nav">
-                        <li><a href="{{pageUrl}}#sponsors-silver">Sponsors</a></li>
+                        <li><a href="/2014/index.html#sponsors-silver">Sponsors</a></li>
                         <li><a href="http://lanyrd.com/2014/agile-tour-bordeaux/schedule/">Programme</a></li>
                         <li><a href="http://lanyrd.com/2014/agile-tour-bordeaux/speakers/">Orateurs</a></li>
                         <li><a href="/2014/blog/index.html">Blog</a></li>
-                        <li><a href="{{pageUrl}}#contact">Contact</a></li>
+                        <li><a href="/2014/index.html#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <!-- /Navigation -->
@@ -87,7 +87,122 @@
     <!-- Content area -->
     <div class="content-area">
 
-        {{content}}
+        <!-- PAGE BLOG -->
+<section class="page-section with-sidebar"><!-- sidebar-right-->
+    <div class="container">
+        <div class="row">
+
+            <!-- Content -->
+            <section id="content" class="content col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
+
+
+                <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                    <div class="post-media">
+                        <img src="/static/img/blog/formation-wide.jpg" alt="Une occasion unique de suivre une formation dispens&eacute;e par Gojko Adzic"/>
+                    </div>
+                    <div class="post-header">
+                        <h2 class="post-title"><a href="/2014/08/26/formation.html">Improve your user stories!</a></h2>
+                        <div class="post-meta">
+                        <span class="post-date">
+                            Post&eacute; le
+                            <span class="day">26</span>
+                            <span class="month">
+
+                            Ao&ucirc;t
+
+                            </span>
+                            <span class="year">2014</span>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-excerpt">
+                            <p>Une occasion unique de suivre une formation dispens&eacute;e par Gojko Adzic</p>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                    <span class="post-readmore">
+                        <a href="/2014/08/26/formation.html" class="btn btn-theme btn-theme-transparent">Lire la suite</a>
+                    </span>
+                    </div>
+                </article>
+
+                <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                    <div class="post-media">
+                        <img src="/static/img/blog/equipe-wide.jpg" alt="Venez d&eacute;couvrir l'&eacute;quipe qui organise l'Agile Tour Bordeaux 2014"/>
+                    </div>
+                    <div class="post-header">
+                        <h2 class="post-title"><a href="/2014/08/25/equipe.html">L'équipe d'organisation</a></h2>
+                        <div class="post-meta">
+                        <span class="post-date">
+                            Post&eacute; le
+                            <span class="day">25</span>
+                            <span class="month">
+
+                            Ao&ucirc;t
+
+                            </span>
+                            <span class="year">2014</span>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-excerpt">
+                            <p>Venez d&eacute;couvrir l'&eacute;quipe qui organise l'Agile Tour Bordeaux 2014</p>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                    <span class="post-readmore">
+                        <a href="/2014/08/25/equipe.html" class="btn btn-theme btn-theme-transparent">Lire la suite</a>
+                    </span>
+                    </div>
+                </article>
+
+
+                <!-- Pagination -->
+
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+
+                        <li><a href="/2014/blog/page3">«</a></li>
+
+
+
+
+                        <li><a href="/2014/blog/index.html">1</a></li>
+
+
+
+                        <li><a href="/2014/blog/page2">2</a></li>
+
+
+
+                        <li><a href="/2014/blog/page3">3</a></li>
+
+
+
+                        <li class="active"><a href="#">4</a></li>
+
+
+
+
+                        <li class="disabled"><a href="#">»</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- /Pagination -->
+
+            </section>
+            <!-- Content -->
+
+            <hr class="page-divider transparent visible-xs"/>
+
+        </div>
+    </div>
+</section>
+<!-- /PAGE BLOG -->
+
 
     </div>
     <!-- /Content area -->
@@ -115,9 +230,7 @@
 <!-- /Wrap all content -->
 
 <!-- CSS Page Level -->
-{% for cssFile in page.css %}
-<link href="{{ cssFile }}" rel="stylesheet">
-{% endfor %}
+
 
 <!-- JS Global -->
 
@@ -145,9 +258,9 @@
 </script>
 
 <!-- JS Page Level -->
-{% for jsFile in page.js %}
-<script src="{{ jsFile }}"></script>
-{% endfor %}
+
+<script src="/static/js/blog-index.js"></script>
+
 
 </body>
 </html>

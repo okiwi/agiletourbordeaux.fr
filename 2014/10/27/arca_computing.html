@@ -8,7 +8,7 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{page.title}}</title>
+    <title>L'agilit&eacute; chez Arca Computing</title>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/2014/assets/ico/apple-touch-icon-144-precomposed.png">
@@ -63,18 +63,18 @@
                 <!-- /Logo -->
 
                 <!-- Navigation -->
-                {% if page.url != "/2014/index.html" %}
-                    {% assign pageUrl = "/2014/index.html" %}
-                {% endif %}
+                
+                    
+                
                 <div id="mobile-menu"></div>
                 <nav class="navigation closed clearfix">
                     <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                     <ul class="sf-menu nav">
-                        <li><a href="{{pageUrl}}#sponsors-silver">Sponsors</a></li>
+                        <li><a href="/2014/index.html#sponsors-silver">Sponsors</a></li>
                         <li><a href="http://lanyrd.com/2014/agile-tour-bordeaux/schedule/">Programme</a></li>
                         <li><a href="http://lanyrd.com/2014/agile-tour-bordeaux/speakers/">Orateurs</a></li>
                         <li><a href="/2014/blog/index.html">Blog</a></li>
-                        <li><a href="{{pageUrl}}#contact">Contact</a></li>
+                        <li><a href="/2014/index.html#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <!-- /Navigation -->
@@ -87,7 +87,55 @@
     <!-- Content area -->
     <div class="content-area">
 
-        {{content}}
+        <!-- PAGE BLOG -->
+<section class="page-section with-sidebar sidebar-right">
+    <div class="container">
+        <div class="row">
+
+            <!-- Content -->
+            <section id="content" class="content col-sm-12 col-md-12">
+
+                <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                    <div class="post-header">
+                        <h2 class="post-title"><a href="#">L'agilit&eacute; chez Arca Computing</a></h2>
+                        <div class="post-meta">
+                <span class="post-date">
+                    Post&eacute;
+                    <span class="day">27</span>
+                    <span class="month">octobre</span>
+                    <span class="year">2014</span>
+                </span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-excerpt">
+
+                            <p>Chez ARCA Computing nous pensons que la mise en oeuvre des m&eacute;thodes Agiles permet de produire des logiciels offrant le meilleur compromis entre la qualit&eacute;, la satisfaction du client et de bonnes conditions de travail pour nos &eacute;quipes.<br />
+							Depuis 4 ans nos d&eacute;veloppeurs accompagnent nos clients dans cette aventure en partageant avec eux leur passion et le fruit de leur exp&eacute;rience.</p>
+
+							<p>Au quotidien nous nous appliquons &agrave; suivre les valeurs de l’extreme programming, chez nos clients et en interne.<br />
+							Par la communication nous partageons nos id&eacute;es et nos connaissances pour faire grandir les &eacute;quipes de nos clients, la qualit&eacute; des projets et notre socle de savoir-faire interne. Bien que nos d&eacute;veloppeurs soient souvent dispers&eacute;s chez nos clients, nous formons une communaut&eacute; soud&eacute;e qui s’entraide face aux difficult&eacute;s.<br />
+							Par la simplicit&eacute; nous encourageons les processus l&eacute;ger dans nos projets, des outils ergonomiques et actuels qui n’entravent pas le travail et la cr&eacute;ativit&eacute; des &eacute;quipes. Du code lisible et des solutions qui ne soient pas sophistiqu&eacute;es &agrave; tort.<br />
+							Par le feedback nous entendons la transparence, la prise en compte des critiques constructives et l’am&eacute;lioration continue qu’il permet dans nos prises de d&eacute;cisions et dans nos pratiques. Nous tentons d’abord les choses, puis en fonction des r&eacute;sultats nous d&eacute;cidons quoi en faire.<br />
+							Par le courage nous comprenons la n&eacute;cessit&eacute; de faire confiance aux autres, que chacun fait du mieux qu’il peut en fonction des circonstances et de ses contraintes. Ne pas avoir peur d’entendre les critiques et se remettre toujours en question.<br />
+							Par le respect nous prenons en compte l’avis de chacun sans que notre ego ne s’interpose. Nous encourageons nos d&eacute;veloppeurs &agrave; exp&eacute;rimenter leurs id&eacute;es via des jours de R&D que nous offrons car chaque contribution est importante.</p>
+
+							<p>Chez nos clients nous exerçons nos pratiques dans le respect de leurs contraintes organisationnelles et &agrave; la mesure de nos comp&eacute;tences. Nous mettons tous nos efforts &agrave; produire des logiciels de qualit&eacute; en int&eacute;grant les contraintes qui p&egrave;sent sur nos clients, leurs &eacute;ch&eacute;ances et leurs enjeux, en partageant leur vision.<br />
+							Pour r&eacute;soudre cette &eacute;quation difficile nous nous appuyons sur des pratiques &eacute;prouv&eacute;es comme TDD, la revue par les pairs, le bin&ocirc;mage. Nous outillons nos projets pour produire des m&eacute;triques, car on n’am&eacute;liore que ce que l’on mesure, et nous les exposons en toute transparence.<br />
+							Avec un bloc de Post-it &agrave; port&eacute;e de main, quelques feutres et de la bonne humeur, chaque jour nous tentons de construire les projets de demain !</p>
+
+                        </div>
+                    </div>
+                </article>
+
+            </section>
+            <!-- Content -->
+
+        </div>
+    </div>
+</section>
+<!-- /PAGE BLOG -->
+
 
     </div>
     <!-- /Content area -->
@@ -115,9 +163,7 @@
 <!-- /Wrap all content -->
 
 <!-- CSS Page Level -->
-{% for cssFile in page.css %}
-<link href="{{ cssFile }}" rel="stylesheet">
-{% endfor %}
+
 
 <!-- JS Global -->
 
@@ -145,9 +191,9 @@
 </script>
 
 <!-- JS Page Level -->
-{% for jsFile in page.js %}
-<script src="{{ jsFile }}"></script>
-{% endfor %}
+
+<script src="/static/js/post.js"></script>
+
 
 </body>
 </html>
