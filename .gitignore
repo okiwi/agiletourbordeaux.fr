@@ -1,7 +1,3 @@
 _site
-
 .idea
-
-static/img/.DS_Store
-
-static/img/infos_pratiques/.DS_Store
+.DS_Store

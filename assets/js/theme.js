@@ -161,7 +161,7 @@ var theme = function () {
             $("#main-slider").owlCarousel({
                 //items: 1,
                 autoplay: true,
-                loop: true,
+                loop: false,
                 margin: 0,
                 dots: false,
                 nav: false,
@@ -253,31 +253,16 @@ var theme = function () {
         initGoogleMap: function() {
             var map,
                 marker,
-                myLatlng = new google.maps.LatLng(44.85359, -0.57493);
+                myLatlng = new google.maps.LatLng(44.8407275, -0.5690607);
+
             function initialize() {
                 var mapOptions = {
                     scrollwheel: false,
-                    zoom: 17,
+                    zoom: 13,
                     center: myLatlng
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
-
-                marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    animation: google.maps.Animation.BOUNCE,
-                    title: 'Epitech Bordeaux'
-                });
-                google.maps.event.addListener(marker, 'click', toggleBounce);
-            }
-
-            function toggleBounce() {
-                if (marker.getAnimation() != null) {
-                    marker.setAnimation(null);
-                } else {
-                    marker.setAnimation(google.maps.Animation.BOUNCE);
-                }
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
