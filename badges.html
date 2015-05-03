@@ -4,29 +4,50 @@ title: badges des participants
 ---
 <html>
 <head>
-	<meta encoding="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
 <ul>
-{% for inscrit in site.data.inscrits %}
+  {% assign inscrits = (site.data.inscrits | sort: 'type_de_billet') %}
+  {% for inscrit in inscrits %}
   <li>
+    {% capture taille_type_de_billet %}{{ inscrit.type_de_billet | size | minus:16 }}{% endcapture %}
+    {% if inscrit.type_de_billet contains 'Organisat' or inscrit.type_de_billet contains 'Bénévole' or inscrit.type_de_billet contains 'Photo' %}
+    <div class="type benevole{% unless taille_type_de_billet contains '-' %} small{% endunless %}">
+      <span>{{ inscrit.type_de_billet }}<span>
+    </div>
+    {% elsif inscrit.type_de_billet contains 'Orateur' or inscrit.type_de_billet contains 'Coach' %}
+    <div class="type orateur{% unless taille_type_de_billet contains '-' %} small{% endunless %}">
+      <span>{{ inscrit.type_de_billet }}<span>
+    </div>
+    {% elsif inscrit.type_de_billet contains 'Sponsor' %}
+    <div class="type sponsor{% unless taille_type_de_billet contains '-' %} small{% endunless %}">
+      <span>{{ inscrit.type_de_billet }}<span>
+    </div>
+    {% else %}
+    <div class="type inscrit">
+      <span>Participant<span>
+    </div>
+    {% endif %}
   	<div class="info">
-      <p class="fullname">{{ inscrit.prenom }} {{ inscrit.nom }}</p>
-      <p>
-      	<span class="twitter">{{ inscrit.twitter }}</span>
-      	-
-      	<span class="site_web">{{ inscrit.site_web }}</span>
-      </p>
-      <p class="intitule_du_poste">{{ inscrit.intitule_du_poste }}</p>
+      <p class="fullname">{{ inscrit.prenom | capitalize }} {{ inscrit.nom | capitalize }}</p>
+      {% if inscrit.twitter %}
+    	<p class="twitter">@{{ inscrit.twitter | remove:'https://twitter.com/' | remove:'http://www.twitter.com/' | remove:'@' }}</p>
+      {% endif %}
+      {% capture site_web_size %}{{ inscrit.site_web | size | minus:32 }}{% endcapture %}
+    	<p class="site_web{% unless site_web_size contains '-' %} small{% endunless %}">{{ inscrit.site_web }}</p>
+      {% capture intitule_du_poste_size %}{{ inscrit.intitule_du_poste | size | minus:32 }}{% endcapture %}
+      <p class="intitule_du_poste{% unless intitule_du_poste_size contains '-' %} small{% endunless %}">{{ inscrit.intitule_du_poste | truncate: 40 }}</p>
       <p class="entreprise">{{ inscrit.entreprise }}</p>
+      <p class="type_de_billet">{{ inscrit.type_de_billet }}</p>
     </div>
 	  <div class="sponsors">
-		<img src="/static/img/sponsors/upwiser.png" class="upwiser" alt="Upwiser" />
+		  <img src="/static/img/sponsors/upwiser.png" class="upwiser" alt="Upwiser" />
 	    <img src="/static/img/sponsors/arpinum.jpg" class="arpinum" alt="Arpinum" />
 	    <img src="/static/img/sponsors/lectra.gif" class="lectra" alt="Lectra" />
 	  </div>
   </li>
-{% endfor %}
-<link href="/assets/css/badges/badges.css" rel="stylesheet">
+  {% endfor %}
 </ul>
+<link href="/assets/css/badges/badges.css" rel="stylesheet">
 </body>
