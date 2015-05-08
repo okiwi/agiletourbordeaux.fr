@@ -161,6 +161,70 @@ js:
 </section>
 <!-- /PAGE ABOUT -->
 
+<!-- PAGE DERNIERES NEWS -->
+<section class="page-section">
+    <div class="container">
+        <h1 class="section-title">
+            <span data-animation="flipInY" data-animation-delay="300" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-file-text-o fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="500" class="title-inner">Derni&egrave;res news <small> / Quoi de neuf ?</small></span>
+        </h1>
+        <div class="row post-row">
+
+            {% for post in site.posts limit:3 %}
+            <div class="col-md-4">
+                <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="{% cycle 100, 300, 500 %}">
+                    <div class="post-media">
+                        <img src="/2014/static/img/blog/{{ post.image }}" alt="{{ post.txt }}"/>
+                    </div>
+                    <div class="post-header">
+                        <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                        <div class="post-meta">
+                                        <span class="post-date">
+                                            Post&eacute; le
+                                            <span class="day">{{ post.date | date: "%-d" }}</span>
+                                            <span class="month">
+                                            {% assign m = post.date | date: "%-m" %}
+                                            {% case m %}
+                                            {% when '1' %}Janvier
+                                            {% when '2' %}F&eacute;vrier
+                                            {% when '3' %}Mars
+                                            {% when '4' %}Avril
+                                            {% when '5' %}Mai
+                                            {% when '6' %}Juin
+                                            {% when '7' %}Juillet
+                                            {% when '8' %}Ao&ucirc;t
+                                            {% when '9' %}Septembre
+                                            {% when '10' %}Octobre
+                                            {% when '11' %}Novembre
+                                            {% when '12' %}D&eacute;cembre
+                                            {% endcase %}
+                                            </span>
+                                            <span class="year">{{ post.date | date: "%Y" }}</span>
+                                        </span>
+                        </div>
+                    </div>
+                    <div class="post-body">
+                        <div class="post-excerpt">
+                            <p>{{ post.txt }}</p>
+                        </div>
+                    </div>
+                    <div class="post-footer">
+                            <span class="post-readmore">
+                                <a href="{{ post.url }}" class="btn btn-theme btn-theme-transparent">Lire la suite</a>
+                            </span>
+                    </div>
+                </article>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="text-center margin-top">
+            <a data-animation="flipInY" data-animation-delay="100" href="/blog/index.html" class="btn btn-theme"><i class="fa fa-file"></i> Toutes les news</a>
+        </div>
+    </div>
+</section>
+<!-- /PAGE DERNIERES NEWS -->
+
 <!-- PAGE GOOGLE MAPS -->
 <section class="page-section" id="location">
     <div class="container full-width gmap-background">
