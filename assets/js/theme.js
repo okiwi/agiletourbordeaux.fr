@@ -186,7 +186,6 @@ var theme = function () {
             $('#defaultCountdown').countdown({until: agileDay});
             $('#year').text(agileDay.getFullYear());
             $("#main-slider").on('changed.owl.carousel', function(event) {
-                console.log(event);
                 $('#defaultCountdown').countdown({until: agileDay});
                 $('#year').text(agileDay.getFullYear());
             })
