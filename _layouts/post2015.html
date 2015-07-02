@@ -74,7 +74,53 @@
     <!-- Content area -->
     <div class="content-area">
 
-        {{content}}
+        <!-- PAGE BLOG -->
+        <section class="page-section with-sidebar sidebar-right">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Content -->
+                    <section id="content" class="content col-sm-12 col-md-12">
+                        <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="100">
+                            <div class="post-header">
+                                <h2 class="post-title"><a href="#">{{page.title}}</a></h2>
+                                <div class="post-meta">
+                                    <span class="post-date">
+                                        <span class="day">{{ page.date | date: "%-d" }}</span>
+                                        <span class="month">
+                                            {% assign m = page.date | date: "%-m" %}
+                                            {% case m %}
+                                            {% when '1' %}Janvier
+                                            {% when '2' %}Février
+                                            {% when '3' %}Mars
+                                            {% when '4' %}Avril
+                                            {% when '5' %}Mai
+                                            {% when '6' %}Juin
+                                            {% when '7' %}Juillet
+                                            {% when '8' %}Août
+                                            {% when '9' %}Septembre
+                                            {% when '10' %}Octobre
+                                            {% when '11' %}Novembre
+                                            {% when '12' %}Décembre
+                                            {% endcase %}
+                                        </span>
+                                        <span class="year">{{ page.date | date: "%Y" }}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="post-body">
+                                <div class="post-excerpt">
+                                    {{content}}
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+                    <!-- Content -->
+
+                </div>
+            </div>
+        </section>
+        <!-- /PAGE BLOG -->
 
     </div>
     <!-- /Content area -->

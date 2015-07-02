@@ -161,7 +161,7 @@ var theme = function () {
             $("#main-slider").owlCarousel({
                 //items: 1,
                 autoplay: true,
-                loop: false,
+                loop: true,
                 margin: 0,
                 dots: false,
                 nav: false,
@@ -182,9 +182,14 @@ var theme = function () {
         // CountDown
         initCountDown: function () {
             var agileDay = new Date();
-            agileDay = new Date(2014, 10-1, 31, 9, 0, 0);
+            agileDay = new Date(2015, 10-1, 30, 9, 0, 0);
             $('#defaultCountdown').countdown({until: agileDay});
             $('#year').text(agileDay.getFullYear());
+            $("#main-slider").on('changed.owl.carousel', function(event) {
+                console.log(event);
+                $('#defaultCountdown').countdown({until: agileDay});
+                $('#year').text(agileDay.getFullYear());
+            })
         },
         // Partners Slider
         initPartnerSlider: function () {

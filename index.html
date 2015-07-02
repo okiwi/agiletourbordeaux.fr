@@ -20,8 +20,47 @@ js:
                     <div class="container">
                         <div class="div-table">
                             <div class="div-cell">
-                                <!--<h2 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>Fin 2015</span></h2>-->
-                                <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300"><i class="fa fa-angle-left"></i> Agile Tour Bordeaux 2015 <i class="fa fa-angle-right"></i></h3>
+                                <h2 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>30 - 31 octobre 2015</span></h2>
+                                <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300"><i class="fa fa-angle-left"></i> Agile Tour Bordeaux 2014 <i class="fa fa-angle-right"></i></h3>
+                                <div class="countdown-wrapper">
+                                    <div id="defaultCountdown" class="defaultCountdown"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="item page text-center slide4">
+                <div class="caption">
+                    <div class="container">
+                        <div class="div-table">
+                            <div class="div-cell">
+                                <div class="text-holder">
+                                    <h2 class="caption-title">Appel aux sponsors</h2>
+                                    <h3 class="caption-subtitle"><i class="fa fa-angle-left"></i> Découvrez l'offre 2015 <i class="fa fa-angle-right"></i></h3>
+                                    <p class="caption-text">
+                                        <a href="/2015/07/02/offre-sponsoring.html" class="btn btn-theme btn-theme-xl"> En savoir plus </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="item page text-center slide1">
+                <div class="caption">
+                    <div class="container">
+                        <div class="div-table">
+                            <div class="div-cell">
+                                <h2 class="caption-title" data-animation="fadeInDown" data-animation-delay="100"><span>Les organisateurs</span></h2>
+                                <h3 class="caption-subtitle" data-animation="fadeInUp" data-animation-delay="300"><i class="fa fa-angle-left"></i> Qui sont-ils ? <i class="fa fa-angle-right"></i></h3>
+                                <p class="caption-text">
+                                    <a href="/2015/07/02/equipe.html" class="btn btn-theme btn-theme-xl"> En savoir plus </a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -45,7 +84,7 @@ js:
                                             </span>
                                         <div class="media-body">
                                             <h4 class="media-heading">Date</h4>
-                                            <span>Fin 2015</span>
+                                            <span>30 - 31 octobre 2015</span>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +213,7 @@ js:
             <div class="col-md-4">
                 <article class="post-wrap" data-animation="fadeInUp" data-animation-delay="{% cycle 100, 300, 500 %}">
                     <div class="post-media">
-                        <img src="/2014/static/img/blog/{{ post.image }}" alt="{{ post.txt }}"/>
+                        <img src="/static/img/blog/{{ post.image }}" alt="{{ post.txt }}"/>
                     </div>
                     <div class="post-header">
                         <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -205,7 +244,7 @@ js:
                     </div>
                     <div class="post-body">
                         <div class="post-excerpt">
-                            <p>{{ post.txt }}</p>
+                            <p>{{ post.excerpt }}</p>
                         </div>
                     </div>
                     <div class="post-footer">
@@ -249,3 +288,68 @@ js:
     </div>
 </section>
 <!-- /PAGE GOOGLE MAPS -->
+
+<!-- PAGE CONTACT -->
+<section class="page-section color" id="contact">
+    <div class="container">
+
+        <h1 class="section-title">
+            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Contactez-nous</span>
+        </h1>
+
+        <!-- Contact form -->
+        <form name="af-form" method="post" action="http://formspree.io/contact@agiletourbordeaux.fr" class="af-form row" id="af-form">
+
+            <input type="hidden" name="_subject" value="Formulaire de contact agiletourbordeaux.fr" />
+            <input type="hidden" name="_next" value="/" />
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <input
+                            type="text" name="name" id="name" placeholder="Votre nom..." value="" size="30"
+                            data-toggle="tooltip" title="Le nom est obligatoire"
+                            class="form-control placeholder"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <input
+                            type="text" name="_replyto" id="email" placeholder="Votre email..." value="" size="30"
+                            data-toggle="tooltip" title="L'email est obligatoire"
+                            class="form-control placeholder"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <input
+                            type="text" name="_subject" id="subject" placeholder="Le sujet de votre message..." value="" size="30"
+                            data-toggle="tooltip" title="Le sujet du message est obligatoire"
+                            class="form-control placeholder" />
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <textarea
+                            name="message" id="input-message" placeholder="Votre message..." rows="4" cols="50"
+                            data-toggle="tooltip" title="Le message est obligatoire"
+                            class="form-control placeholder"></textarea>
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required text-center">
+                <div class="form-group af-inner">
+                    <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Envoyer" />
+                </div>
+            </div>
+
+        </form>
+        <!-- /Contact form -->
+
+    </div>
+</section>
+<!-- /PAGE CONTACT -->
