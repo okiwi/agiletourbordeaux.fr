@@ -2,9 +2,7 @@ jQuery(document).ready(function () {
     theme.init();
     theme.initMainSlider();
     theme.initCountDown();
-    theme.initSponsorsGoldSlider();
-    theme.initSponsorsSilverSlider();
-    theme.initPartenaireSlider();
+    theme.initSponsorsSlider();
     theme.initTestimonials();
     theme.initGoogleMap();
 });

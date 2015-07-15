@@ -76,82 +76,27 @@ ul.equipe {
     margin-bottom: 20px;
 }
 
-#owl-clinic .item {
-    margin: 5px;
-    -webkit-box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow:    0 0 5px 2px rgba(50, 50, 50, 0.5);
-    box-shadow:         0 0 5px 2px rgba(50, 50, 50, 0.5);
-}
-
-#owl-clinic .item img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
 .border-white {
     border: 5px solid white;
 }
 
-.partenaires-carousel .owl-carousel div a {display: block; text-align: center; background-color: #f3f4f5; border-radius: 10px; padding: 10px;}
-.partenaires-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
-.partenaires-carousel .owl-carousel .owl-item img {width: auto;}
-.partenaires-carousel .owl-theme .owl-controls {}
-.partenaires-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
+.sponsors-carousel .owl-carousel div a {display: block; text-align: center; background-color: #f3f4f5; border-radius: 10px; padding: 10px;}
+.sponsors-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
+.sponsors-carousel .owl-carousel .owl-item img {width: auto;}
+.sponsors-carousel .owl-theme .owl-controls {}
+.sponsors-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
 @media (max-width: 767px) {
-    .partenaires-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
+    .sponsors-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
 }
-.partenaires-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
+.sponsors-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
     background-color: transparent;
     border-radius: 0;
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-.partenaires-carousel .owl-prev,
-.partenaires-carousel .owl-next {
-    border: solid 1px #ffffff;
-    border-radius: 10px !important;
-    color: #ffffff;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-.partenaires-carousel .owl-next {margin-left: 10px !important;}
-.partenaires-carousel .owl-prev .fa,
-.partenaires-carousel .owl-next .fa {
-    color: #ffffff;
-    font-size: 33px !important;
-    line-height: 50px;
-}
-.partenaires-carousel .owl-prev:hover ,
-.partenaires-carousel .owl-next:hover  {
-    border-color: #435469;
-    color: #435469;
-}
-.partenaires-carousel .owl-prev:hover .fa,
-.partenaires-carousel .owl-next:hover  .fa {
-    color: #435469;
-}
-
-.sponsors-gold-carousel .owl-carousel div a {display: block; text-align: center; background-color: #f3f4f5; border-radius: 10px; padding: 10px;}
-.sponsors-gold-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
-.sponsors-gold-carousel .owl-carousel .owl-item img {width: auto;}
-.sponsors-gold-carousel .owl-theme .owl-controls {}
-.sponsors-gold-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
-@media (max-width: 767px) {
-    .sponsors-gold-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
-}
-.sponsors-gold-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
-    background-color: transparent;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-.sponsors-gold-carousel .owl-prev,
-.sponsors-gold-carousel .owl-next {
+.sponsors-carousel .owl-prev,
+.sponsors-carousel .owl-next {
     border: solid 1px #435469;
     border-radius: 10px !important;
     color: #435469;
@@ -160,66 +105,23 @@ ul.equipe {
     line-height: 50px;
     text-align: center;
 }
-.sponsors-gold-carousel .owl-next {margin-left: 10px !important;}
-.sponsors-gold-carousel .owl-prev .fa,
-.sponsors-gold-carousel .owl-next .fa {
+.sponsors-carousel .owl-next {margin-left: 10px !important;}
+.sponsors-carousel .owl-prev .fa,
+.sponsors-carousel .owl-next .fa {
     color: #435469;
     font-size: 33px !important;
     line-height: 50px;
 }
-.sponsors-gold-carousel .owl-prev:hover ,
-.sponsors-gold-carousel .owl-next:hover  {
+.sponsors-carousel .owl-prev:hover ,
+.sponsors-carousel .owl-next:hover  {
     border-color: #dc143c;
     color: #dc143c;
 }
-.sponsors-gold-carousel .owl-prev:hover .fa,
-.sponsors-gold-carousel .owl-next:hover  .fa {
+.sponsors-carousel .owl-prev:hover .fa,
+.sponsors-carousel .owl-next:hover  .fa {
     color: #dc143c;
 }
 
-
-.sponsors-silver-carousel .owl-carousel div a {display: block; text-align: center; background-color: #CECECE; border-radius: 10px; padding: 10px;}
-.sponsors-silver-carousel .owl-carousel div a.gold {display: block; text-align: center; background-color: #FFDE75; border-radius: 10px; padding: 10px;}
-.sponsors-silver-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
-.sponsors-silver-carousel .owl-carousel .owl-item img {width: auto;}
-.sponsors-silver-carousel .owl-theme .owl-controls {}
-.sponsors-silver-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
-@media (max-width: 767px) {
-    .sponsors-silver-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
-}
-.sponsors-silver-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
-    background-color: transparent;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-.sponsors-silver-carousel .owl-prev,
-.sponsors-silver-carousel .owl-next {
-    border: solid 1px #435469;
-    border-radius: 10px !important;
-    color: #435469;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-.sponsors-silver-carousel .owl-next {margin-left: 10px !important;}
-.sponsors-silver-carousel .owl-prev .fa,
-.sponsors-silver-carousel .owl-next .fa {
-    color: #435469;
-    font-size: 33px !important;
-    line-height: 50px;
-}
-.sponsors-silver-carousel .owl-prev:hover ,
-.sponsors-silver-carousel .owl-next:hover  {
-    border-color: #dc143c;
-    color: #dc143c;
-}
-.sponsors-silver-carousel .owl-prev:hover .fa,
-.sponsors-silver-carousel .owl-next:hover  .fa {
-    color: #dc143c;
-}
 
 .header.shrink {
     background-color: #2C495A;
@@ -227,14 +129,6 @@ ul.equipe {
 
 .sub-page .header {
     background-color: #2C495A;
-}
-
-#sponsors-silver .title-inner .gold {
-    color: #FFDE75;
-}
-
-#sponsors-silver .title-inner .silver {
-    color: #CECECE;
 }
 
 .price-value {
