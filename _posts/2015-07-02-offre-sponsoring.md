@@ -4,7 +4,7 @@ title: Appel aux sponsors
 image: appelauxsponsors.jpg
 wide-image: appelauxsponsors-wide.jpg
 js:
-- /static/js/post.js
+- /static/js/appel-sponsors.js
 ---
 
 Le vendredi 30 et samedi 31 octobre 2015, l’Agile Tour Bordeaux revient !
