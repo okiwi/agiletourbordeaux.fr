@@ -255,18 +255,33 @@ var theme = function () {
         },
         // Google map
         initGoogleMap: function() {
-            var map,
+           var map,
                 marker,
-                myLatlng = new google.maps.LatLng(44.8407275, -0.5690607);
-
+                myLatlng = new google.maps.LatLng(44.85359, -0.57493);
             function initialize() {
                 var mapOptions = {
                     scrollwheel: false,
-                    zoom: 13,
+                    zoom: 17,
                     center: myLatlng
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
+
+                marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    animation: google.maps.Animation.BOUNCE,
+                    title: 'Epitech Bordeaux'
+                });
+                google.maps.event.addListener(marker, 'click', toggleBounce);
+            }
+
+            function toggleBounce() {
+                if (marker.getAnimation() != null) {
+                    marker.setAnimation(null);
+                } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
             }
 
             google.maps.event.addDomListener(window, 'load', initialize);
