@@ -32,3 +32,9 @@ table .pause {
     background-color: #4478b2;
     color: #fff;
 }
+
+table .heure {
+    vertical-align: top;
+    line-height: 100%;
+    padding: 0.5em;
+}
