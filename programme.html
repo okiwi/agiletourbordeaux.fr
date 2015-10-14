@@ -3,8 +3,10 @@ layout: default2015
 title: Programme de l'Agile Tour Bordeaux 2015
 js:
 - /static/js/programme.js
+- /static/lib/animatedModal.min.js
 css:
 - /static/css/programme.css
+- /static/lib/animate.min.css
 ---
 
 <section class="page-section with-sidebar">
@@ -27,7 +29,10 @@ css:
                 </tr>
                 <tr>
                     <td class="heure">9h</td>
-                    <td colspan="5"><span class="orateur">Ploum</span><br/>Le bonheur sans travail</td>
+                    <td colspan="5">
+                        <span class="orateur">Ploum</span><br/>
+                        <a id="conf-ploum" class="modalLink" href="#animatedModal">Le bonheur sans travail</a>
+                    </td>
                 </tr>
                 <tr>
                     <td class="heure">10h</td>
@@ -41,11 +46,12 @@ css:
                     <td class="heure">10h30</td>
                     <td>
                         <span class="orateur">Benjamin ROSOOR</span><br/>
-                        Comment ça va ?<br/>Bien ! Evidemment.
+                        <a id="conf-rosoor" class="modalLink" href="#animatedModal">Comment ça va ?<br/>Bien !
+                            Evidemment.</a>
                     </td>
                     <td>
                         <span class="orateur">Emmanuel GAILLOT & Jonathan PERRET</span><br/>
-						Mob mob mob programming
+						<a id="conf-gaillot" class="modalLink" href="#animatedModal">Mob mob mob programming</a>
                     </td>
                     <td>
                         <span class="orateur">Olivier PATOU & Olivier PICAUD</span><br/>
@@ -239,3 +245,29 @@ css:
         </div>
     </div>
 </section>
+
+<div id="animatedModal">
+    <div  id="btn-close-modal" class="close-animatedModal">
+        FERMER
+    </div>
+    <div class="modal-content">
+        <!--<h1>Comment ça va ? Bien ! Evidemment.</h1>-->
+        <!--<p>Dirigeants, indépendants, freelance, auto-entrepreneurs sont maîtres de leur destin. En position de-->
+        <!--leadership, c'est assez rare qu'ils avouent "aller mal". Et d'ailleurs, la société ne le comprendrait pas.</p>-->
+
+        <!--<p>Quand on parle de bien être au travail et donc de risques psycho-sociologiques on s'adresse donc-->
+        <!--essentiellement aux salariés, aux personnes qui ont un lien hiérarchique avec un manager, un patron.</p>-->
+
+        <!--<p>Or nous sommes dans un monde où l'organisation du travail évolue avec de plus en plus, avec une-->
+        <!--augmentation de l'indépendance au détriment du salariat...le burn-out, lui ne fait pas la différence entre-->
+        <!--les statuts.</p>-->
+
+        <!--<p>Pointer le problème, c'est déjà y répondre en partie.</p>-->
+
+        <!--<p><b>Benjamin Rosoor,</b></p>-->
+
+        <!--<p>Multi-Entrepreneur du web depuis 1999. Il est engagé depuis plusieurs années au sein du Centre des Jeunes-->
+        <!--Dirigeants (CJD) où il a participé à des travaux sur le bien être du dirigeant.</p>-->
+        </div>
+    </div>
+</div>

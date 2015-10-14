@@ -38,3 +38,15 @@ table .heure {
     line-height: 100%;
     padding: 0.5em;
 }
+
+#btn-close-modal {
+    padding: 1em;
+    width:100%;
+    text-align: center;
+    cursor:pointer;
+    color:#fff;
+}
+
+#animatedModal .modal-content {
+    padding: 1em;
+}
