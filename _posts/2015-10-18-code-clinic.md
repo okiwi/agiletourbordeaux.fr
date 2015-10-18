@@ -16,15 +16,14 @@ Quand on écrit des applications, on se retrouve souvent avec des petites questi
 et pleins d'autres sur les divers aspects de notre quotidien de développeurs.
 
 Le Code Clinic, c'est l'occasion d'essayer de trouver des réponses à ces questions ou à minima obtenir un éclairage différent de la situation.  
-Au cours de sessions de 20min, vous aurez la possibilité de discuter de votre problématique en tête à tête avec un autre développeur expérimenté.
+Au cours de sessions de 20min, vous aurez la possibilité de discuter de votre problématique en tête à tête avec un autre développeur expérimenté.  
 Les mots d'ordre de l'équipe "d'aides-soignants" : **humilité, empathie, confidentialité et partage.**
 
 **Comment ça marche :**  
 - Durant les 2 heures du Code Clinic, des créneaux de 20min sont proposés. Ils sont matérialisées par un tableau placé à l'entrée de l'espace Code Clinic.
  
 Préparez éventuellement votre code en amont, sur votre ordinateur, dans un repository ou juste un exemple de code (gist ou autre...).  
-**Pour participer, il suffit de marquer son nom, et les mots clés du thème dans une case libre et d'être présent à l'heure que vous avez choisi.** 
-
+**Pour participer, il suffit de marquer son nom, et les mots clés du thème dans une case libre et d'être présent à l'heure que vous avez choisi.**  
 Ne soyez pas en retard, ou vous perdrez du temps :)  
 
 ![Alt text](/static/img/blog/code-clinic-wide.jpg){: .img-responsive }{: .center-block }
