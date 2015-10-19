@@ -40,9 +40,9 @@ jQuery(document).ready(function () {
         });
 
         jQuery(element).animatedModal({
-            animatedIn:'slideInLeft',
-            animatedOut:'slideOutRight',
-            animationDuration:'.6s',
+            animatedIn:'fadeIn',
+            animatedOut:'fadeOut',
+            animationDuration:'.3s',
             beforeOpen: function() {
                 animatedModal.addClass('visible');
             },
