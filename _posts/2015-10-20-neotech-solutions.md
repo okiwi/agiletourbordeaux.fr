@@ -16,10 +16,10 @@ Nous plaçons les femmes et les hommes au centre de nos préoccupations. Nous so
 **Vous considérez-vous comme Agile aujourd'hui ?**
  
 Nous n’en sommes pas très loin je pense. En effet, les quatre valeurs principales de l’agilité sont au cœur de notre organisation :  
-·         Les individus et leurs interactions plus que les processus et les outils<br />
-·         Du logiciel qui fonctionne plus qu’une documentation exhaustive<br />
-·         La collaboration avec les clients plus que la négociation contractuelle<br />
-·         L’adaptation au changement plus que le suivi d’un plan.
+·         Les individus et leurs interactions plus que les processus et les outils  
+·         Du logiciel qui fonctionne plus qu’une documentation exhaustive  
+·         La collaboration avec les clients plus que la négociation contractuelle  
+·         L’adaptation au changement plus que le suivi d’un plan  
  
 **Qu'est ce que l'agilité a apporté à Neotech Solutions  ?**
  
