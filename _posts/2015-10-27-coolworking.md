@@ -20,11 +20,11 @@ Du fonctionnement plutôt "empirique » des débuts, nous avons au fur et à mes
 
 **Qu'est ce que l'agilité a apporté à [Coolworking](http://www.coolworking.fr/coworking-bordeaux/) ?**
 
-Nous avons perdu pas mal d’argent dans notre premier espace (rue Esprit des lois) car nous pensions naïvement de toutes nos hypothèses étaient bonnes, et qu’elles finiraient nécessairement par aboutir. Donc plutôt que de chercher à les valider, nous les mettions directement en application, ce qui nous a parfois coûté pas mal d’argent. Nous continuons à émettre des hypothèses, mais aujourd’hui nous nous efforçons de les valider avant d’investir du temps et de l’argent.
+Nous avons perdu pas mal d’argent dans notre premier espace (rue Esprit des lois) car nous pensions naïvement de toutes nos hypothèses étaient bonnes, et qu’elles finiraient nécessairement par aboutir. Donc plutôt que de chercher à les valider, nous les mettions directement en application, ce qui nous a parfois coûté cher. Nous continuons à émettre des hypothèses, mais aujourd’hui nous nous efforçons de les valider avant d’investir du temps et de l’argent.
 
 **Pourquoi soutenez-vous l'Agile Tour Bordeaux ?**
 
-J’ai été sensibilisé à l’agilité par JB Dusseaut, Cédric Pillac et Bastien Gallay qui ont longtemps investis dans l’Agile Tour Bordeaux. C’est tout naturellement que nous avons accueilli les réunions d'organisation de l'AT et les autres évènements d'Okiwi (codings dojo, Global Day of Code Retreat, ...).
+J’ai été sensibilisé à l’agilité par JB Dusseaut, Cédric Pillac et Bastien Gallay qui ont longtemps été investis dans l’Agile Tour Bordeaux. C’est tout naturellement que nous avons accueilli les réunions d'organisation de l'AT et les autres évènements d'Okiwi (codings dojo, Global Day of Code Retreat, ...).
 
 **Est-ce que le bonheur au travail est un thème qui vous parle ?**
 
