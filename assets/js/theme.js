@@ -160,7 +160,7 @@ var theme = function () {
         initMainSlider: function () {
             $("#main-slider").owlCarousel({
                 //items: 1,
-                autoplay: true,
+                autoplay: false, // "true" to have automatic changing slides
                 loop: true,
                 margin: 0,
                 dots: false,

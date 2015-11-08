@@ -1,7 +1,7 @@
 jQuery(document).ready(function () {
     theme.init();
     theme.initMainSlider();
-    theme.initCountDown();
+    // theme.initCountDown();
     theme.initSponsorsSlider();
     theme.initTestimonials();
     theme.initGoogleMap();
