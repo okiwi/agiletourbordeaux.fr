@@ -1,0 +1,52 @@
+/* topbar : #2C495A */
+/* bleu clair : #4478b2*/
+/* bleu nuit : #0d1d31*/
+
+table {
+    margin-top: 1.2em;
+}
+
+table caption {
+    font-size: 2em;
+    color: #2C495A;
+    padding: 1.1em;
+}
+
+table td, table th {
+    padding: 1.1em;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table th {
+    background-color: #0d1d31;
+    color: #fff;
+}
+
+table .orateur {
+    color: #4478b2;
+    font-weight: 800;
+}
+
+table .pause {
+    background-color: #4478b2;
+    color: #fff;
+}
+
+table .heure {
+    vertical-align: top;
+    line-height: 100%;
+    padding: 0.5em;
+}
+
+#btn-close-modal {
+    padding: 1em;
+    width:100%;
+    text-align: center;
+    cursor:pointer;
+    color:#fff;
+}
+
+#animatedModal .modal-content {
+    padding: 1em;
+}
