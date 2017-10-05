@@ -10,7 +10,7 @@ jQuery(document).ready(function () {
     var descriptions = {
         'conf-sandro':      '<h1>The long road / La route est longue</h1><p>Choisir ses changements de carrière dans une industrie qui mute si souvent n\'est pas une mince affaire. Nous traiterons ici de l\'importance de ce choix, quels critères observer, et quand activer ces changements de carrière pour atteindre le rôle de nos rêves.</p>',
         'conf-ricaud':      '<h1>Stigmergie : fourmis, auto-organisation et collaboration à grande échelle</h1><p>Si le modèle concurrentiel crée des redondances et gâche des ressources sur la protection des idées, la publicité et autre, le modèle coopératif gâche beaucoup de temps et de ressources à discuter (et à discuter les discussions). Entre ces deux modèles, la stigmergie, une nouvelle méthode de gouvernance inspirée du mode d\'organisation des insectes sociaux, pourrait offrir un modèle alternatif plus adapté à la collaboration dans des grands groupes.</p><p><b>Lilian Ricaud</b> : Chercheur, consultant, formateur avec une approche écosystémique de la coopération.</p>',
-        'conf-loudin':      '<h1>Agilité à grande échelle</h1><p></p>',
+        'conf-loudin':      '<h1>Refactorisation de code : comment intégrer à sa roadmap produit ?</h1><p></p>',
         'conf-rossignol':   '<h1>Agile Smells</h1><p>Ajouter une nouvelle colonne à votre kanban board, décaler le daily standup, sortir de rétrospective avec l\'action \"être plus rigoureux\", ou encore empiler les coachs agiles, doivent être pour vous des alertes sur le fait que vos équipes déplacent un problème ou ne se posent pas les bonnes questions.</p><p>Je vous propose, au travers de situation réellement vécues, de faire un tour d\'horizon des dérives, des fausses bonnes idées ou simplement des phrases prononcées qui peuvent vous amenez à vous dire que quelque chose sent mauvais.</p>',
         'conf-cockburn-workshop':    '<h1>Workshop</h1><p></p>',
         'conf-gaillot':     '<h1>Des promesses, toujours des promesses...</h1><p></p>',
@@ -30,8 +30,17 @@ jQuery(document).ready(function () {
         'conf-bailly':    '<h1>Du mode d’existence du code</h1><p></p>',
         'conf-f-faure':    '<h1>Le Work Hackisme est un humanisme</h1><p></p>',
         'conf-bossavit':    '<h1>L\'enfance perpétuelle : survivre dans une industrie qui croit toujours au Père Noël</h1><p></p>',
-        'conf-cauwenberghe-pleniere':    '<h1>Real options</h1><p></p>',
-        'conf-cloture':    '<h1>template</h1><p></p>'
+		'conf-cloture-J1':    '<h1>template</h1><p></p>',
+
+		'conf-cauwenberghe-pleniere':    '<h1>Real options</h1><p></p>',
+        'atelier-aimetti':    '<h1>Coaching Dojo</h1><p></p>', 
+        'atelier-labasse':    '<h1>Lego pour les vrais projets de la vrais vie</h1><p></p>',
+        'atelier-durand':    '<h1>Business Value Game</h1><p></p>',
+        'atelier-froville':    '<h1>Lean startup snowflakes</h1><p></p>',
+        'atelier-salazar':    '<h1>Passez à l\'action avec l\'improvisation !</h1><p></p>',
+        'atelier-cranford':    '<h1>Coding Gouter</h1><p></p>',
+        'atelier-gaillot':    '<h1>Open Space</h1><p></p>',
+        'conf-cloture-J2':    '<h1>template</h1><p></p>'
 	};
 
     jQuery('.modalLink').each(function(index, element) {
