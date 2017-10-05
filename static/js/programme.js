@@ -43,7 +43,7 @@ jQuery(document).ready(function () {
         
         'atelier-aimetti':    '<h1>Coaching Dojo</h1><p><b>Christophe Deniaud</b> et <b>Fabrice Aimetti</b> souhaitent réunir des personnes qui désirent découvrir, apprendre, développer, ... des techniques de coaching individuelle qui les aideront dans leur quotidien. Ils co-facilitent depuis janvier 2016 des Coaching Dojo sur Bordeaux. Ils en ont récemment animé un à Agile Pays Basque.</p>', 
         'atelier-labasse':    '<h1>Lego pour les vrais projets de la vrais vie</h1><p>Les mains dans les briques, nous verrons comment la méthode Lego® Serious Play® permet, entre autres, d\'obtenir une vision partagée du produit, de créer les personas ou de co-organiser une équipe.</p>',
-        'atelier-durand':    '<h1>Business Value Game</h1><p>Description à venir</p>',
+        'atelier-durand':    '<h1>Business Value Game</h1><p>Il s\'agit, au travers de cet atelier, de prendre la bonne décision concernant la construction de divers monuments et ainsi maximiser son bénéfice.<p></p>L\'idée est d\'introduire le concept de "valeur métier", permettant une priorisation stratégique, en fonction de divers critères.<p></p>L\'intérêt est de montrer à nos maîtres d\'oeuvre qu\'il est important de bâtir son modèle de décision ensemble, avec pour objectif : "Le Bon produit au Bon moment avec les Bonnes fonctionnalités".</p>',
         'atelier-froville':    '<h1>Lean startup snowflakes</h1><p>Description à venir</p>',
         'atelier-salazar':    '<h1>Passez à l\'action avec l\'improvisation !</h1><p>Description à venir</p>',
 
