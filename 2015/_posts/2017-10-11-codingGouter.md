@@ -15,7 +15,7 @@ dans une ambiance conviviale les bases de l'informatique.
 <!--more-->                                         
 
 
-###Comment ça va se passer ?
+### Comment ça va se passer ?
 
 **Quand** : Samedi 21 Octobre.        
 **Où** : Epitech 81-89 Rue du Jardin public, 33000 Bordeaux    
@@ -35,14 +35,14 @@ Pour que le coding goûter se passe bien, il faut retenir quelques points :
 * les participants peuvent circuler et choisir l'activité qu'ils ont envie de faire à tout moment
 * c'est gratuit
 
-###Que vous faut-il amener ?
+### Que vous faut-il amener ?
 * une grosse envie d'apprendre, pour vous et vos enfant  
 * de la bonne humeur
 * un enfant qui sait lire assez facilement (à partir de 7,8 ans c'est top, et ça peut aller jusqu'à 77 ans)
 * un ordinateur portable
 * de quoi goûter à partager, une tarte au pomme et une bouteille de soda font l'affaire !
 
-###Qui sommes nous ?
+### Qui sommes nous ?
 
 Des bénévoles, des développeurs, des chefs de projets. Des passionnés d'informatique pour qui transmettre est important, 
 et pour qui partager un goûter l'est encore plus. 
