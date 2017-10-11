@@ -36,11 +36,11 @@ Pour que le coding goûter se passe bien, il faut retenir quelques points :
 * c'est gratuit
 
 ### Que vous faut-il amener ?
-* une grosse envie d'apprendre, pour vous et vos enfant  
+* une grosse envie d'apprendre, pour vous et vos enfants  
 * de la bonne humeur
 * un enfant qui sait lire assez facilement (à partir de 7,8 ans c'est top, et ça peut aller jusqu'à 77 ans)
 * un ordinateur portable
-* de quoi goûter à partager, une tarte au pomme et une bouteille de soda font l'affaire !
+* un goûter à partager: une tarte aux pommes et une bouteille de soda font l'affaire !
 
 ### Qui sommes nous ?
 
