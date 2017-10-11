@@ -1,8 +1,8 @@
 ---
 layout: post2015
 title: Samedi 21 Octobre, c'est coding goûter !
-image: retex.jpg
-wide-image: scratch.jpg
+image: scratch.jpg
+wide-image: coding-gouter-wide.jpg
 js:
 - /static/js/post.js
 ---
