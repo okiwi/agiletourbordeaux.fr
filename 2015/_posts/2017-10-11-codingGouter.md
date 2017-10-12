@@ -42,6 +42,9 @@ Pour que le coding goûter se passe bien, il faut retenir quelques points :
 * un ordinateur portable
 * un goûter à partager: une tarte aux pommes et une bouteille de soda font l'affaire !
 
+### Comment s'inscrire ?
+Il suffit de se rendre sur le [site de la billetterie](https://www.weezevent.com/agile-tour-bordeaux-2017) et réserver un billet (gratuit, et sans carte bancaire) pour la journée du samedi !
+
 ### Qui sommes nous ?
 
 Des bénévoles, des développeurs, des chefs de projets. Des passionnés d'informatique pour qui transmettre est important, 
