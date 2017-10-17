@@ -1,7 +1,7 @@
 ---
 layout: post2015
-title: l’agilité, clé de la réussite dans des marchés évoluant à toute vitesse
-subtitle: interview de véronique zoccoletto, chief transformation officer, lectra
+title: L’agilité, clé de la réussite dans des marchés évoluant à toute vitesse
+subtitle: interview de Véronique Zoccoletto, Chief transformation officer, Lectra
 image: lectra.jpg
 wide-image: lektra.jpg
 js:
