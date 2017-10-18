@@ -21,11 +21,11 @@ Découvrez comment Lectra adopte la philosophie de l'agilité.
 
 # L’agilité, clé de la réussite dans des marchés évoluant à toute vitesse
                                                                                
-## Interview de véronique zoccoletto, chief transformation officer, lectra                                                                               
+## Interview de Véronique Zoccoletto, Chief transformation officer, Lectra                                                                               
 
 ### Pour vous, qu’est-ce que l’agilité ?
 
-L’agilité est avant tout une philosophie que, chez lectra, nous nous appliquons à mettre en pratique au quotidien.
+L’agilité est avant tout une philosophie que, chez Lectra, nous nous appliquons à mettre en pratique au quotidien.
 C’est un état d'esprit. Par exemple, nous avons à cœur de placer nos clients au cœur de notre stratégie : cela
 implique de leur proposer des offres innovantes, à haute valeur, répondant parfaitement à leurs besoins et leur
 procurant une expérience de qualité. Pour y parvenir, la collaboration est notre devise. des équipes pluridisciplinaires
@@ -46,7 +46,7 @@ matériel mis à disposition. enfin, quatre coachs agile/lean accompagnent les �
 
 ### Pour vous, quels sont les avantages d’une démarche agile ?
                              
-L’agilité est pour nous une nécessité. lectra a une stratégie ambitieuse, centrée sur l'industrie 4.0 et s’appuyant sur le
+L’agilité est pour nous une nécessité. Lectra a une stratégie ambitieuse, centrée sur l'industrie 4.0 et s’appuyant sur le
 saas. Concevoir et développer notre offre avec une démarche agile garantit de pouvoir adapter en permanence notre
 organisation, nos processus et nos outils pour atteindre nos objectifs.                   
 Pour les nombreux collaborateurs que nous recrutons – 80 rien qu’en 2017 – l’agilité est gage d’une intégration rapide
@@ -56,7 +56,7 @@ et efficace.
 
 Comme dans toute transition, la conduite du changement est cruciale. une démarche imposée, sans tenir compte des
 contextes propres à chaque équipe, à chaque personne, risque de se révéler contre-productive. Vide de sens, elle ne
-motive pas et dérive vers un désengagement. C’est pourquoi, chez lectra, les équipes elles-mêmes sont motrices du
+motive pas et dérive vers un désengagement. C’est pourquoi, chez Lectra, les équipes elles-mêmes sont motrices du
 changement.
 
 ### Comment sensibiliser les équipes à une démarche agile ? 
@@ -86,7 +86,7 @@ nécessaires.
 Depuis trois ans, nous disposons également d'un outil de gestion de projet agile déployé auprès de l'ensemble des
 équipes qui contribuent à la conception et au développement de notre offre.
 
-### Qui porte une casquette agile chez lectra ?
+### Qui porte une casquette agile chez Lectra ?
 
 Nous nous appuyons sur les coachs agiles/lean internes, dont l’expertise nous est nécessaire. Mais plutôt que de
 confier à un petit groupe de personnes le pilotage du changement et la veille sur les méthodes agiles, nous préférons
@@ -94,9 +94,9 @@ impliquer l’ensemble du management.
 
 ### Pour vous, à quoi tient la réussite d'une transition vers une démarche agile ?
 
-La réussite est au rendez-vous en gardant le cap sur ses objectifs. chez lectra : délivrer notre offre en respectant le
+La réussite est au rendez-vous en gardant le cap sur ses objectifs. chez Lectra : délivrer notre offre en respectant le
 calendrier de la feuille de route marketing, avec le niveau de qualité requis pour atteindre la valeur promise à nos
 clients.
 
-Véronique, pour Lectra
+Véronique Zoccoletto, pour Lectra
                                                                                
