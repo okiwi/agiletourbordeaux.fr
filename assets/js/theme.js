@@ -264,7 +264,7 @@ var theme = function () {
             function initialize() {
                 var mapOptions = {
                     scrollwheel: false,
-                    zoom: 5,
+                    zoom: 10,
                     center: myLatlng
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
