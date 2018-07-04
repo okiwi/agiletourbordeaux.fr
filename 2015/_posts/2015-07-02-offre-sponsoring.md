@@ -21,7 +21,7 @@ Il y a aussi un autre point important pour nous d’avoir des sponsors : résist
 
 Nous sommes ouverts à tous les sponsors ainsi qu’à d’autres formes de contribution (partenariats). Cette année, nous avons simplifié l’offre de sponsoring, un tarif clair et unique pour tous : **à partir de 999€**
 
-Pour en savoir plus, nous vous invitons à consulter le document .pdf ci-dessous et à contacter Guillaume Vincent, responsable de l’offre de sponsoring au 06.66.30.70.15 ou via le mail <mailto:sponsor@agiletourbordeaux.fr>.
+Pour en savoir plus, nous vous invitons à consulter le document .pdf ci-dessous et à contacter Guillaume Vincent, responsable de l’offre de sponsoring au 06.66.30.70.15 ou via le mail sponsor [arobase] agiletourbordeaux [point] fr.
 
 Nous vous remercions déjà de l’intérêt que vous portez à notre (et surtout votre) évènement. A très bientôt !
 
