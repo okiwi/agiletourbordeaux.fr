@@ -73,9 +73,26 @@
 						<li><a href="https://www.weezevent.com/agile-tour-bordeaux-2">Inscriptions</a></li>
 						<li><a href="/2015/programme.html">Programme</a></li>
 						<li><a href="/2015/blog">Blog</a></li>
-						<li><a href="{{pageUrl}}#contact">Contact</a></li>
-                        <li><a href="/2014/index.html">Edition 2014</a></li>
-						<li><a href="/index.html">Edition 2017</a></li>
+                        <li><a href="{{pageUrl}}#contact">Contact</a></li>
+                        <li>
+                            <select id="selectEditions" onselect="onSelect()">
+                                <option value="/2012/index.html">Edition 2012</option>
+                                <option value="/2013/index.html">Edition 2013</option>
+                                <option value="/2014/index.html">Edition 2014</option>
+                                <option value="/2015/index.html">Edition 2015</option>
+                                <option value="/2017/index.html">Edition 2017</option>
+                                <option value="/index.html">Edition 2018</option>
+                            </select>
+                            <script>
+                                $(document).ready(function () {
+                                    document.getElementById('selectEditions').value = '/2015/index.html';
+                                });
+                            
+                                document.getElementById('selectEditions').addEventListener("change", function(event) {
+                                    document.location = this.value;
+                                });
+                            </script>
+                        </li>
 					</ul>
 				</nav>
                 <!-- /Navigation -->

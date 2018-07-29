@@ -798,7 +798,8 @@ textarea {
 .sf-menu {margin-right: -1em; font-size: 14px; font-weight: 300; text-transform: uppercase;}
 .sf-menu.nav > li > a:hover, /* bs3 reset */
 .sf-menu.nav > li > a:focus /* bs3 reset */ {background-color: transparent;}
-.sf-menu.nav > li > a, /*bs3 reset */ .sf-menu a {padding: 10px 15px;}
+.sf-menu.nav > li > a, /*bs3 reset */ .sf-menu a,
+.sf-menu.nav > li > a, /*bs3 reset */ .sf-menu select {padding: 10px 15px;}
 
 .sf-menu a {color: #ffffff;}
 .sf-menu a:hover {color: #ffffff;}
