@@ -8,6 +8,7 @@ $("a[data-gal^='prettyPhoto']").prettyPhoto({
 
 // Sponsors Slider
 theme.initSponsorsSlider = function () {
+    console.log('init sponsor slider', $(".sponsors-carousel .owl-carousel"));
     $(".sponsors-carousel .owl-carousel").owlCarousel({
         autoplay: true,
         loop: true,

@@ -80,10 +80,11 @@ ul.equipe {
     border: 5px solid white;
 }
 
-.sponsors-carousel .owl-carousel div a {display: block; text-align: center; background-color: #f3f4f5; border-radius: 10px; padding: 10px;}
+.sponsors-carousel .owl-carousel div a {display: block; text-align: center; background-color: #ffffff; border-radius: 10px; padding: 10px;}
 .sponsors-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
 .sponsors-carousel .owl-carousel .owl-item img {width: auto;}
 .sponsors-carousel .owl-theme .owl-controls {}
+.sponsors-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
 @media (max-width: 767px) {
     .sponsors-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
 }
