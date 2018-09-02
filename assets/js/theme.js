@@ -159,8 +159,8 @@ var theme = function () {
         // Main Slider
         initMainSlider: function () {
             $("#main-slider").owlCarousel({
-                //items: 1,
-                autoplay: false, // "true" to have automatic changing slides
+                items: 2,
+                autoplay: true, // "true" to have automatic changing slides
                 loop: true,
                 margin: 0,
                 dots: false,
@@ -182,7 +182,7 @@ var theme = function () {
         // CountDown
         initCountDown: function () {
             var agileDay = new Date();
-            agileDay = new Date(2015, 10-1, 30, 9, 0, 0);
+            agileDay = new Date(2018, 11-1, 2, 9, 0, 0);
             $('#defaultCountdown').countdown({until: agileDay});
             $('#year').text(agileDay.getFullYear());
             $("#main-slider").on('changed.owl.carousel', function(event) {
