@@ -8,7 +8,7 @@ title: badges des participants
 </head>
 <body>
 <ul>
-  {% assign inscrits = (site.data.inscrits | sort: 'type_de_billet') %}
+  {% assign inscrits = site.data.inscrits | sort: 'type_de_billet' %}
   {% for inscrit in inscrits %}
   <li>
     {% capture taille_type_de_billet %}{{ inscrit.type_de_billet | size | minus:16 }}{% endcapture %}
