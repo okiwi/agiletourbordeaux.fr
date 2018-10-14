@@ -6,6 +6,7 @@ jQuery(document).ready(function () {
     jQuery('ul.sf-menu li:nth-child(2)').addClass('active');
 
     var animatedModal = jQuery("#animatedModal");
+    var toTopButton = jQuery(".to-top");
 
     var descriptions = {
         'conf-ploum': '<h1>Le bonheur sans travail</h1><p><ol><li>1. Le travail est appelé à disparaitre car, par nature, il y aura un robot pour le faire à notre place</li><li>2. Il est nécessaire de trouver une motivation, un sens à sa vie autre que le travail</li><li>3. L’argent, symbole du travail, ne s’y prête pas. Je propose donc une nouvelle méthode de mesure de l’épanouissement à travers des unités de temps.</li></ol></p>',
@@ -60,12 +61,14 @@ jQuery(document).ready(function () {
         animatedModal.addClass('visible');
         animatedModal.removeClass('vhidden');
         jQuery('body').attr('style', 'overflow-y: hidden');
+        toTopButton.addClass('vhidden');
     }
 
     function hideModal() {
         animatedModal.addClass('vhidden');
         animatedModal.removeClass('visible');
         jQuery('body').attr('style', 'overflow-y: auto');
+        toTopButton.removeClass('vhidden');
     }
 
     function changeDescription(id) {

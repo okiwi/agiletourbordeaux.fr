@@ -6,6 +6,7 @@ jQuery(document).ready(function () {
     jQuery('ul.sf-menu li:nth-child(2)').addClass('active');
 
     var animatedModal = jQuery("#animatedModal");
+    var toTopButton = jQuery(".to-top");
 
     var descriptions = {
         'conf-sandro':      '<h1>The long road / La route est longue</h1><p>Choisir ses changements de carrière dans une industrie qui mute si souvent n\'est pas une mince affaire. Nous traiterons ici de l\'importance de ce choix, quels critères observer, et quand activer ces changements de carrière pour atteindre le rôle de nos rêves.</p>',
@@ -71,12 +72,14 @@ jQuery(document).ready(function () {
         animatedModal.addClass('visible');
         animatedModal.removeClass('vhidden');
         jQuery('body').attr('style', 'overflow-y: hidden');
+        toTopButton.addClass('vhidden');
     }
 
     function hideModal() {
         animatedModal.addClass('vhidden');
         animatedModal.removeClass('visible');
         jQuery('body').attr('style', 'overflow-y: auto');
+        toTopButton.removeClass('vhidden');
     }
 
     function changeDescription(id) {
