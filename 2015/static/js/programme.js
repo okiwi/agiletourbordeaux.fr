@@ -40,10 +40,11 @@ jQuery(document).ready(function () {
 
     jQuery('.modalLink').each(function(index, element) {
         jQuery(element).on('click', function(event) {
+            alert('click close custom');
             var id = jQuery(event.currentTarget).attr('id');
             animatedModal.find('.modal-content').html(descriptions[id]);
         });
-
+        alert('animateModal ', element.attr('id'));
         jQuery(element).animatedModal({
             animatedIn:'fadeIn',
             animatedOut:'fadeOut',
