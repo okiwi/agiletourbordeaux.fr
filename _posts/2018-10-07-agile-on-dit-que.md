@@ -26,7 +26,7 @@ revue ?
 
 ![Alt text](/static/img/blog/article-conserto/image002.jpg){: .img-responsive }{: .center-block }
 
-## L’Agilité? Trop compliqué à mettre en place...
+### L’Agilité? Trop compliqué à mettre en place...
 
 ![Alt text](/static/img/blog/article-conserto/image004.gif){: .img-responsive }{: .center-block }
 
@@ -35,7 +35,7 @@ des Sprints. Ce qui est compliqué c'est de faire en sorte que les valeurs Agile
 comprises par les é
 quipes.
 
-## La documentation, ce n’est pas Agile, alors on n’en fait pas.
+### La documentation, ce n’est pas Agile, alors on n’en fait pas.
 
 ![Alt text](/static/img/blog/article-conserto/image006.gif){: .img-responsive }{: .center-block }
 
@@ -65,7 +65,7 @@ En d'autres termes, une bonne utilisation des user stories permet de mutualiser 
 raffinement du produit, ce qui facilite la vie de l'équipe de développement en même temps qu'elle 
 permet la rédaction d'une documentation exhaustive et efficace.
 
-## L’Agilité permet de changer à sa guise les priorités de développement
+### L’Agilité permet de changer à sa guise les priorités de développement
 
 ![Alt text](/static/img/blog/article-conserto/image010.gif){: .img-responsive }{: .center-block }
 
@@ -83,7 +83,7 @@ Sprint review sur la base des enseignements des Sprints précédents ainsi que d
 haque Sprint est une opportunité de réaligner les 
 priorités de développement pour le Sprint suivant.
 
-## L'Agilité permet de livrer à chaque fin de Sprint
+### L'Agilité permet de livrer à chaque fin de Sprint
 
 ![Alt text](/static/img/blog/article-conserto/image012.gif){: .img-responsive }{: .center-block }
 
@@ -96,7 +96,7 @@ travail nécessaire, parasitant la capacité de l’
 l'objectif, qui est de délivrer 
 régulièrement de la valeur métier, ne pourra pas être tenu.
 
-## L'Agilité est une méthode bien cadrée
+### L'Agilité est une méthode bien cadrée
 
 L'Agilité est en fait un ensemble de valeurs autour desquelles des professionnels s’accordent à 
 travailler e
@@ -108,7 +108,7 @@ existants dans un paysage Agile bien plus vaste, comme l’illustre Chris Webb:
 
 [![Alt text](/static/img/blog/article-conserto/image014.gif){: .img-responsive }{: .center-block }](/static/img/blog/article-conserto/image013.jpg){:target="_blank"}
 
-## L’Agilité peut s'appliquer à tous les types de projets
+### L’Agilité peut s'appliquer à tous les types de projets
 
 ![Alt text](/static/img/blog/article-conserto/image016.gif){: .img-responsive }{: .center-block }
 
@@ -124,7 +124,7 @@ iner un pont construit par
 morceaux utilisables, alors que c’est particulièrement adapté pour un projet de développement 
 logiciel par exemple.
 
-## Connaître le cadre de la méthode Scrum, c'est comprendre l'Agilité
+### Connaître le cadre de la méthode Scrum, c'est comprendre l'Agilité
 
 ![Alt text](/static/img/blog/article-conserto/image018.gif){: .img-responsive }{: .center-block }
 
@@ -134,7 +134,7 @@ liée aux principes Agiles. Si cette valeur n’est pas comprise alors
 cela conduit inévitablement à 
 des dérives.
 
-## L'Agilité permet d'améliorer la productivité
+### L'Agilité permet d'améliorer la productivité
 
 ![Alt text](/static/img/blog/article-conserto/image020.gif){: .img-responsive }{: .center-block }
 
@@ -147,7 +147,7 @@ termes de
 qualité et livre des f
 onctionnalités utiles. 
 
-## Dès que les problèmes de projet surgissent, il est facile d'incriminer les méthodes Agiles.
+### Dès que les problèmes de projet surgissent, il est facile d'incriminer les méthodes Agiles.
 
 ![Alt text](/static/img/blog/article-conserto/image022.gif){: .img-responsive }{: .center-block }
 
@@ -158,7 +158,7 @@ résolution
 reste à la charge des 
 équipes, car les problèmes liés à l’organisation ou à l’humain sont leurs responsabilités. 
 
-## Chaque Sprint est une course où il faut tout faire pour finir chaque User Story dans les temps
+### Chaque Sprint est une course où il faut tout faire pour finir chaque User Story dans les temps
 
 ![Alt text](/static/img/blog/article-conserto/image024.gif){: .img-responsive }{: .center-block }
 
@@ -176,7 +176,7 @@ raconter une histoire. Cette histoire
 permet alors de comprendre ce qui a empêché l'équipe de les terminer, et donc de s'améliorer.
 De ce point de vue, un Sprint n'est pas une course mais une opportunité d'amélioration.
 
-## Un des buts cachés de l’Agilité est de permettre de contrôler tous mes faits et gestes (façon de travailler, temps de travail, daily meeting etc.)
+### Un des buts cachés de l’Agilité est de permettre de contrôler tous mes faits et gestes (façon de travailler, temps de travail, daily meeting etc.)
 
 ![Alt text](/static/img/blog/article-conserto/image026.gif){: .img-responsive }{: .center-block }
 
@@ -186,7 +186,7 @@ personnes ne vont plus travailler en équipe. Une mauvaise ut
 ilisation de frameworks comme 
 Scrum peut donner cette sensation (cf. "Dark Scrum", par Ron Jeffries).
 
-## Pour être productif dans une équipe, il faut connaître la vélocité de chaque membre de l'équipe
+### Pour être productif dans une équipe, il faut connaître la vélocité de chaque membre de l'équipe
 
 ![Alt text](/static/img/blog/article-conserto/image028.gif){: .img-responsive }{: .center-block }
 
@@ -198,7 +198,7 @@ vélocité réalis
 te. Cela permet la planification, mais n'est en aucun cas un indicateur de 
 productivité.
 
-## Faire de l'Agilité amène à faire plus de réunions
+### Faire de l'Agilité amène à faire plus de réunions
 
 ![Alt text](/static/img/blog/article-conserto/image030.gif){: .img-responsive }{: .center-block }
 
@@ -217,7 +217,7 @@ combler un manque de communication et de partage d'information. Si ce manque est
 un accroissement de la transparence, alors ces ré
 unions disparaîtront organiquement.
 
-## Les parties prenantes ne font pas partie de l'équipe Agile.
+### Les parties prenantes ne font pas partie de l'équipe Agile.
 
 ![Alt text](/static/img/blog/article-conserto/image032.gif){: .img-responsive }{: .center-block }
 
@@ -227,7 +227,7 @@ revues de Sprint, peuvent être
 amenés à collaborer directement avec les membres de l'équipe, et entretiennent une relation 
 étroite avec le Product Owner.
 
-## En Agilité il n'y pas de planning
+### En Agilité il n'y pas de planning
 
 ![Alt text](/static/img/blog/article-conserto/image034.gif){: .img-responsive }{: .center-block }
 
@@ -242,7 +242,7 @@ régulièrement en fonction de l'expérience, par opposition à un planning bas�
 invérifiable
 s.
 
-## La méthode Agile KANBAN n'est qu'une méthode Waterfall avec un tableau visuel en plus.
+### La méthode Agile KANBAN n'est qu'une méthode Waterfall avec un tableau visuel en plus.
 
 ![Alt text](/static/img/blog/article-conserto/image036.gif){: .img-responsive }{: .center-block }
 
@@ -257,7 +257,7 @@ feedb
 ack en optimisant le flux de valeur. Le time to market de chaque carte est ainsi réduit, 
 offrant les enseignements nécessaires pour ajuster le développement des futures cartes. 
 
-## Dans les méthodes Agiles, on continue de faire les estimations en jours/hommes.
+### Dans les méthodes Agiles, on continue de faire les estimations en jours/hommes.
 
 ![Alt text](/static/img/blog/article-conserto/image038.gif){: .img-responsive }{: .center-block }
 
@@ -273,7 +273,7 @@ jour/homme ne prend pas en compte l'apprentissage de l'équipe,
 ses challenges ni la complexité 
 relative du travail à réaliser.
 
-## Le Product Owner décide seul du périmètre de chaque Sprint
+### Le Product Owner décide seul du périmètre de chaque Sprint
 
 ![Alt text](/static/img/blog/article-conserto/image040.gif){: .img-responsive }{: .center-block }
 
@@ -283,7 +283,7 @@ l’équipe de réalisation, c’est elle qui s'engage à terminer le
 travail planifié il lui appartient donc 
 d’en accepter un contenu en lien avec les priorités business expliquées par le Product Owner.
 
-## Les Scrum Masters sont des chefs de projets Agiles
+### Les Scrum Masters sont des chefs de projets Agiles
 
 ![Alt text](/static/img/blog/article-conserto/image042.gif){: .img-responsive }{: .center-block }
 
@@ -292,7 +292,7 @@ ef de projet. Il est là pour
 lever les obstacles qui peuvent barrer la route de l’équipe de développement, faciliter le travail et 
 permettre au Product Owner de piloter l'équipe de réalisation par le métier et la valeur business.
 
-## Le Scrum Master n'est pas une secrétaire ou un baby-sitter.
+### Le Scrum Master n'est pas une secrétaire ou un baby-sitter.
 
 ![Alt text](/static/img/blog/article-conserto/image044.gif){: .img-responsive }{: .center-block }
 
@@ -301,7 +301,7 @@ membres de l'équipe doivent comprendre et apprendre à devenir autonomes et pol
 reste du management doit quant à lui
 faire confiance et ne pas demander rapports sur rapports
 
-## En méthodes Agiles, se tromper n'est ni permis, ni excusable dans un projet.
+### En méthodes Agiles, se tromper n'est ni permis, ni excusable dans un projet.
 
 ![Alt text](/static/img/blog/article-conserto/image046.gif){: .img-responsive }{: .center-block }
 
@@ -312,7 +312,7 @@ des conséquences minimes. Par ailleurs, un des quatre cadrans de la roue de Mod
 propose d’expérimenter et d’apprendre rapidement. Cela passe par l’acceptation du risque 
 d’erreur, pour autant que ces erreurs permettent de retirer des enseignements.
 
-## En Agilité on néglige la qualité au profit de la vitesse de réalisation
+### En Agilité on néglige la qualité au profit de la vitesse de réalisation
 
 ![Alt text](/static/img/blog/article-conserto/image048.gif){: .img-responsive }{: .center-block }
 
@@ -322,7 +322,7 @@ Si le Product Owner demande à ce que l’équipe développe plus vite, il faut 
 conscient que cela va faire automatiquement baisser la qualité du code et donc potentiellement 
 produire des anomalies.
 
-## Une méthode Agile doit être encadrée et suivie scrupuleusement.
+### Une méthode Agile doit être encadrée et suivie scrupuleusement.
 
 ![Alt text](/static/img/blog/article-conserto/image050.gif){: .img-responsive }{: .center-block }
 
@@ -334,7 +334,7 @@ Agiles. Scrum et Kanban sont des cadres de travail
 , il appartient à chacun d'appliquer ses 
 préceptes selon le contexte de travail.
 
-## L’Agilité coûte plus cher que les projets en cycle en V
+### L’Agilité coûte plus cher que les projets en cycle en V
 
 ![Alt text](/static/img/blog/article-conserto/image052.gif){: .img-responsive }{: .center-block }
 
@@ -346,7 +346,7 @@ Par ailleurs, il arrive que l'Agilité permette au contraire de réduire certain
 ts puisque ne sont 
 développées que les fonctionnalités que l'expérience a démontré comme utiles et/ou attendues.
 
-## Les méthodes Agiles ne permettent pas d’avoir un budget maîtrisé
+### Les méthodes Agiles ne permettent pas d’avoir un budget maîtrisé
 
 ![Alt text](/static/img/blog/article-conserto/image054.gif){: .img-responsive }{: .center-block }
 
@@ -355,7 +355,7 @@ sera le budget alloué pour produire une liste
 définie de fonctionnalités pour une date donnée. Le but est de produire le maximum de valeur 
 métier pour un budget donné au fur et à mesure des Sprints.
 
-## Seule la Scrum Team doit être formée à l'Agilité.
+### Seule la Scrum Team doit être formée à l'Agilité.
 
 ![Alt text](/static/img/blog/article-conserto/image056.gif){: .img-responsive }{: .center-block }
 
