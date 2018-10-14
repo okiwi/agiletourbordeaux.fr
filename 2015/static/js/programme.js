@@ -36,26 +36,37 @@ jQuery(document).ready(function () {
         'conf-martraire': '<h1>Domain Driven Design (pour de vrai)</h1><p>DDD est un sujet important mais fréquemment maltraité, de l’obsession malsaine du pattern Repository jusqu’aux auto-proclamés ”frameworks DDD”, sans parler des articles de blogs trompeurs. Pourtant l’essentiel est ailleurs, et l’objet de ce talk de faire le point sur ce qu’est vraiment DDD. Nous illustrerons par des exemples et des petites histoires, et même un peu de code, à quoi ressemble la pratique de DDD : c’est l’occasion idéale pour démarrer DDD sur de bonnes bases !</p><p><b>Cyrille (@cyriux on Twitter),</b></p><p>est CTO co-fondateur de la société Arolla, qui rassemble 60 développeurs passionnés de code bien écrit et bien testé. Il a fondé la communauté Paris Software Craftsmanship et intervient fréquemment comme orateur dans des conférences en Europe et parfois au-délà.<br>Cyrille est avant tout un développeur avec 15 ans d\'expérience en startups, chez des éditeurs et des banques, et avec une passion intacte pour le design dans toutes ses formes (TDD, BDD, DDD).</p>',
 		'atelier-dusseaut': '<h1>L\'ordre des développeurs : Atelier constituant</h1>Description à venir',
 		'open-space': '<h1>Open Space</h1><p>L\'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s\'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n\'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p><p>Il repose sur le respect d\'une loi, étayée par quatre principes.</p><p>Les quatre principes :<br />les personnes qui se présentent sont les bonnes ;<br />ce qui arrive, est la seule chose qui pouvait arriver ;<br />ça commence quand ça commence ;<br />quand c’est fini, c’est fini.<br />La loi des deux pieds : si vous n’êtes ni en train d’apprendre, ni de contribuer, passez à autre chose !</p>'
-	};
+    };
+
+    hideModal();
 
     jQuery('.modalLink').each(function(index, element) {
-        jQuery(element).on('click', function(event) {
-            alert('click close custom');
-            var id = jQuery(event.currentTarget).attr('id');
-            animatedModal.find('.modal-content').html(descriptions[id]);
-        });
-        alert('animateModal ', jQuery(element).attr('id'));
-        jQuery(element).animatedModal({
-            animatedIn:'fadeIn',
-            animatedOut:'fadeOut',
-            animationDuration:'.3s',
-            beforeOpen: function() {
-                animatedModal.addClass('visible');
-            },
-            afterClose: function() {
-                animatedModal.removeClass('visible');
-            },
-            color: '#2C495A'
-        });
+        handleClickEvent(element);
     });
+
+    jQuery('#btn-close-modal').on('click', function(event) {
+        hideModal();
+    });
+
+    function handleClickEvent(element) {
+        jQuery(element).on('click', function(event) {
+            var id = jQuery(event.currentTarget).attr('id');
+            changeDescription(id);
+            showModal();
+        });
+    }
+    
+    function showModal() {
+        animatedModal.addClass('visible');
+        animatedModal.removeClass('vhidden');
+    }
+
+    function hideModal() {
+        animatedModal.addClass('vhidden');
+        animatedModal.removeClass('visible');
+    }
+
+    function changeDescription(id) {
+        animatedModal.find('.modal-content').html(descriptions[id]);
+    }
 });

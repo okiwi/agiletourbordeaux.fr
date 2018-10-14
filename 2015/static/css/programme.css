@@ -50,3 +50,14 @@ table .heure {
 #animatedModal .modal-content {
     padding: 1em;
 }
+
+#animatedModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(44, 73, 90);
+    overflow-y: auto;
+    z-index: 9999;
+}
