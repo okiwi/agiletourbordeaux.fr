@@ -71,14 +71,14 @@ jQuery(document).ready(function () {
     function showModal() {
         animatedModal.addClass('visible');
         animatedModal.removeClass('vhidden');
-        jQuery('body').attr('style', 'overflow-y: hidden');
+        jQuery('body').attr('style', 'overflow: hidden');
         toTopButton.addClass('vhidden');
     }
 
     function hideModal() {
         animatedModal.addClass('vhidden');
         animatedModal.removeClass('visible');
-        jQuery('body').attr('style', 'overflow-y: auto');
+        jQuery('body').attr('style', 'overflow: auto');
         toTopButton.removeClass('vhidden');
     }
 
