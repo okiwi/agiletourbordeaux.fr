@@ -49,23 +49,37 @@ jQuery(document).ready(function () {
         'open-space':    '<h1>Open Space</h1><p>L\'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s\'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n\'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p><p>Il repose sur le respect d\'une loi, étayée par quatre principes.</p><p>Les quatre principes :<br />les personnes qui se présentent sont les bonnes ;<br />ce qui arrive, est la seule chose qui pouvait arriver ;<br />ça commence quand ça commence ;<br />quand c’est fini, c’est fini.<br />La loi des deux pieds : si vous n’êtes ni en train d’apprendre, ni de contribuer, passez à autre chose !</p>'
 	};
 
+    hideModal();
+    
     jQuery('.modalLink').each(function(index, element) {
+        handleClickEvent(element);
+    });
+
+    jQuery('#btn-close-modal').on('click', function(event) {
+        hideModal();
+    });
+
+    function handleClickEvent(element) {
         jQuery(element).on('click', function(event) {
             var id = jQuery(event.currentTarget).attr('id');
-            animatedModal.find('.modal-content').html(descriptions[id]);
+            changeDescription(id);
+            showModal();
         });
+    }
+    
+    function showModal() {
+        animatedModal.addClass('visible');
+        animatedModal.removeClass('vhidden');
+        jQuery('body').attr('style', 'overflow-y: hidden');
+    }
 
-        jQuery(element).animatedModal({
-            animatedIn:'fadeIn',
-            animatedOut:'fadeOut',
-            animationDuration:'.3s',
-            beforeOpen: function() {
-                animatedModal.addClass('visible');
-            },
-            afterClose: function() {
-                animatedModal.removeClass('visible');
-            },
-            color: '#2C495A'
-        });
-    });
+    function hideModal() {
+        animatedModal.addClass('vhidden');
+        animatedModal.removeClass('visible');
+        jQuery('body').attr('style', 'overflow-y: auto');
+    }
+
+    function changeDescription(id) {
+        animatedModal.find('.modal-content').html(descriptions[id]);
+    }
 });
