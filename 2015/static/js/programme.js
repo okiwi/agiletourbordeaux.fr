@@ -44,7 +44,7 @@ jQuery(document).ready(function () {
             var id = jQuery(event.currentTarget).attr('id');
             animatedModal.find('.modal-content').html(descriptions[id]);
         });
-        alert('animateModal ', element.attr('id'));
+        alert('animateModal ', jQuery(element).attr('id'));
         jQuery(element).animatedModal({
             animatedIn:'fadeIn',
             animatedOut:'fadeOut',
