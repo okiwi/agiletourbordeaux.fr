@@ -59,11 +59,13 @@ jQuery(document).ready(function () {
     function showModal() {
         animatedModal.addClass('visible');
         animatedModal.removeClass('vhidden');
+        jQuery('body').attr('style', 'overflow-y: hidden');
     }
 
     function hideModal() {
         animatedModal.addClass('vhidden');
         animatedModal.removeClass('visible');
+        jQuery('body').attr('style', 'overflow-y: auto');
     }
 
     function changeDescription(id) {
