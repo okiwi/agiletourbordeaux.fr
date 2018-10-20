@@ -36,7 +36,7 @@ jQuery(document).ready(function () {
         'atelier-event-storming':  '<h1>Découvrir Event Storming et le quotidien des développeurs</h1>',
         'atelier-coding':          '<h1>Coding dojo</h1><p>Le coding dojo est une rencontre entre plusieurs personnes qui souhaitent travailler sur un défi de programmation de façon collective.</p>',
         'open-space':              '<h1>Open space</h1><p>L\'Open Space (ou Forum Ouvert) est une méthode pour structurer des conversations et des conférences.</p><p>Grâce à cette méthode, des groupes de 5 à 2 000 participants peuvent s\'assembler et travailler ensemble.</p><p>La caractéristique de la méthode est l\'ouverture mise à la fois sur le contenu mais aussi sur la forme.</p><p>Les participants sont invités à travailler ensemble sur une thématique importante et complexe. L\'ordre du jour est réalisé par les participants au démarrage de l\'Open Space.</p><p>Les utilisateurs donnent ainsi leurs propres sujets en plénière et forment des groupes de travail pour chaque thème abordé.</p>',
-        'coding-gouter':           '<h1>Coding goûter</h1>'
+        'coding-gouter':           '<h1>Coding goûter</h1><p>Venez apprendre à coder avec votre enfant. Une occasion unique de partager des gâteaux, des rires et du code !</p>'
 	};
 
     hideModal();
