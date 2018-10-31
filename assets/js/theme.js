@@ -159,9 +159,9 @@ var theme = function () {
         // Main Slider
         initMainSlider: function () {
             $("#main-slider").owlCarousel({
-                items: 2,
-                autoplay: true, // "true" to have automatic changing slides
-                loop: true,
+                items: 1,
+                autoplay: false, // "true" to have automatic changing slides
+                loop: false,
                 margin: 0,
                 dots: false,
                 nav: false,

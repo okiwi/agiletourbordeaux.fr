@@ -1,6 +1,6 @@
 jQuery(document).ready(function () {
     theme.init();
-    //theme.initMainSlider();
+    theme.initMainSlider();
     theme.initCountDown();
     theme.initSponsorsSlider();
     theme.initTestimonials();
