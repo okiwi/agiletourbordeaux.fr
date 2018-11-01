@@ -260,11 +260,11 @@ var theme = function () {
         initGoogleMap: function() {
            var map,
                 marker,
-                myLatlng = new google.maps.LatLng(44.840704, -0.565217);
+                myLatlng = new google.maps.LatLng(44.85359, -0.57493);
             function initialize() {
                 var mapOptions = {
                     scrollwheel: false,
-                    zoom: 17,
+                    zoom: 15,
                     center: myLatlng
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
