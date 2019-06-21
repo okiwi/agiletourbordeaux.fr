@@ -261,13 +261,13 @@ var theme = function () {
                 var mapOptions = {
                     scrollwheel: false,
                     zoom: 15,
-                    center: myLatlng
+                    center: iutMontaigneLatlng
                 };
                 map = new google.maps.Map(document.getElementById('map-canvas'),
                     mapOptions);
 
                 marker = new google.maps.Marker({
-                    position: myLatlng,
+                    position: iutMontaigneLatlng,
                     map: map,
                     animation: google.maps.Animation.BOUNCE,
                     title: 'IUT Montaigne'
