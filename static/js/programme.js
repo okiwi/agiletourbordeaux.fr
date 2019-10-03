@@ -8,17 +8,74 @@ jQuery(document).ready(function () {
     var animatedModal = jQuery("#animatedModal");
     var toTopButton = jQuery(".to-top");
 
+    const confAppelo = `<h1>Shakeup and Speedup</h1>
+    <p>Shifting up the Innovation Funnel (for businesses that want to change and innovate faster)</p>
+    <p>Starting new teams and scaling up innovation is more important than ever. The key to success
+    is applying different practices in different stages of the innovation lifecycle. What works for a
+    new business does not work for a mature one, and vice versa. In this talk, we will nosedive into
+    the major good practices for business leaders and product teams, from the moment they have
+    an innovative idea to the day they will scale it up (or screw it up). Everything depends on the
+    lifecycle stage of the new product or service</p>`;
+
+    //`<h1></h1><p></p>`
+
+    const confDusseaut = `<h1>L'articulation Craftsmanship/agilité</h1>`;
+
+    const confSanglanCharlier = `<h1>Mob programming, promesse tenues ?</h1><p>Le Mob Programming consiste à regrouper une équipe entière dans une pièce équipée d'un seul poste de travail pour tout le monde. Cette pratique vous promet entre autres une productivité accrue alors qu'une seule personne à la fois ne peut toucher le clavier ! Promesses tenues ?</p>`;
+
+    const confMy = `<h1>A la chasse des voleurs de temps</h1>
+    <p>Dans ce monde VUCA en mouvement permanent, notre capacité à répondre à une demande évoluant sans cesse est devenue un enjeu majeur de survie aussi bien dans la sphère professionnelle que dans la sphère personnelle. En effet, le temps est devenu aujourd'hui une ressource rare et précieuse.</p>
+    <p>Comment organiser son temps afin de prendre les bonnes décisions, au bon moment ? Comment s'assurer de ne pas gaspiller son temps sur des choses qui n'en valent pas la peine ? Comment devenir acteur de son temps plutôt que d'être victime de son manque ?</p>
+    <p>Inspiré des travaux de Dominica DeGrandis dans son livre intitulé "Making work visible", je vous propose de dénicher ces voleurs de temps qui nous empêchent d'être efficaces et productifs afin de pouvoir mieux vous en défaire ! </p>`;
+
+    const confMartin = `<h1>Organiser l'Agilité dans une entreprise en hyper-croissance</h1>
+    <p>Manomano est passé de 5 features teams sur un lieu (Paris) à 15 features teams sur trois lieux (Barcelone, Bordeaux, Paris) sur les 18 derniers mois. Et il est prévu de doubler sur l'année prochaine.</p>
+    <p>En tant que premier coach agile interne, je vous raconterai comment organiser l'agilité dans ce contexte : équipes, outils, principes...</p>`;
+
+    const atelierUrvoas = `<h1>Hackez votre cerveau avec l'intelligence collective</h1>
+    <p>Marre des réunions et workshops ennuyeux et stériles?</p>
+    <p>Venez hacker votre cerveau et mettre en pratique plusieurs principes d'intelligence collective à travers un atelier participatif et ludique. </p>`;
+
+    const atelierCadilhac = `<h1>TDD React</h1>
+    <p>La pratique du TDD peut changer votre vie de développeur. True story. Au programme de cet atelier : du développement 100% TDD, en Javascript sur du React.</p>
+    <p>Nous partirons d’une feuille blanche et construirons une application de répartition de dépenses : Jim a payé 150 euros de courses pendant les vacances, combien lui doivent Pam et Michael ?</p>
+    <p>Comment choisir le premier test ?</p>
+    <p>Quels outils pour être efficace ?</p>
+    <p>Nous répondrons a toutes ces questions, et bien d’autres.</p>
+    <p>Cet atelier est pour vous si :
+    <ul>
+        <li>vous avez entendu parler de TDD, mais vous doutez que cela fonctionne dans la vraie vie ;</li>
+        <li>vous avez commencé TDD, mais vous n’y avez pas trouvé ce que vous espériez ;</li>
+        <li>vous pratiquez déjà TDD, et vous avez envie de voir comment ça se passe chez d'autres développeurs ;</li>
+    </ul>
+    </p>
+    <p>Et surtout : vous avez envie de retrouver le PLAISIR de développer.</p>`;
+
+    const confFaure = `<h1>Agilistes et développeur·euse·s sont dans un bateau</h1>
+    <p>A la machine à café, j’ai entendu un développeur râler car il devait intégrer une équipe fonctionnant en Scrum. Un autre jour, j’ai croisé un Scrum Master et sa Product Owner qui se plaignaient de leur équipe de dev qui n’allait pas assez vite et qui faisait exprès de gonfler ses estimations.</p>
+    <p>Il y a quelque chose de pourri au royaume de l’agilité…</p>
+    <p>Comment expliquer cet éloignement entre développeurs et agilistes ? Est-il inexorable ?</p>
+    <p>L’objectif ambitieux de cette présentation est d’essayer de réconcilier ces deux populations qui auraient dû rester les deux faces d’une même pièce. On parlera sans doute de Software Craftsmanship, de Domain Driven Design, de dette technique, de refactoring mais aussi de valeur métier, de gemba, etc. </p>
+    <p>En sortie de cette session, les POs ne seront peut-être pas des spécialistes du principe de substitution de Liskov, mais connaitront au moins l'existence des principes SOLID. Les devs ne seront peut-être pas capables d'animer un shifumi géant mais ils auront, j'espère, envie d'aller voir et comprendre leurs utilisateurs.</p>`;
+
+    const confHaasser = `<h1>Tempête de boulettes géantes (en prod)</h1><p></p>`;
+
+    const confAzeau = `<h1>Conception émergente : l'art de coder sans savoir où l'on va ?</h1><p></p>`;
+
+    const confFedou = `<h1>Stratégie de test : la faire bien pour en faire moins</h1><p></p>`;
+
     var descriptions = {
-        'conf-hoogendoorn':        '<h1>It\'s a small world after all</h1><p>Our world changes fast and at increasing speed. Things that weren\'t possible 5 years ago come into reach.</p><p>Incumbents need to adept to match start-ups that use newer technologies. We are evolving towards smaller, faster, shorter. Smaller teams or even micro-teams, flat organizations, no management, even shorter cycles, smaller components.</p><p>During this inspiring talk Sander discusses Cynefin, how software development goes wrong, how to go beyond Scrum, why self-organization is hard, why continuous delivery allows you to stop estimating or do projects and why microservices are hard, but essential.</p>',
-        'conf-lefevre':            '<h1>Agile (d\'accord !), mais Green (d\'abord !)</h1><p>Laurent Lefevre travaille depuis 10 ans sur comment améliorer l\'efficacité énergétique des grands systèmes numériques (datacentres, clouds et réseaux).</p><p>Pendant cet exposé, il présentera le rôle que joue le logiciel afin de maitriser les leviers énergétiques présents sur les nouveaux équipements et son impact sur les étapes du cycle de vie de l\'informatique. Une petite incursion dans le monde de l\'éco-conception logicielle sera aussi abordée.</p>',
-        'conf-lesieur':            '<h1>Le mystérieux cadrage d\'or des cités agiles</h1>',
-        'conf-deniaud':            '<h1>Et si notre communication était biaisée ?</h1><p>La communication est au cœur de l\'Agilité, au cœur de vos équipes, au cœur de votre activité quotidienne. Pourtant, nous en apprenons si peu sur cet outil essentiel, sur son exploitation et sur ses limites.</p><p>Je ne vous propose pas un kit prêt à l\'emploi, mais une exploration de quelques clefs permettant de mieux comprendre pourquoi nous n\'en tirons pas souvent le meilleur parti. Reprenons ensemble l\'une des idées fondatrices du manifeste agile : replacer l\'humain au centre de tout. Et sous ce « nouvel » éclairage, décryptons un peu les effets de sa présence au sein de la relation et ce qu\'il nous apporte.</p><p>Vous repartirez avec quelques clefs à emporter dans vos équipes, dans vos contextes respectifs, vous permettant de mieux appréhender ce qui se passe dans vos propres modes de communication et ceux que vous observerez.</p>',
-        'atelier-manoukian':       '<h1>Mieux communiquer en découvrant ses filtres d\'attention</h1><p>Je vous propose de parler filtres d\'attention. Pourquoi donc ? Car ce à quoi nous faisons attention est le reflet de notre manière de penser, de réfléchir, de nous comporter et donc de communiquer.  En effet, une des illusions de la communication est de croire que ce qui est important pour nous l\'est forcément pour l\'autre ! Vous découvrirez dans le même temps un modèle de typologie de personnalité qui, je l\'espère, vous aidera à mieux vous connaître, mieux comprendre les autres et rendre vos interactions plus efficaces.</p>',
-        'atelier-example-mapping': '<h1>Découvrir l\'example mapping par la pratique</h1><p>Le BDD est trop souvent réduit à de l\'outillage, alors que c\'est surtout un super moyen de rapprocher le métier et les professionnels du software afin de livrer des applications alignées avec les besoins business.</p><p>L\'Example Mapping n\'est pas beaucoup utilisé, car pas bien connu. Nous ferons une petite introduction à l\'Example Mapping suivie d\'un atelier afin de l\'illustrer par la pratique, puis nous échangerons sur cette pratique.</p>',
-        'conf-desliens':           '<h1>Design Sprint, méthode d\'émergence rapide et efficace des projets, inspiré du Design Thinking et de l\'Agile</h1><p>Le "Design Sprint" est une méthodologie mise au point par GV à partir des principes et outils du Design Thinking.</p><p>Elle vise, en 3 à 5 journées, à résoudre en équipe tout type de problématique complexe (organisation, stratégie, nouveau produit, etc.), de la compréhension au prototypage et test de la solution.</p>',
-        'conf-fakih':              '<h1>Développeur : quelles compétences clés faut-il maîtriser pour être meilleur?</h1><p>Les compétences dans le monde du développement informatique sont variées et ne se limitent pas uniquement à l\'expertise technique. Dans ce talk, nous allons parler des différentes compétences clés du métier. Nous verrons comment les acquérir, les structurer, les renforcer et les mettre en œuvre pour être meilleur en développement.</p>',
-        'conf-luzeau':             '<h1>Astuces de Scrum master pour varier les rétros</h1><p>Sur une équipe pratiquant des sprints de 2 semaines, il y a 26 rétros à animer chaque année, et à chaque rétro, vous vous devez d\'innover, pour éviter la monotonie...</p><p>Voici quelques astuces simples pour varier vos rétros et éviter l\'ennui ! Scrum Master et coach agile depuis 3 ans, j\'aime créer et concevoir, dessiner et animer !</p><p>Scrum masters : voici quelques astuces simples pour varier vos rétros et éviter l\'ennui !</p>',
-        'conf-allaire':            '<h1>Itérez plus vite avec des designers</h1><p>La rapidité d\'itération est au centre des méthodes agiles. Plus une entreprise est capable de générer des nouvelles versions rapidement plus elle a de chances de développer un avantage sur sa compétition.</p><p>Scrum pose les sprints comme unité d\'itération. Ces cycles d\'une à plusieurs semaines se terminent avec une version fonctionnelle du produit. Ces itérations sont relativement lentes et couteuses.</p><p>Je vous propose une manière d\'itérer plus rapidement et moins cher en incluant designers, développeurs et product manager.</p>',
+        'conf-appelo':             confAppelo,
+        'conf-dusseaut':           confDusseaut,
+        'conf-sanglanCharlier':    confSanglanCharlier,
+        'conf-o-my':               confMy,
+        'conf-martin':             confMartin,
+        'atelier-urvoas':          atelierUrvoas,
+        'atelier-cadilhac':        atelierCadilhac,
+        'conf-faure':              confFaure,
+        'conf-haasser':            confHaasser,
+        'conf-azeau':              confAzeau,
+        'conf-fedou':              confFedou,
         'conf-crabe':              '<h1>A la découverte du deep work</h1><p>Dans un monde ou les distractions sont nombreuses (réseaux sociaux, messagerie instantanée, SMS, mails …), la concentration est une denrée précieuse mais qui tend à se raréfier. Pourtant c\'est celle-ci qui peut amener plus de valeur à notre travail.</p><p>L\'agilité prône la protection de l\'équipe de développement des éléments extérieurs qui peuvent perturber son travail. Et si le "Deep work" permettait de protéger l\'équipe de l\'intérieur ?</p><p>Je vous propose au travers de ce lighting talk de vous présenter sommairement ce qu\'est le "Deep work" ainsi que mon expérience de l\'apprentissage difficile mais bénéfique de ce nouveau super pouvoir !</p>',
         'conf-osherove':           '<h1>Growing great teams and adopting new processes through Elastic Leadership</h1><p>As managers, architects, and other types of technical team leaders, you usually study methodologies, practices, and techniques for delivering software.</p><p>Often your learning leaves you a great desire to "change" how things work, but you soon discover that you\'re "stuck". Stuck convincing your team to adopt particular practices. Stuck with too little time to learn how to implement these practices ("we don\'t have time for unit testing"). Stuck with all the people-related aspects of leading a team.In this talk we will cover some of the essential skills and techniques for leading software teams, based on elastic and adaptive leadership principles.</p><p>You will gain insight into the skills that make real change happen in your team, and how to transform the team you have into the team you want.</p><p>Learn about the three basic team modes: Survival mode, Learning mode, and Self Organization mode. Learn how to understand which mode your team is in right now.Learn essential skills for the three modes of leadership you will need for the three phases of the team: Command and control leadership, Coaching and facilitative leadership.Learn how to start changing anything by understanding why people behave the way they do and grasp the six influence forces that affect our behaviour.</p>',
         'conf-leguedois':          '<h1>Cessons les estimations</h1><p>Alors que les estimations sont à la base des méthodes classiques et que dans le domaine Agile, Scrum notamment lui accorde une grande importance, nous allons l’espace d’une conférence remettre en cause celles-ci.</p><p>Après un bref rappel de différentes méthodes permettant de réaliser des estimations et croyances qui y sont attachées, nous prendrons le temps de réfléchir sur les effets néfastes de ces dernières.</p><p>Enfin, nous verrons comment dans la réalité des projets, il est possible de s’en extraire.</p><p>Conférence iconoclaste, sous la forme d’un one man show, afin de réfléchir (et de rire ?) sur un aspect essentiel de l’agilité.</p><p>Ouvert à tout public ayant une première approche des projets de développement logiciel.</p>',
