@@ -78,7 +78,7 @@ jQuery(document).ready(function () {
     <p>Mais le problème, c’est que vos collègues n’en font pas. Parce que « c’est trop cher on n’a pas le temps », « je ne connais pas », « on ne m’écoutera pas », « ça ne marchera pas chez nous », « je crains les remarques sur mon code »…</p>
     <p>Comment aider votre équipe ?</p>
     <p>Après cette conférence, quand vous reviendrez sur votre plateau projet, vous aurez quelques éléments à essayer tout de suite. Et peut-être de quoi élaborer un plan de bataille pour que vous et votre équipe soyez fiers de votre code et ainsi conquérir le monde ! 😉</p>`;
-    const atelierPizza = `<h1>Kanban Pizza Game</h1><p></p>`;
+    const atelierPizza = `<h1>Kanban Pizza Game</h1><p>Venez découvrir, comprendre et pratiquer le Kanban et quelques concept Lean dans un atelier de fabrication de Pizza !</p>`;
     const atelierConter = `<h1>Livrer sans savoir ou savoir sans livrer, quelle est ta question</h1>
     <p>L’agile c’est simple : on se synchronise et on avance !</p>
     <p>Ok, et ça donne quoi quand il faut s’accorder avec les architectes, l’expert en cyber-sécurité, les gars du hardware, l’équipe infra … ?</p>
