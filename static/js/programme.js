@@ -122,7 +122,10 @@ jQuery(document).ready(function () {
     const atelierAllaire = `<h1>Découvrez Haskell avec cette introduction à la programmation fonctionnelle</h1>
     <p>Les fonctionnalités de programmation fonctionnelle sont de plus en plus présentes dans les langages impératifs, orienté objet. Mais qu'est-ce que la programmation fonctionnelle au juste ? Nous partirons de cette définition pour introduire Haskell un langage purement fonctionnel. A partir d'une fonction anodine nous déroulerons plusieurs phases de refactoring pour faire émerger l'abstraction sous-jascente. (Aucun pré-requis nécessaire en Haskell) A la fin de ce talk vous saurez écrire un petit programme en Haskell et vous aurez découvert de nouvelles armes pour refactorer votre code.</p>`;
     const confMoura = `<h1>La théorie sociale de Bourdieu et la tech</h1><p></p>`;
-    const confAvoustin = `<h1>Mind The Gap</h1><p></p>`;
+    const confAvoustin = `<h1>Mind The Gap</h1>
+    <p>La collaboration entre experts techniques et experts du domaine métier n’est pas toujours évidente. On a parfois l'impression que chacun vit sur sa planète, avec des objectifs et des rythmes très différents. Or, arriver à les faire collaborer pour que le besoin de l’un soit solutionné par l’autre est un des enjeux majeurs de notre métier.</p>
+    <p>Très tôt, avec l’agile, beaucoup de bonnes pratiques et d’ateliers ont émergé pour tenter de réduire cet écart. Les User Stories avec leur critère d’acceptation, les ateliers de Story Mapping, ou de Sprint Planning en sont des exemples. Mais ils ne solutionnent pas tous les problèmes, notamment ceux liés à la conception même du produit.</p>
+    <p>Je vous propose donc de découvrir quelques pratiques et ateliers à ajouter dans votre boite à outils, et à tester dès demain, pour améliorer la communication entre experts techniques et experts du domaine, les amener à collaborer plus efficacement, et faciliter le travail de conception de la solution.</p>`;
     const confSaillofest = `<h1>Danse ton chemin agile</h1>
     <p>Je pourrais vous parler de danse swing, mon loisir préféré, pendant des heures. Je peux avoir des débats enflammés sur l’agilité, mon sujet professionnel préféré, pendant des heures.</p>
     <p>Quel lien entre les deux?</p>
