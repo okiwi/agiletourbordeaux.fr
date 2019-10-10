@@ -57,7 +57,10 @@ jQuery(document).ready(function () {
     <p>L’objectif ambitieux de cette présentation est d’essayer de réconcilier ces deux populations qui auraient dû rester les deux faces d’une même pièce. On parlera sans doute de Software Craftsmanship, de Domain Driven Design, de dette technique, de refactoring mais aussi de valeur métier, de gemba, etc. </p>
     <p>En sortie de cette session, les POs ne seront peut-être pas des spécialistes du principe de substitution de Liskov, mais connaitront au moins l'existence des principes SOLID. Les devs ne seront peut-être pas capables d'animer un shifumi géant mais ils auront, j'espère, envie d'aller voir et comprendre leurs utilisateurs.</p>`;
 
-    const confHaasser = `<h1>Tempête de boulettes géantes (en prod)</h1><p></p>`;
+    const confHaasser = `<h1>Tempête de boulettes géantes (en prod)</h1>
+    <p>Bonjour, je m'appelle Agnès, je suis développeuse web, j'ai 8 ans d'expérience… et j'ai vidé la base de prod. Pas au début de ma carrière, non. J'ai vidé la base de prod cette année, un beau soir à l'aube du printemps, au terme d'une après-midi de galères et de stress.</p>
+    <p>J'ai eu besoin d'en parler, alors j'ai demandé à mes collègues quelle était leur plus grosse boulette de prod. J'ai reçu des centaines de réponses. J'ai relativisé (vite), j'ai ri (un peu), j'ai appris (beaucoup).</p>
+    <p>Comment réduire les risques d'erreur humaine ? Comment en limiter les conséquences fâcheuses ? On parlera procédures, organisation… et vous repartirez avec quelques trucs et astuces à mettre en œuvre dans votre vie de tous les jours dès le retour au boulot !</p>`;
     const confAzeau = `<h1>Conception émergente : l'art de coder sans savoir où l'on va ?</h1>
     <p>"Si on avait su, on l'aurait codé autrement", "J'ai codé un truc générique pour faciliter les futurs changements", "L'architecture est à revoir complètement si on veut prendre en compte ce cas là" Qui a déjà développé un logiciel sans jamais entendre ce genre de phrase ?</p>
     <p>Le développeur semble sans cesse naviguer entre le regret du code existant -parce qu'il faut bien faire avec- et l'attirance d'un code futur, toujours plein de promesses.</p>
