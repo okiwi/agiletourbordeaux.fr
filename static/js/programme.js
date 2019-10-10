@@ -17,9 +17,8 @@ jQuery(document).ready(function () {
     an innovative idea to the day they will scale it up (or screw it up). Everything depends on the
     lifecycle stage of the new product or service</p>`;
 
-    //`<h1></h1><p></p>`
-
-    const confDusseaut = `<h1>L'articulation Craftsmanship/agilité</h1>`;
+    const confDusseaut = `<h1>L’ordre sans le pouvoir</h1>
+    <p>10 ans d’agile tour, eXtreme Programmer depuis plus longtemps encore. Je vais prendre cette opportunité pour étudier avec vous, ce que l’agilité a voulu dire et veut dire pour moi.</p>`;
 
     const confSanglanCharlier = `<h1>Mob programming, promesse tenues ?</h1><p>Le Mob Programming consiste à regrouper une équipe entière dans une pièce équipée d'un seul poste de travail pour tout le monde. Cette pratique vous promet entre autres une productivité accrue alors qu'une seule personne à la fois ne peut toucher le clavier ! Promesses tenues ?</p>`;
 
@@ -59,8 +58,14 @@ jQuery(document).ready(function () {
     <p>En sortie de cette session, les POs ne seront peut-être pas des spécialistes du principe de substitution de Liskov, mais connaitront au moins l'existence des principes SOLID. Les devs ne seront peut-être pas capables d'animer un shifumi géant mais ils auront, j'espère, envie d'aller voir et comprendre leurs utilisateurs.</p>`;
 
     const confHaasser = `<h1>Tempête de boulettes géantes (en prod)</h1><p></p>`;
-    const confAzeau = `<h1>Conception émergente : l'art de coder sans savoir où l'on va ?</h1><p></p>`;
-    const confFedou = `<h1>Stratégie de test : la faire bien pour en faire moins</h1><p></p>`;
+    const confAzeau = `<h1>Conception émergente : l'art de coder sans savoir où l'on va ?</h1>
+    <p>"Si on avait su, on l'aurait codé autrement", "J'ai codé un truc générique pour faciliter les futurs changements", "L'architecture est à revoir complètement si on veut prendre en compte ce cas là" Qui a déjà développé un logiciel sans jamais entendre ce genre de phrase ?</p>
+    <p>Le développeur semble sans cesse naviguer entre le regret du code existant -parce qu'il faut bien faire avec- et l'attirance d'un code futur, toujours plein de promesses.</p>
+    <p>Au cours d'une présentation interactive où vous ferez, collectivement et en direct, des choix de conception, je vous propose de visiter quelques pratiques de développement visant à faciliter l'émergence d'un code que l'on va pouvoir faire durer tout en restant focalisé sur les besoins immédiats.</p>`;
+    const confFedou = `<h1>Stratégie de test : la faire bien pour en faire moins</h1>
+    <p>Une stratégie de tests, on sait tous que c’est nécessaire, mais sans forcément savoir à quoi ça ressemble.</p>
+    <p>Une stratégie de tests est la façon de s’organiser pour montrer qu’une application est de qualité suffisante pour aller en production. Il ne s’agit donc pas d’un inventaire de tests manuels ou automatisés, mais d’un raisonnement avec des choix et des renoncements.</p>
+    <p>Dans cette présentation nous verrons comment une stratégie de tests vise à optimiser la confiance et les preuves de qualité dans le cadre du développement d’un produit agile.</p>`;
     const confMonville = `<h1></h1><p></p>`;
     const confLemaire = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1><p></p>`;
     const confHumphreys = `<h1>Les émotions dans le monde professionnel</h1>
@@ -91,13 +96,16 @@ jQuery(document).ready(function () {
     </p>`;
     const confDetant = `<h1>Test && Commit || Revert</h1><p></p>`;
     const confIa = `<h1>L'Intelligence Artificielle va-t-elle changer l'agilité ?</h1><p>L'IA et ses ramifications change profondément le paradigme du développement logiciel en passant d'une pratique algorithmique à une pratique  d'apprentissage. Cette session propose de parcourir les impacts de la réalisation d'application à base d'intelligence artificielle sur les pratiques agiles historiques tels que l'intégration continue, le refactoring, le pair programming, le TDD. etc</p>`;
-    const confPecoul = `<h1>The software evolution hasn't happened yet</h1><p></p>`;
+    const confPecoul = `<h1>The software evolution hasn't happened yet</h1>
+    <p>On nous parle depuis longtemps de la fameuse loi de Moore, mais pourquoi cette loi ne semble s’appliquer qu’au Hardware et pas au Software ? S’il existe une ingénierie de l’informatique, alors pourquoi les programmeurs n’arrivent pas à trouver des méthodes scientifiques qui produisent un logiciel robuste, dans un délai et un coup raisonnable ? Qu’est ce qui peut être si compliqué dans le fait de traduire un besoin métier en une série d’instructions non ambiguës compréhensibles par un ordinateur ? Durant cette présentation, j’aimerais introduire quelques hypothèses pour répondre à ces questions. Le but est de challenger nos pratiques ainsi que notre compréhension de ce qu’est un logiciel et un développeur, dans le but de nous améliorer. Je vous préviens : vous aurez plus de questions en repartant qu’en arrivant, mais heureusement l’important c’est le voyage, pas la destination.</p>`;
     const confBrunet = `<h1>L'entreprise libérée : La théorie de l'évolution des organisations</h1>
     <p>Voilà un concept qui fait parler de lui. L'entreprise libérée, soit on aime, soit on déteste. Je t'aime, moi non plus.</p>
     <p>Mais au final de quoi parle-t-on vraiment ? Suffit-il d'un baby foot et d'un open space pour être une entreprise libérée ? Quelles sont les ingrédients magiques à créer cette philosophie ?</p>
     <p>Je vous embarque dans un voyage, comme Darwin sur le navire Beagle, afin de découvrir l'évolution des organisations et comment on en est arrivé à l'entreprise libérée.</p>`;
     const keynoteCloture = `<h1></h1><p></p>`;
-    const confThibault = `<h1></h1><p></p>`;
+    const confThibault = `<h1>En finir avec la “dette technique”</h1>
+    <p>Ward Cunningham a nommé "Technical Debt" le procédé qui consiste à déroger temporairement à ses standards de qualité en vue de gagner du temps dans la réalisation d'un objectif intermédiaire. Au cours de la dernière décennie, l'expression est devenue très populaire, tout en perdant son sens initial.  Elle est désormais utilisée pour désigner l'état d'une solution jugée non conforme à l'état de l'art généralement admis dans notre industrie, et pour souligner le fait que c'est cette non-qualité qui ralentit la progression de l'équipe aux prises avec cette solution. La plupart des équipes de développement ne contractent pas délibérément de dette technique. Elles subissent, ou créent passivement, de la dette technique.</p>
+    <p>Dans ce contexte le terme "Dette Technique" ne contribue en rien à clarifier l'état de ce qu'il est censé décrire. Il ne veut plus rien dire. Nous devons donc trouver un modèle alternatif qui nous donne une meilleure façon de parler de cet état des choses que nous appelons une solution "endettée" si nous voulons contribuer à l'améliorer.  C'est ce que je me propose de faire durant cette présentation.</p>`;
     const confLambert = `<h1>Une semaine dans ma peau de testeur agile</h1>
     <p>Le testeur, ou le QA, on voit très bien ce qu'il fait avant le passage à l'agilité : il teste... Plus précisément, il valide les changements, il vérifie la non-régression, et puis il fait aussi d'autres trucs à côté.</p>
     <p>Par contre que fait-il maintenant qu'on travaille en agile ? Ce n'est évident pour personne, d'autant plus qu'on l'a intégré dans l'équipe agile. Comment peut-il bien faire tout ce qu'il faisait avant mais désormais en juste une itération ? Et puis on n'arrête pas de parler d'automatisation des tests, a-t-on vraiment encore besoin de testeur ?</p>
