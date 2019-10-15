@@ -70,7 +70,9 @@ jQuery(document).ready(function () {
     <p>Une stratégie de tests est la façon de s’organiser pour montrer qu’une application est de qualité suffisante pour aller en production. Il ne s’agit donc pas d’un inventaire de tests manuels ou automatisés, mais d’un raisonnement avec des choix et des renoncements.</p>
     <p>Dans cette présentation nous verrons comment une stratégie de tests vise à optimiser la confiance et les preuves de qualité dans le cadre du développement d’un produit agile.</p>`;
     const confMonville = `<h1>Quel est votre véritable pouvoir ?</h1><p>Au cours de cette session, nous allons passer en revue les clés qui vous permettront de découvrir et vous approprier votre pouvoir de transformation.</p>`;
-    const confLemaire = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1><p></p>`;
+    const confLemaire = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1>
+    <p>Pourquoi alors que l’agilité n’a jamais été aussi populaire, certains développeurs ne s’y retrouvent plus ? Comment, ce qui devait être un mouvement d’émancipation des acteurs d’un projet, se retrouve à être vécu comme un calvaire ?</p>
+    <p>Nous chercherons à répondre à ces questions en revenant à la motivation profonde des entreprises et à pourquoi elles n’arrivent pas à se défaire de leurs (mauvaises) habitudes de management.</p>`;
     const confHumphreys = `<h1>Les émotions dans le monde professionnel</h1>
     <p>Venez assister à une expérience inédite : La fabuleuse Docteur Alice va expérimenter / analyser devant vous le phénomène unique de la Vanessa dont le comportement professionnel intrigue - serait-elle assez folle pour exprimer ses émotions au travail ?</p>`;
     const confPascaud = `<h1>Et si nous faisions quelque chose de nos réunions ?</h1>
