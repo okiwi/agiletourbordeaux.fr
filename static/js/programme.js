@@ -154,7 +154,8 @@ jQuery(document).ready(function () {
             <li>quand c’est fini, c’est fini.</li>
         </ul>
     </p>
-    <p>La loi des deux pieds : si vous n’êtes ni en train d’apprendre, ni de contribuer, passez à autre chose !</p>`;
+    <p>La loi des deux pieds : si vous n’êtes ni en train d’apprendre, ni de contribuer, passez à autre chose !</p>
+    <a href="https://fr.wikipedia.org/wiki/M%C3%A9thodologie_Forum_Ouvert">Fiche Wikipedia</a>`;
 
     var descriptions = {
         'conf-appelo':             confAppelo,
