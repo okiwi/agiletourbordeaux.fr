@@ -14,6 +14,8 @@ Depuis les dernières années, on voit que la méthodologie agile prend un essor
 Pour commencer, il faut savoir que pour utiliser convenablement l’agilité il faut définir un Flow. Ce Flow va permettre à votre équipe d’optimiser le plus possible notre temps de travail.
 Un Flow typique de l’agilité technique est constitué d’une suite de plusieurs étapes.
 
+<!--more-->
+
 ![Alt text](/static/img/blog/article-azeo/image001.png){: img-responsive }{: .center-block }
 
 ### Décider
