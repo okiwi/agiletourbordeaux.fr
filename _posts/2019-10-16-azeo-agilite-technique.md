@@ -1,13 +1,12 @@
 ---
 layout: post2018
-title:  "AZEO - L'agilité technique"
+title:  "Qu’est-ce que l’agilité technique ?"
 image: azeo.jpg
 wide-image: azeo-wide.jpg
 js:
 - /static/js/post.js
 ---
 
-# Qu’est-ce que l’agilité technique ?
 **Article rédigé par Benjamin Titeux, Consultant Modern Apps AZEO**
 
 Depuis les dernières années, on voit que la méthodologie agile prend un essor important, mais savez-vous ce qu’est l’agilité technique ? C’est ce que nous allons découvrir ensemble.
