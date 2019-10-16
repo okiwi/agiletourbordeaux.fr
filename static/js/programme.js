@@ -142,7 +142,19 @@ jQuery(document).ready(function () {
     <p>Est-ce que je me sens débutante? Avancée? Jusqu’où je souhaite aller? Amatrice éclairée ou professionnelle aguerrie?</p>
     <p>Est-ce que mon équipe, mon organisation est débutante, mature? Qu’est-ce que nous souhaitons qu’il arrive? Quel effort sommes nous prêt à investir pour que cela arrive? </p>`;
     const confAubert = `<h1>L'intégration (dis-)continue</h1><p>Présentation des principes et bonnes pratiques de l'intégration continue (code sources, livrables, environnements). Que doit-on/peut-on automatiser ? Que faire quand certaines actions restent manuelles ? Comment outiller l'intégration discontinue ? (ce descriptif pourrait évoluer un peu dans sa version finale)</p>`;
-    const openSpace = `<h1>Open Space</h1><p></p>`;
+    const openSpace = `<h1>Open space</h1>
+    <p>L'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p>
+    <p>Il repose sur le respect d'une loi, étayée par quatre principes.</p>
+    <p>
+        Les quatre principes :
+        <ul>
+            <li>les personnes qui se présentent sont les bonnes ;</li>
+            <li>ce qui arrive, est la seule chose qui pouvait arriver ;</li>
+            <li>ça commence quand ça commence ;</li>
+            <li>quand c’est fini, c’est fini.</li>
+        </ul>
+    </p>
+    <p>La loi des deux pieds : si vous n’êtes ni en train d’apprendre, ni de contribuer, passez à autre chose !</p>`;
 
     var descriptions = {
         'conf-appelo':             confAppelo,
