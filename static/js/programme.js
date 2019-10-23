@@ -48,7 +48,8 @@ jQuery(document).ready(function () {
         <li>vous pratiquez déjà TDD, et vous avez envie de voir comment ça se passe chez d'autres développeurs ;</li>
     </ul>
     </p>
-    <p>Et surtout : vous avez envie de retrouver le PLAISIR de développer.</p>`;
+    <p>Et surtout : vous avez envie de retrouver le PLAISIR de développer.</p>
+    <p>Si vous avez la possibilité d'apporter votre machine sur laquelle vous savez coder en Javascript, ce sera très utile.</p>`;
 
     const confFaure = `<h1>Agilistes et développeur·euse·s sont dans un bateau</h1>
     <p>A la machine à café, j’ai entendu un développeur râler car il devait intégrer une équipe fonctionnant en Scrum. Un autre jour, j’ai croisé un Scrum Master et sa Product Owner qui se plaignaient de leur équipe de dev qui n’allait pas assez vite et qui faisait exprès de gonfler ses estimations.</p>
