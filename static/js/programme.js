@@ -109,7 +109,7 @@ jQuery(document).ready(function () {
     const keynoteCloture = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1>
     <p>Pourquoi alors que l’agilité n’a jamais été aussi populaire, certains développeurs ne s’y retrouvent plus ? Comment, ce qui devait être un mouvement d’émancipation des acteurs d’un projet, se retrouve à être vécu comme un calvaire ?</p>
     <p>Nous chercherons à répondre à ces questions en revenant à la motivation profonde des entreprises et à pourquoi elles n’arrivent pas à se défaire de leurs (mauvaises) habitudes de management.</p>`;
-    const confPanoptique = `<h1>Mégacorporations ou mini-panoptiques? Coach Agiles ou jésuites ?</h1>
+    const confPanoptique = `<h1>Les grandes boîtes sont des petits panoptiques. Les coachs agiles sont des jésuites.</h1>
     <p>Sans grande conspiration ni individu malveillant à son sommet, nous avons créé une culture d’entreprise dysfonctionnelle où le gaspillage règne, la tristesse est omniprésente, et la majorité a abandonné tout espoir d'amélioration.</p>
     <p>C’est un système où tous les participants sont à la fois oppressés et complices de leur oppression.</p>
     <p>Cette conférence a pour but de vous aider à voir le système, et, en voyant comme il vous blesse, de prendre les armes et le combattre.</p>
