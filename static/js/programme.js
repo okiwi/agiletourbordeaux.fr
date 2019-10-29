@@ -109,9 +109,11 @@ jQuery(document).ready(function () {
     const keynoteCloture = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1>
     <p>Pourquoi alors que l’agilité n’a jamais été aussi populaire, certains développeurs ne s’y retrouvent plus ? Comment, ce qui devait être un mouvement d’émancipation des acteurs d’un projet, se retrouve à être vécu comme un calvaire ?</p>
     <p>Nous chercherons à répondre à ces questions en revenant à la motivation profonde des entreprises et à pourquoi elles n’arrivent pas à se défaire de leurs (mauvaises) habitudes de management.</p>`;
-    const confThibault = `<h1>En finir avec la “dette technique”</h1>
-    <p>Ward Cunningham a nommé "Technical Debt" le procédé qui consiste à déroger temporairement à ses standards de qualité en vue de gagner du temps dans la réalisation d'un objectif intermédiaire. Au cours de la dernière décennie, l'expression est devenue très populaire, tout en perdant son sens initial.  Elle est désormais utilisée pour désigner l'état d'une solution jugée non conforme à l'état de l'art généralement admis dans notre industrie, et pour souligner le fait que c'est cette non-qualité qui ralentit la progression de l'équipe aux prises avec cette solution. La plupart des équipes de développement ne contractent pas délibérément de dette technique. Elles subissent, ou créent passivement, de la dette technique.</p>
-    <p>Dans ce contexte le terme "Dette Technique" ne contribue en rien à clarifier l'état de ce qu'il est censé décrire. Il ne veut plus rien dire. Nous devons donc trouver un modèle alternatif qui nous donne une meilleure façon de parler de cet état des choses que nous appelons une solution "endettée" si nous voulons contribuer à l'améliorer.  C'est ce que je me propose de faire durant cette présentation.</p>`;
+    const confPanoptique = `<h1>Mégacorporations ou mini-panoptiques? Coach Agiles ou jésuites ?</h1>
+    <p>Sans grande conspiration ni individu malveillant à son sommet, nous avons créé une culture d’entreprise dysfonctionnelle où le gaspillage règne, la tristesse est omniprésente, et la majorité a abandonné tout espoir d'amélioration.</p>
+    <p>C’est un système où tous les participants sont à la fois oppressés et complices de leur oppression.</p>
+    <p>Cette conférence a pour but de vous aider à voir le système, et, en voyant comme il vous blesse, de prendre les armes et le combattre.</p>
+    <p>Cette conférence a pour but de vous convaincre que vous pouvez, en fait, faire la différence.</p>`
     const confLambert = `<h1>Une semaine dans ma peau de testeur agile</h1>
     <p>Le testeur, ou le QA, on voit très bien ce qu'il fait avant le passage à l'agilité : il teste... Plus précisément, il valide les changements, il vérifie la non-régression, et puis il fait aussi d'autres trucs à côté.</p>
     <p>Par contre que fait-il maintenant qu'on travaille en agile ? Ce n'est évident pour personne, d'autant plus qu'on l'a intégré dans l'équipe agile. Comment peut-il bien faire tout ce qu'il faisait avant mais désormais en juste une itération ? Et puis on n'arrête pas de parler d'automatisation des tests, a-t-on vraiment encore besoin de testeur ?</p>
@@ -184,7 +186,7 @@ jQuery(document).ready(function () {
         'conf-pecoul': confPecoul,
         'conf-brunet': confBrunet,
         'conf-keynoteCloture': keynoteCloture,
-        'conf-thibault': confThibault,
+        'conf-panopticon': confPanoptique,
         'conf-lambert': confLambert,
         'conf-cranford': confCranford,
         'conf-yoteau': confYoteau,
