@@ -71,9 +71,6 @@ jQuery(document).ready(function () {
     <p>Une stratégie de tests est la façon de s’organiser pour montrer qu’une application est de qualité suffisante pour aller en production. Il ne s’agit donc pas d’un inventaire de tests manuels ou automatisés, mais d’un raisonnement avec des choix et des renoncements.</p>
     <p>Dans cette présentation nous verrons comment une stratégie de tests vise à optimiser la confiance et les preuves de qualité dans le cadre du développement d’un produit agile.</p>`;
     const confMonville = `<h1>Quel est votre véritable pouvoir ?</h1><p>Au cours de cette session, nous allons passer en revue les clés qui vous permettront de découvrir et vous approprier votre pouvoir de transformation.</p>`;
-    const confLemaire = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1>
-    <p>Pourquoi alors que l’agilité n’a jamais été aussi populaire, certains développeurs ne s’y retrouvent plus ? Comment, ce qui devait être un mouvement d’émancipation des acteurs d’un projet, se retrouve à être vécu comme un calvaire ?</p>
-    <p>Nous chercherons à répondre à ces questions en revenant à la motivation profonde des entreprises et à pourquoi elles n’arrivent pas à se défaire de leurs (mauvaises) habitudes de management.</p>`;
     const confHumphreys = `<h1>Les émotions dans le monde professionnel</h1>
     <p>Venez assister à une expérience inédite : La fabuleuse Docteur Alice va expérimenter / analyser devant vous le phénomène unique de la Vanessa dont le comportement professionnel intrigue - serait-elle assez folle pour exprimer ses émotions au travail ?</p>`;
     const confPascaud = `<h1>Et si nous faisions quelque chose de nos réunions ?</h1>
@@ -143,6 +140,11 @@ jQuery(document).ready(function () {
     <p>Est-ce que je me sens débutante? Avancée? Jusqu’où je souhaite aller? Amatrice éclairée ou professionnelle aguerrie?</p>
     <p>Est-ce que mon équipe, mon organisation est débutante, mature? Qu’est-ce que nous souhaitons qu’il arrive? Quel effort sommes nous prêt à investir pour que cela arrive? </p>`;
     const confAubert = `<h1>L'intégration (dis-)continue</h1><p>Présentation des principes et bonnes pratiques de l'intégration continue (code sources, livrables, environnements). Que doit-on/peut-on automatiser ? Que faire quand certaines actions restent manuelles ? Comment outiller l'intégration discontinue ? (ce descriptif pourrait évoluer un peu dans sa version finale)</p>`;
+    const confrobinbrones = `<h1>Les Agile smells, comment se défendre de l'Agile Bashing de manière fun et ludique !</h1>
+    <p>L’Agile bashing montant (blogs, conférences, agile quiters Manifesto et autres) doit nous interpeller sur notre responsabilité de continuer à expliquer l’Agilité, et à la pratiquer avec éthique, respect et compétences.</p>
+    <p>Seulement voilà : comment faire pour convaincre des individus déçus après avoir essayé, parfois plusieurs mois ou années, des approches dites agile. Comment expliquer simplement que l’agilité n’est pas responsable de la manière dont on pense l’appliquer sans attiser les tensions ?</p>
+    <p>Nous avons créé l'open serious game Agile Smells destiné à combattre l’Agile Bashing de manière simple et ludique ! En effet, ce jeu aide à prendre conscience que ce n’est pas l’agilité qui ne fonctionne pas mais la manière dont on l’applique</p>`;
+
     const openSpace = `<h1>Open space</h1>
     <p>L'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p>
     <p>Il repose sur le respect d'une loi, étayée par quatre principes.</p>
@@ -159,61 +161,61 @@ jQuery(document).ready(function () {
     <a href="https://fr.wikipedia.org/wiki/M%C3%A9thodologie_Forum_Ouvert">Fiche Wikipedia</a>`;
 
     var descriptions = {
-        'conf-appelo':             confAppelo,
-        'conf-dusseaut':           confDusseaut,
-        'conf-sanglanCharlier':    confSanglanCharlier,
-        'conf-o-my':               confMy,
-        'conf-martin':             confMartin,
-        'atelier-urvoas':          atelierUrvoas,
-        'atelier-cadilhac':        atelierCadilhac,
-        'conf-faure':              confFaure,
-        'conf-haasser':            confHaasser,
-        'conf-azeau':              confAzeau,
-        'conf-fedou':              confFedou,
-        'conf-monville':           confMonville,
-        'conf-lemaire':            confLemaire,
-        'conf-humphreys':          confHumphreys,
-        'conf-pascaud':            confPascaud,
-        'conf-jakubowski':         confJakubowski,
-        'atelier-pizza':           atelierPizza,
-        'atelier-conter':          atelierConter,
-        'conf-detant':             confDetant,
-        'conf-ia':                 confIa,
-        'conf-pecoul':             confPecoul,
-        'conf-brunet':             confBrunet,
-        'conf-keynoteCloture':     keynoteCloture,
-        'conf-thibault':           confThibault,
-        'conf-lambert':            confLambert,
-        'conf-cranford':           confCranford,
-        'conf-yoteau':             confYoteau,
-        'conf-stEtienne':          confStEtienne,
-        'atelier-cassini':         atelierCassini,
-        'atelier-allaire':         atelierAllaire,
-        'conf-moura':              confMoura,
-        'conf-avoustin':           confAvoustin,
-        'conf-saillofest':         confSaillofest,
-        'conf-aubert':             confAubert,
-        'open-space':              openSpace
-	};
+        'conf-appelo': confAppelo,
+        'conf-dusseaut': confDusseaut,
+        'conf-sanglanCharlier': confSanglanCharlier,
+        'conf-o-my': confMy,
+        'conf-martin': confMartin,
+        'atelier-urvoas': atelierUrvoas,
+        'atelier-cadilhac': atelierCadilhac,
+        'conf-faure': confFaure,
+        'conf-haasser': confHaasser,
+        'conf-azeau': confAzeau,
+        'conf-fedou': confFedou,
+        'conf-monville': confMonville,
+        'conf-robin-brones': confrobinbrones,
+        'conf-humphreys': confHumphreys,
+        'conf-pascaud': confPascaud,
+        'conf-jakubowski': confJakubowski,
+        'atelier-pizza': atelierPizza,
+        'atelier-conter': atelierConter,
+        'conf-detant': confDetant,
+        'conf-ia': confIa,
+        'conf-pecoul': confPecoul,
+        'conf-brunet': confBrunet,
+        'conf-keynoteCloture': keynoteCloture,
+        'conf-thibault': confThibault,
+        'conf-lambert': confLambert,
+        'conf-cranford': confCranford,
+        'conf-yoteau': confYoteau,
+        'conf-stEtienne': confStEtienne,
+        'atelier-cassini': atelierCassini,
+        'atelier-allaire': atelierAllaire,
+        'conf-moura': confMoura,
+        'conf-avoustin': confAvoustin,
+        'conf-saillofest': confSaillofest,
+        'conf-aubert': confAubert,
+        'open-space': openSpace
+    };
 
     hideModal();
-    
-    jQuery('.modalLink').each(function(index, element) {
+
+    jQuery('.modalLink').each(function (index, element) {
         handleClickEvent(element);
     });
 
-    jQuery('#btn-close-modal').on('click', function(event) {
+    jQuery('#btn-close-modal').on('click', function (event) {
         hideModal();
     });
 
     function handleClickEvent(element) {
-        jQuery(element).on('click', function(event) {
+        jQuery(element).on('click', function (event) {
             var id = jQuery(event.currentTarget).attr('id');
             changeDescription(id);
             showModal();
         });
     }
-    
+
     function showModal() {
         animatedModal.addClass('visible');
         animatedModal.removeClass('vhidden');
