@@ -109,7 +109,7 @@ jQuery(document).ready(function () {
     const keynoteCloture = `<h1>Entre industrialisation et artisanat, le métier de développeur</h1>
     <p>Pourquoi alors que l’agilité n’a jamais été aussi populaire, certains développeurs ne s’y retrouvent plus ? Comment, ce qui devait être un mouvement d’émancipation des acteurs d’un projet, se retrouve à être vécu comme un calvaire ?</p>
     <p>Nous chercherons à répondre à ces questions en revenant à la motivation profonde des entreprises et à pourquoi elles n’arrivent pas à se défaire de leurs (mauvaises) habitudes de management.</p>`;
-    const confPanoptique = `<h1>Mégacorporations ou mini-panoptiques? Coach Agiles ou jésuites ?</h1>
+    const confPanoptique = `<h1>Les grandes boîtes sont des petits panoptiques. Les coachs agiles sont des jésuites.</h1>
     <p>Sans grande conspiration ni individu malveillant à son sommet, nous avons créé une culture d’entreprise dysfonctionnelle où le gaspillage règne, la tristesse est omniprésente, et la majorité a abandonné tout espoir d'amélioration.</p>
     <p>C’est un système où tous les participants sont à la fois oppressés et complices de leur oppression.</p>
     <p>Cette conférence a pour but de vous aider à voir le système, et, en voyant comme il vous blesse, de prendre les armes et le combattre.</p>
@@ -121,8 +121,8 @@ jQuery(document).ready(function () {
     <p>Je suis un agiliste auto-didacte et j'ai d'ailleurs un avis très mitigé sur les certifications. Loin de tout dogmatisme, attendez-vous à voir avant tout du retour d'expérience, du vécu. Le tout sur le ton de l'humour et du troll !</p>
     <p>Vous verrez que le rôle de testeur agile est plein de subtilités. Contrairement à ce qu'on pourrait imaginer il a énormément de travail et la plupart des équipes gagneraient à un avoir un !</p>`;
     const confCranford = `<h1>Agile Sex</h1><p>L'agilité se vie comme une vie sexuelle. Les deux ont des buts et des pratiques en commun, autant que de résultats similaire. Ça peut se bien passer comme ça peut très mal se passer. Quelques idées et astuces pour que les résultats soient les bons</p>`;
-    const confYoteau = `<h1>Pourquoi le DevOps concernent pas que les Dev/Ops</h1>
-    <p>On entend tout autour du DevOps. "Le DEVOPS, c'est tout automatiser". "Le DevOps, c'est cassé le mur de l'imcompréhension entre Dev et Ops". OK mais Pourquoi? A travers, quelques exemples, je vais vous montrer comment la collaboration entre Dev et Ops rends service à tous les métiers de l'entreprise.</p>`;
+    const confYoteau = `<h1>Pourquoi le DevOps ne concerne pas que les Dev/Ops</h1>
+    <p>On entend tout autour du DevOps. "Le DEVOPS, c'est tout automatiser". "Le DevOps, c'est casser le mur de l'incompréhension entre Dev et Ops". OK mais Pourquoi ? A travers quelques exemples, je vais vous montrer comment la collaboration entre Dev et Ops rend service à tous les métiers de l'entreprise.</p>`;
     const confStEtienne = `<h1>10 years challenge: comment vivre avec le même code</h1><p>Pour la grande majorité des développeurs (ceux ci étant en majorité employés dans des ESN) les projets s'enchainent et ne se ressemblent pas tous. Et il y a ce fameux turn-over. J'ai connu cela durant mes 15 premières années de carrière. Et tout d'un coup, l'âge de raison sûrement, me voici pris dans une aventure de long terme. Déboussolant ou rassurant? Peut être les deux. Mais cela ne s'est pas fait par hasard. Laissez moi vous raconter ce qui m'a permis de rester contre tout attente avec la même équipe et le même code. Ce qui a fait que 10 ans passèrent très vite, sans le temps de sentir la routine et avec comme défi permanent de construire pour durer.</p>`;
     const atelierCassini = `<h1>Bien réussir sa rétrospective</h1>
     <p>Cérémonie mal aimée, mal comprise, mal utilisée ou pas adaptée à votre contexte actuel, à chaque fin de sprint celle-ci est pourtant une des plus importantes et doit rebooster vos troupes.</p>
