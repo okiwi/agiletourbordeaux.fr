@@ -83,7 +83,7 @@ jQuery(document).ready(function () {
     <p>Quid de nos convictions autour de l'agilité ? Que sont-elles devenues "après tout ça" ? Sommes-nous abattus ou au contraire convaincus comme jamais ?</p>
     <p>Je vous propose de poser à plat ce qui s'est passé : ce qui a été mis à mal, bousculé. Puis nous ferons un zoom sur comment l'agilité s'est comportée (et se comporte encore) durant cette crise. Quelles sont ses forces ? Ses faiblesses ? A-t-elle mutée ? Enfin, après un suspense insoutenable, je vous avouerai si oui ou non, j'y crois encore.</p>`;
 
-    const atelierBeraudSudreau = `<h1>L'agilité c'est pas sorcier : Chaos transformation</h1>
+    const atelierBeraudSudreau = `<h1>Welcome to happy company (Serious Game)</h1>
     <p>Comment tirer bénéfice du hasard dans la transformation d'un système complexe ?</p>`;
 
     const confVeyron = `<h1>Excursion cosmique vers la transformation agile</h1>
