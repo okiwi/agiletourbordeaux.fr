@@ -125,7 +125,9 @@ jQuery(document).ready(function () {
     <p>Je vous propose de partager avec vous mon aventure du Lean et comment ce dernier m’a appris à apprendre. On parlera de dissonances, de biais, mais aussi de problèmes, de management et d’outils.</p>`;
 
     const confDusseaut = `<h1>Keynote de Jean-Baptiste Dusseaut</h1>
-    <p></p>`;
+    <p>La sagesse populaire veut que l'agilité soit morte, paix à son âme.</p>
+    <p>Ceci étant dit, l'agilité s'était donné comme épouvantail le cycle en V, et proposait une autre approche.</p>
+    <p>Si l'agilité est vraiment morte, par quoi la remplacer ? De qui est-elle l'épouvantail ?</p>`;
 
     const openSpace = `<h1>Open space</h1>
     <p>L'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p>
