@@ -103,8 +103,11 @@ jQuery(document).ready(function () {
     <p>- Conclusion sur les différents types de galaxies (entreprises) ainsi que leur culture d’entreprise.</p>
     <p>Prochain voyage pour l’agilité à l’échelle ?</p>`;
 
-    const confDijoux = `<h1>La posture du coach</h1>
-    <p>Quelle différence entre un consultant et un coach ? Quels sont les éléments caractéristiques de la pratique du coach ? Comment se faire accepter par l'équipe ? Comment les amener à se poser les bonnes questions ? Comment rendre visible leur progès et leurs succès ?</p>`;
+    const confLamarque = `<h1>Kata: Gilded Rose Inn</h1>
+    <p>L'auberge de Gilded-Rose est situé au cœur de Hurlevent, et propose aux voyageurs de tout Azeroth des armes rares, et des mets délicats.    
+Leur système informatique de gestion des stocks et de prix est OK, il a été codé il y a 10 ans par un gnome stagiaire, qui est depuis passé sous un troll.   
+Le code fonctionne. Par contre le code est très très moche, y amener le moindre changement est compliqué, les tentatives d'évolutions ont entrainé des régressions critiques pour l'économie de l'auberge et se sont toutes faites dans la douleur.
+Ma mission, si je l'accepte : nettoyer suffisamment le code pour qu'en faire une évolution soit facile, en s'assurant de ne pas introduire de régression fonctionnelle.</p>`;
 
     const confBailly = `<h1>TDD et TDD sont dans un bateau</h1>
     <p>Le TDD (Type-Driven Development) ou Développement Dirigé par les Tests est un des piliers du développement agile : les tests sont une forme de spécification exécutable concrète, basée sur des exemples, qui guident la conception et le développement du code. Les langages modernes et plus particulièrement les langages fonctionnels permettent d'appliquer ce principe en amont du processus, avant même que le code ne soit exécuté, lors de la compilation : d'où l'idée du TDD comme Type-Driven Development, développement dirigé par les types.</p>
@@ -159,7 +162,7 @@ jQuery(document).ready(function () {
         'conf-metais': confMetais,
         'atelier-beraud-sudreau': atelierBeraudSudreau,
         'conf-veyron': confVeyron,
-        'conf-dijoux': confDijoux,
+        'conf-lamarque': confLamarque,
         'conf-bailly': confBailly,
         'conf-migot': confMigot,
         'conf-barreau': confBarreau,
