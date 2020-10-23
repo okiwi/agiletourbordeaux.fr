@@ -61,8 +61,8 @@ jQuery(document).ready(function () {
     <p>Comment développer son mindset ?</p>
     <p>Je propose de partager 4 façons simples de développer son mindset. C’est à la portée de tous, il nous suffit de nous attacher à faire de petits changements chaque jour et ainsi, notre mindset plus positif nous apportera plus d’agilité pour réussir dans notre environnement pro (et perso !)</p>`;
 
-    const confDlus = `<h1>Agilité et danse contemporaine</h1>
-    <p>Suite à une expérience de worskhops et de performance de danse contemporaine "Slow Show" en Février 2020 avec un chorégraphe de renommée mondiale, Dimitri Chamblas. J'ai perçu des similitudes, des liens entre agilité et cette activité artistique : la dynamique des workshops, la posture du coach, les exercices Ice-breaker, les activité de cohésion de groupe. Cette session permettra de façon surprenante de lier des univers apparemment bien éloignés.</p>`;
+    const confHeralFaure = `<h1></h1>
+    <p></p>`;
 
     const confUrvoas = `<h1>La permaculture humaine, une solution pour une transformation agile plus durable</h1>
     <p>Beaucoup de transformations agiles échouent …. dans le temps</p>
@@ -158,7 +158,7 @@ Ma mission, si je l'accepte : nettoyer suffisamment le code pour qu'en faire une
         'conf-lemaire': confLemaire,
         'conf-kol': confKol,
         'atelier-san-juan': atelierSanJuan,
-        'conf-dlus': confDlus,
+        'conf-heral-faure': confHeralFaure,
         'conf-urvoas': confUrvoas,
         'conf-rouhaud': confRouhaud,
         'conf-metais': confMetais,
