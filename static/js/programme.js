@@ -61,8 +61,9 @@ jQuery(document).ready(function () {
     <p>Comment développer son mindset ?</p>
     <p>Je propose de partager 4 façons simples de développer son mindset. C’est à la portée de tous, il nous suffit de nous attacher à faire de petits changements chaque jour et ainsi, notre mindset plus positif nous apportera plus d’agilité pour réussir dans notre environnement pro (et perso !)</p>`;
 
-    const confHeralFaure = `<h1></h1>
-    <p></p>`;
+    const confHeralFaure = `<h1>Je suis dans un monolithe, sortez-moi de là !</h1>
+    <p>Comment sortir du monolithe grâce à la transformation produit en accompagnant une équipe au quotidien.</p>
+    <p>#découplage #testabilité #accelerate #limitedewip #mobprogramming #cicd</p>`;
 
     const confUrvoas = `<h1>La permaculture humaine, une solution pour une transformation agile plus durable</h1>
     <p>Beaucoup de transformations agiles échouent …. dans le temps</p>
