@@ -61,8 +61,9 @@ jQuery(document).ready(function () {
     <p>Comment développer son mindset ?</p>
     <p>Je propose de partager 4 façons simples de développer son mindset. C’est à la portée de tous, il nous suffit de nous attacher à faire de petits changements chaque jour et ainsi, notre mindset plus positif nous apportera plus d’agilité pour réussir dans notre environnement pro (et perso !)</p>`;
 
-    const confDlus = `<h1>Agilité et danse contemporaine</h1>
-    <p>Suite à une expérience de worskhops et de performance de danse contemporaine "Slow Show" en Février 2020 avec un chorégraphe de renommée mondiale, Dimitri Chamblas. J'ai perçu des similitudes, des liens entre agilité et cette activité artistique : la dynamique des workshops, la posture du coach, les exercices Ice-breaker, les activité de cohésion de groupe. Cette session permettra de façon surprenante de lier des univers apparemment bien éloignés.</p>`;
+    const confHeralFaure = `<h1>Je suis dans un monolithe, sortez-moi de là !</h1>
+    <p>Comment sortir du monolithe grâce à la transformation produit en accompagnant une équipe au quotidien.</p>
+    <p>#découplage #testabilité #accelerate #limitedewip #mobprogramming #cicd</p>`;
 
     const confUrvoas = `<h1>La permaculture humaine, une solution pour une transformation agile plus durable</h1>
     <p>Beaucoup de transformations agiles échouent …. dans le temps</p>
@@ -83,7 +84,7 @@ jQuery(document).ready(function () {
     <p>Quid de nos convictions autour de l'agilité ? Que sont-elles devenues "après tout ça" ? Sommes-nous abattus ou au contraire convaincus comme jamais ?</p>
     <p>Je vous propose de poser à plat ce qui s'est passé : ce qui a été mis à mal, bousculé. Puis nous ferons un zoom sur comment l'agilité s'est comportée (et se comporte encore) durant cette crise. Quelles sont ses forces ? Ses faiblesses ? A-t-elle mutée ? Enfin, après un suspense insoutenable, je vous avouerai si oui ou non, j'y crois encore.</p>`;
 
-    const atelierBeraudSudreau = `<h1>L'agilité c'est pas sorcier : Chaos transformation</h1>
+    const atelierBeraudSudreau = `<h1>Welcome to happy company (Serious Game)</h1>
     <p>Comment tirer bénéfice du hasard dans la transformation d'un système complexe ?</p>`;
 
     const confVeyron = `<h1>Excursion cosmique vers la transformation agile</h1>
@@ -103,8 +104,11 @@ jQuery(document).ready(function () {
     <p>- Conclusion sur les différents types de galaxies (entreprises) ainsi que leur culture d’entreprise.</p>
     <p>Prochain voyage pour l’agilité à l’échelle ?</p>`;
 
-    const confDijoux = `<h1>La posture du coach</h1>
-    <p>Quelle différence entre un consultant et un coach ? Quels sont les éléments caractéristiques de la pratique du coach ? Comment se faire accepter par l'équipe ? Comment les amener à se poser les bonnes questions ? Comment rendre visible leur progès et leurs succès ?</p>`;
+    const confLamarque = `<h1>Kata: Gilded Rose Inn</h1>
+    <p>L'auberge de Gilded-Rose est situé au cœur de Hurlevent, et propose aux voyageurs de tout Azeroth des armes rares, et des mets délicats.    
+Leur système informatique de gestion des stocks et de prix est OK, il a été codé il y a 10 ans par un gnome stagiaire, qui est depuis passé sous un troll.   
+Le code fonctionne. Par contre le code est très très moche, y amener le moindre changement est compliqué, les tentatives d'évolutions ont entrainé des régressions critiques pour l'économie de l'auberge et se sont toutes faites dans la douleur.
+Ma mission, si je l'accepte : nettoyer suffisamment le code pour qu'en faire une évolution soit facile, en s'assurant de ne pas introduire de régression fonctionnelle.</p>`;
 
     const confBailly = `<h1>TDD et TDD sont dans un bateau</h1>
     <p>Le TDD (Type-Driven Development) ou Développement Dirigé par les Tests est un des piliers du développement agile : les tests sont une forme de spécification exécutable concrète, basée sur des exemples, qui guident la conception et le développement du code. Les langages modernes et plus particulièrement les langages fonctionnels permettent d'appliquer ce principe en amont du processus, avant même que le code ne soit exécuté, lors de la compilation : d'où l'idée du TDD comme Type-Driven Development, développement dirigé par les types.</p>
@@ -125,7 +129,9 @@ jQuery(document).ready(function () {
     <p>Je vous propose de partager avec vous mon aventure du Lean et comment ce dernier m’a appris à apprendre. On parlera de dissonances, de biais, mais aussi de problèmes, de management et d’outils.</p>`;
 
     const confDusseaut = `<h1>Keynote de Jean-Baptiste Dusseaut</h1>
-    <p></p>`;
+    <p>La sagesse populaire veut que l'agilité soit morte, paix à son âme.</p>
+    <p>Ceci étant dit, l'agilité s'était donné comme épouvantail le cycle en V, et proposait une autre approche.</p>
+    <p>Si l'agilité est vraiment morte, par quoi la remplacer ? De qui est-elle l'épouvantail ?</p>`;
 
     const openSpace = `<h1>Open space</h1>
     <p>L'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p>
@@ -153,13 +159,13 @@ jQuery(document).ready(function () {
         'conf-lemaire': confLemaire,
         'conf-kol': confKol,
         'atelier-san-juan': atelierSanJuan,
-        'conf-dlus': confDlus,
+        'conf-heral-faure': confHeralFaure,
         'conf-urvoas': confUrvoas,
         'conf-rouhaud': confRouhaud,
         'conf-metais': confMetais,
         'atelier-beraud-sudreau': atelierBeraudSudreau,
         'conf-veyron': confVeyron,
-        'conf-dijoux': confDijoux,
+        'conf-lamarque': confLamarque,
         'conf-bailly': confBailly,
         'conf-migot': confMigot,
         'conf-barreau': confBarreau,
