@@ -8,131 +8,161 @@ jQuery(document).ready(function () {
     var animatedModal = jQuery("#animatedModal");
     var toTopButton = jQuery(".to-top");
 
-    const confLambert = `<h1>Sortir de l'ère des héros - l'excellence technique comme clé d'une organisation résiliente</h1>
+    const confAubry = `<h1>Keynote - Arrêtez de commencer des sprints, commencez par finir le prélude</h1>
     <p>Votre projet marche, mais c’est le chaos. Comment arrêter de dépendre de ces “héros” sur qui tout repose ?</p>`;
 
-    const confNeis = `<h1>Swarming, Swarming, Swarming</h1>
-    <p>Un "swarm" ou essaim en français est une initiative permettant de tester une idée, un concept, un projet.</p>
-    <p>Un essaim quitte la ruche, pollenise et ensuite revient à la ruche, ou crée une nouvelle ruche.</p>
-    <p>Nous allons parler de théorie de flocage dans le contexte de l´organisation agile. Dans mon livre, "The New Normal: AO...", j'explique la structure d´une organisation en plateforme.</p>
-    <p>Mais un point clef reste toujours le Swarm. Au lieu de passer des mois à définir un cadre, on fait un swarm d´une ou deux semaines.</p>
-    <p>Etes-vous prêt pour le futur de l´Agile?</p>`;
+    const confGraveaud = `<h1>A la découverte d'Accelerate (FR)</h1>
+    <p>Les organisations veulent déployer plus vite pour atteindre leurs objectifs. Mais elles souhaitent également avoir des applications plus stables dans le temps. Vitesse et stabilité sont compatibles et les organisations ont un moyen de le découvrir.</p>
+	<p>Accelerate (la science derrière DevOps) est une recherche de 4 ans qui a défini les pratiques informatiques pour améliorer sa performance organisationnelle: productivité, rentabilité et être plus concurrentiel sur le marché.</p>
+	<p>La force d'Accelerate est que c'est applicable à toutes les entreprises (note inscrite dans la recherche) et aide aux choix stratégiques dans son entreprise.</p>
+	<p>Si la culture Agile est déjà présente alors déployer Accelerate est encore plus simple !
+	<br>A travers cet atelier, vous comprendrez l'idée générale d'accelerate, quelques mécanismes et les résultats qu'Accelerate prédit"</p>`;
 
-    const confDuboisCabanne = `<h1>Jusqu’ici tout va bien!</h1>
-    <p>C’est l’histoire d’une société qui lance des trains agiles, de plus en plus de trains, des trains de plus en plus gros, des trains de trains qui embarquent toujours plus de gens, vont de plus en plus en vite, accélèrent encore, encore plus, toujours plus....</p>
-    <p>C’est l’histoire d’une société qui trébuche et tombe et qui au fur et à mesure de sa chute se répète sans cesse pour se rassurer : jusqu’ici tout va bien, jusqu’ici tout va bien, jusqu’ici tout va bien...</p>
-    <p>C’est l’histoire de deux agilistes qui, au lendemain de l’impact, constatent l’effondrement : les trains vidés de leurs passagers, privés de leurs pilotes, certains stoppés net d’autres continuant d’avancer et de produire tant bien que mal mais sans visibilité et avec les mêmes objectifs, au risque de dérailler. Et les gens dedans, et les gens sur le quai ne savent pas quoi faire de leurs douleurs, doutes, pertes ….</p>
-    <p>L’important c’est pas la chute, c’est l'atterrissage!</p>
-    <p>Cette situation sans précédent nous amené à interroger le modèle de l’agilité à l’échelle bien sûr, mais aussi son mode d’implémentation : savoir escalader ne suffit pas, il faut savoir le faire en sécurité, et pour cela comprendre la désescalade.</p>`;
+    const confChanson = `<h1>Débloquez vos résistances aux changements</h1>
+    <p>Venez découvrir comment et pourquoi nous les humains préfèrons rester dans un statut quo insatisfaisant et épuisant, dans l'inconfort connu, plutôt que d'embrasser les changements qui seraient bons pour nous, notre équipe, notre entreprise, notre monde.</p>
+	<p>	Nous éclairerons ces questions avec la notion d'immunité au changement de R. Kegan et L. Lahey, qui est un outil simple pour se réinventer. </p>`;
+	
+	const confEvers = `<h1>Mets toi ça dans la tête !</h1>
+    <p>On a tous vécu cela: Se donner beaucoup de mal pour faire comprendre l'agilité et n'obtenir aucun changement visible, ni de comportement ni même de compréhension. </p>
+	<p>Plutôt que de blâmer l'apprenant, je préfère m'interroger sur ma stratégie d'apprentissage. Aussi, j'ai étudié les mécanismes d'apprentissage et c'est cela que je vais partager avec vous.</p>
+	<p>Vous repartirez avec une vision éclairée du processus cognitif permettant d'ancrer l'information, illustrée de pratiques de formateurs, facilitateurs et coachs.</p>`;
+	
+	const confSanglanCharlier = `<h1>Le Domain Driven Design, comment bien démarrer ?</h1>
+    <p>Le Domain Driven Design gagne en popularité. De plus en plus d'équipes veulent s'y mettre, mais il est parfois compliqué de savoir par où commencer. </p>
+	<p>Depuis peu la communauté DDD met à disposition un ensemble de ressources Open Source pour rendre le DDD plus accessible. Parmi celles-ci, je vous présenterai le DDD Starter Modeling Process qui constitue un guide parfait pour les personnes souhaitant se lancer dans l'aventure DDD.</p>`;
+	
+	const confAndrieux = `<h1>Comment (ne pas) refactorer un kernel.</h1>
+    <p>Il était une fois un vieux logiciel adoré de tous. Il rendait de grands services à ses utilisateurs et malgré son âge avancé et sa maintenance capricieuse, ses développeurs l’aimaient et le choyaient. Mais après des années et des années d’existence, notre vieux logiciel fatigué avait besoin d’une cure de jouvence. Les meilleurs développeurs furent choisis pour accomplir cette mission et redonner sa superbe à notre antique ami.</p>
+	<p>Cette histoire commence comme un conte de fée. Mais les choses ne se déroulent pas toujours comme dans les livres pour enfants !</p>
+	<p>Nous verrons dans cette session les erreurs qui ont transformé un projet ambitieux et motivant en un long et douloureux développement. Nous aborderons différentes stratégies possibles pour gérer le refactoring d’un projet historique, les indicateurs présageant de difficultés à venir ainsi que le point commun entre un condensateur, une barre d’uranium et une estimation réaliste.</p>`;
+	
+	const confCabanne = `<h1>Pourquoi les coachs agiles répondent aux questions par des questions ?</h1>
+    <p>
+	<li>C’est quoi un coach agile ?</li>
+	<li> Quelles formation fait-on pour devenir coach agile ?</li>
+	<li> Quelle est la différence entre coaching agile et coaching professionnel ?</li>
+	<li> A-t-on besoin d’avoir un diplôme de coach pro pour être coach agile ?</li>
+	<li> Quels sont les différents styles de coach agile ?</li>
+	<li> Quelle est la différence entre supervision, intervision et codev ?</li>
+	<li> Y a-t-il un code de déontologie pour les coachs agiles ?</li></p>
+	<p>Et aussi :
+	<li> Ai-je besoin d’un coach agile pour me lancer dans l’agilité ?</li>
+	<li> Qu’est ce que c’est une transformation agile ? On transforme quoi pour aller de quel état à quel état ?</li>
+	<li> Une fois qu’on est agile, on a plus besoin de coach agile, c’est ça ?</li>
+	<li> Combien on met de coach par FTE ou ETP ?</li>
+	<li> Le coach agile est-il le nouveau Scrum Master ou le nouveau manager ?</li>
+	<li> Comment et quand la mission du coach agile se termine ?</li>
+	<li> Quand est-ce qu’un coach doit faciliter une retro et quand il ne doit pas le faire ?</li>
+	<li> Le coach agile a-t-il un engagement de résultat ?</li></p>
+
+	<p>Voilà les questions que Benjamin se pose ou qu’on lui pose, parfois pour discuter, parfois pour ironiser et la plupart du temps, cela soulève une très longue discussion. Il s'est dit que ça serait intéressant de compiler la synthèse de ces discussions dans cette conférence pour vous en faire profiter.</p>`;
     
-    const confCharon = `<h1>Ludopédagogie ou pourquoi jouer pour s'améliorer</h1>
-    <p>Après une approche à 360° du sujet (histoire, mécanismes d'apprentissage de l'adulte, bonnes pratiques...), je présenterai une mise en œuvre concrète à travers un serious game inventé par l'équipe de coachs en place chez Cdiscount.</p>`;
-
-    const atelierRoudaut = `<h1>The energizer storm</h1>
-    <p>L'objectif de ce workshop est double.</p>
-    <p>Il s'agit d'apporter aux non initiés les éléments clés concernant les energizers pour se lancer dans cette nouvelle pratique. Nous allons voir pourquoi réaliser des energizers et quelles sont les astuces pour les réussir.</p>
-    <p>Le second objectif est de vous faire découvrir une grande quantité d'energizer afin de renouveler votre collection. :)</p>
-    <p>Ce workshop prône l'intelligence collective et l’apprentissage par la pratique.</p>`;
-
-    const confLandryTopcu = `<h1>Osez Devenir Speaker !</h1>
-    <p>Devenir Speaker, c’est peut-être quelque chose qui vous fait envie. Mais qu’est ce qui vous empêche d’aller plus loin ?</p>
-    <p>Sûrement cette petite voix qui vous dit qu’il y a beaucoup de gens plus qualifiés que vous pour parler d’un sujet. Qu’est ce que vous avez à partager de toute manière ? Et puis parler devant une centaine de personnes ce n’est pas pour vous, les gens qui arrivent à faire ça ont certaines prédispositions…</p>
-    <p>Lors de cette session, nous verrons ensemble que cette petite voix a tort. Vous pouvez le faire ! Et pour bien se lancer, nous verrons les bonnes pratiques de la création d'un talk jusqu'à la réalisation de celui-ci: le choix du sujet, la création du talk et la candidature aux conférences.</p>`;
-
-    const confFroville = `<h1>Le Continuous Delivery souffle sur mon bateau Agilité. Ca va secouer !</h1>
-    <p>La mise en place du Continuous Delivery a des impacts inattendus pour de nombreuses équipes et notamment sur l'organisation agile quotidienne (rôles, communication, format des US...).</p>
-    <p>Le Continuous Delivery vise à rendre ton produit déployable en production à tout moment et passe notamment par de l'automatisation de la construction, du déploiement et des tests.</p>
-    <p>Chez Pôle Emploi, nous accompagnons nos équipes de fabrication vers le Continous Delivery depuis plusieurs années.</p>
-    <p>Notre expérience est qu'il y a des choses à savoir pour que cela se passe du mieux possible et nous te partagerons nos apprentissages.</p>`;
-
-    const confLemaire = `<h1>Keynote d'Arnaud Lemaire</h1>
+    const confMira = `<h1>Agilité et Liberté : le regard de Montessori Extended</h1>
     <p></p>`;
+	
+	const confBossavit = `<h1>Chimères</h1>
+    <p>Peut-être vous êtes-vous un jour senti·e mal à l’aise à l’idée de vous décrire en un seul mot : développeur, développeuse, testeur, testeuse ; Product Owner, manager ou tout autre mot anglais qu’on prétend « invariable »… </p>
+	<p>Si vous avez envie d’en savoir plus sur tous ces rôles et sur vous-même, si vous êtes tenté·e par le complexe du savant fou et n’avez pas peur de vous lancer dans des manipulations génétiques, cette session est pour vous.</p>`;
+	
+	const confGerbaud = `<h1>Constituez des équipes, apprenez et jouez avec le Deck Agile</h1>
+    <p>Le Deck Agile est un jeu de 52 cartes pour jouer avec l'agilité comme un As. 20 experts de l'agilité ont contribué à rédiger un contenu original pour découvrir et approfondir ses connaissances sur l'agilité</p>`;
+	
+	const confPloquin = `<h1>Et si nos managers étaient indispensables ?</h1>
+    <p>Les managers ont généralement du mal avec l’agilité. Mais quel est leur rôle et les actions qu’ils doivent tenir auprès des équipes ? Est-ce que quelqu’un leur a dit ? Est-ce que quelqu’un le sait ?</p>
+	<p>Le Lean management donne aux managers un rôle primordial qui les positionnent comme acteurs clés de la démarche d’amélioration continue. Et pour soutenir ce rôle, le Lean défini des pratiques à mettre en place et qui vont souvent à l’encontre de celles exercées par les managers traditionnels. Ce sont ces pratiques que je me propose de vous exposer.</p>`;
+	
+	const confJeremie = `<h1>Bien répondre aux besoins utilisateur, c'est surtout une histoire de comportement (logiciel) !</h1>
+    <p>C'est super, tu arrives sur un nouveau projet ! Mais très vite, tu te rends compte que le seul moyen de comprendre ce qu'il fait, est d'aller faire de l'archéologie dans le code. Niveau user stories, elles sont bien définies... pourtant tu ne sais jamais jusqu’où tu dois aller pour les implémenter ! D'ailleurs à chaque fois que tu en livres, tu es a côté du besoin métier...</p>
+	<p>Et si on te disait que le Behavior-Driven Development pouvait t'aider à résoudre tes problèmes !!</p>
+	<p>En partant d'une user story, nous allons voir comment en faire émerger les comportements attendus du logiciel. Puis lors de la phase de développement, nous aborderons les pratiques qui permettent d'implémenter et vérifier automatiquement les attentes des utilisateurs.</p>`;
+	
+	const confUrvoas = `<h1>La confiance, la clé d'une équipe agile performante.</h1>
+    <p>La confiance est la clé de la voûte de la performance collective d'une équipe.</p>
+	<p>Mais qu'est-ce qui fait que nous décidons de faire confiance à une personne? Qu'est-ce qui fait que nous choisissons un jour de remettre une partie de notre devenir aux mains du collectif ?</p>
+	<p>Découvrez à travers cette session interactive des leviers simples et concrets permettant de bâtir et d'entretenir confiance et performance pour vous et votre équipe.</p>`;
+	
+	const confBarralon = `<h1>L'inclusion dans les équipes agiles, focus sur les personnes neuro-atypiques</h1>
+    <p>Ayant travaillé avec des personnes neuro-atypiques (HPI, troubles autistiques), je me suis interrogée sur leur position dans une équipe agile dite auto-managée.
+	<li>Quelle est leur place ?</li>
+	<li>Comment gère ton leur émotions ?</li>
+	<li>Comment les comprendre ?</li>
+	<li>Comment accueillir nos différences ?</li></p>
+	<p>On en entend beaucoup parler chez les enfants (DYS, HPI, zèbre, etc). Mais chez les adultes c'est silence radio... que deviennent-ils ?</p>`;
+	
+	const confSutherland = `<h1>How to be a high performing distributed agile team</h1>
+    <p>It's the 20th anniversary of the agile manifesto, and we have all just experienced a pandemic that has changed the way most of us work. </p>
+	<p>The principles in the agile manifesto promote face-to face-collaboration. But what happens when face-to-face collaboration isn't possible? </p>
+	<p>Distributed working is here to stay and those of us on distributed or hybrid teams are going to have to adapt.</p>
+	<p>In this talk, we will discuss how changes in the new world of work affect the agile principles.  You will walk away having learned how to work online as if you were in the office together - and what’s possible when you get remote working right.</p>`;
+	
+	const confHemery = `<h1>Le tour de l'hexagone ?</h1>
+    <p>L'architecture hexagonale, beaucoup de gens en parlent en ce moment. Ce pattern d'architecture mis sur le devant de la scène par Alistair Cockburn est de plus en plus populaire.</p>
+	<p>À quoi ça ressemble concrètement ? Pour quels intérêts, notamment sur la testabilité ? Comment le mettre en place ? Prenons une base de code existante, et allons écrire un peu de code !</p>`;
+	
+	const confVeyron = `<h1>Vos convictions sont-elles un frein ou un accélérateur de vos projets ?</h1>
+    <p>“On ne peut pas tout avoir”, “Ça ne marchera jamais”, “On a jamais rien sans rien” ...</p>
+	<p>Nous avons tou.te.s des certitudes, que l’on porte sur soi, les autres ou la vie en général... Et c'est normal !</p>
+	<p>Toutefois, ces dernières, conscientes ou inconscientes influencent nos actions et peuvent parfois nous limiter. Je vous propose dans cet atelier, à faire seul.e ou en équipe, les clés pour reconnaitre, comprendre et agir sur vos croyances afin d’en faire les atouts de vos projets.</p>
+	<h2>Détails de l’atelier :</h2>
+	<p><li>Passez à l’action en détectant et comprenant vos croyances. Via cet atelier qui s'équilibre entre théorie et pratique,</li>
+	<li>Faites le choix de vous détacher d'une croyance limitante afin de créer et/ou renforcer une croyance aidante.</li></p>`;
+	
+	const confRay = `<h1>Priorisation de Roadmap : dépassez les attentes des devs, clients, directeurs !</h1>
+    <p>Comment se sentir libre et épanoui dans la construction du produit, plutôt qu'en étau entre devs et directeurs ? Comment dépasser les attentes des devs, clients, directeurs ?</p>`;
+	
+	const confJorre = `<h1>Deviens un.e véritable pirate ! 🏴‍☠️</h1>
+    <p>"Je ne peux rien faire changer dans cette boîte, je suis seulement [ton titre de job] !"</p>
+	<p>Si c'est généralement ce que tu te dis quand tu regardes ta mission actuelle, même après avoir passé ta journée en conf agile, alors laisse-nous te prouver que tu te trompes.</p>
+	<p>Les conférences agiles, c’est l’occasion pour toi :
+	<br>- de trouver de nouvelles idées,
+	<br>- de mieux comprendre comment faire progresser ton équipe,
+	<br>- et de te rebooster pour enfin faire changer les choses.</p>
+	<p>Mais malheureusement… tu y vas seul.e.</p>
+	<p>D’ailleurs en retournant au bureau, certain.e.s de tes collègues vont peut-être te charier lorsque tu voudras lancer de nouvelles initiatives :
+	<br>- "Ça y est, tu as vu une conf, tu crois que tu peux révolutionner le monde !",
+	<br>- "La rétrospective ? Laisse tomber, nous on y va plus depuis longtemps, ça sert à rien et c’est pas aujourd’hui que ça va changer ..."
+	<br>- "Mettre en place une intégration continue chez nous ? On y a pensé, mais ici on ne peut pas, c'est TELLEMENT compliqué."</p>
+	<br>Et j’imagine que tu pourrais en citer d’autres.</p>
+	<p>Dans ces conditions, tu t'épuises à essayer de faire bouger les choses, sans résultat. Tu te sens certainement frustré.e de ne pas réussir à faire émerger le désir de changement. Et peut-être même que tu te demandes comment réussir ta mission si tu ne peux pas expérimenter de nouvelles idées !</p>
+	<p>Et c'est bien normal. N'importe qui douterait... Mais tu n'es peut-être pas n'importe qui... ?</p>
+	<p>Si tu veux enfin savoir comment mieux utiliser ton énergie, redonner l'envie à ton équipe de s'améliorer sans que tu aies besoin de tout porter seul.e, déclencher le tilt pour que les choses changent, alors tu as trouvé la bonne conférence !</p>
+	<p>Au travers d'exemples concrets, nous allons t'initier à l’art subtile de faire bouger les choses en détournant les pratiques des coachs et des managers. Tu pourras alors découvrir la/le véritable pirate qui sommeille en toi.</p>
+	<p>Qu'est-ce que tu attends ? arrête de frotter le pont moussaillon et... À L'ABORDAGE ! 🏴‍☠️</p>`;
+	
+	const confMagne = `<h1>Comment dépasser les incompétences individuelles par le collectif ?</h1>
+    <p>Comment aider les équipes de toute une organisation à s’améliorer techniquement ? </p>
+	<p>Toute personne possède des compétences sur de nombreux domaines et est nécessairement incompétente sur d’autres. Le niveau de compétence d’une personne dans un domaine correspond aux connaissances qu’elle a pu acquérir dans celui-ci. Ce niveau peut être plus ou moins élevé en fonction de son appétence, de sa formation et de son expérience. Le partage des connaissances au sein d’une équipe est donc essentiel pour que celle-ci progresse rapidement. </p>
+	<p>Comment faire pour que cette connaissance soit partagée rapidement et efficacement ? </p>
+	<p>Nous avons expérimenté un nouveau format d’échange chez ManoMano. Ce format nommé “Atelier Craft”, a été créé par Promyze et propose une réponse à cette problématique. Nous verrons ce qu'a apporté ce format aux équipes, en termes de partage de connaissance et de montée en compétence de tous les membres qui les composent.</p>
+	<h2>Plan :</h2>
+	<h3>Contexte et Objectifs<h3>
+	<h4>- Une situation réelle chez ManoMano</h4>
+	<h4>- Un manque de compétence individuelle ?</h4>
+	<h4>- Un manque de partage au sein d’une équipe ?</h4>
 
-    const confKol = `<h1>Peut-on devenir agile sans comprendre l’humain et ses limites ?</h1>
-    <p>Lorsque j'explique à mes proches mon métier de coach Agile, cela les laisse perplexes. Après tout l'agilité ce n'est que du bon sens et des valeurs auxquelles il est facile d'adhérer.</p>
-    <p>Alors pourquoi tant de transformations agiles sont si difficiles?</p>
-    <p>Selon moi la difficulté réside dans l'incarnation de ses valeurs par les équipes et les parties prenantes.</p>
-    <p>En effet, l’application de ces valeurs entre souvent en contradiction avec notre propre fonctionnement, notre intuition en tant qu’être humain et nous oblige a sortir de notre zone de confort. C’est pourquoi selon moi, la méthode classique pour accompagner des équipes à devenir agiles ne fonctionne pas. En effet, il s’agit de faire appliquer un framework qui aurait fait ses preuves ailleurs. Et plus les individus résistent et plus l’accompagnant force pour les emmener dans la « bonne » direction pour « leur bien être » et parce que « c’est comme cela que l’on devient agile ».</p>
-    <p>Je vous propose donc de décrypter différentes techniques agiles, sous un autre angle, et vous démontrez qu’on peut accompagner des équipes de manière à ce qu'elles puissent incarner ces valeurs dans un contexte professionnel, sans dette émotionnelle et au service de l'intelligence collective.</p>`;
+	<h3>Démarche et Résultats</h3>
+	<h4>- Format des ateliers mis en place</h4>
+	<h4>- Un REX chez ManoMano</h4>
+	<h4>- Comment aller plus loin ? (création et animation de communautés de pratiques interne pour un partage de connaissance entre différentes équipes délocalisées)</h4>`;
+	
+	const confTardif = `<h1>25 ans d'intégration continue ...</h1>
+    <p>De makefile au Déploiement continue revenons sur les grandes étapes, les grandes fonctionnalités, et les points de vigilances qu'il faut garder à l'esprit quand on automatise son projet.</p>
+	<p>Pour chaque grande évolution (le versionning des sources, le découplage IDE / Build, le versionning des dépendances,......), nous discuterons des avantages, des problèmes résolus mais aussi des nouveaux problèmes engendrés.</p>
+	<p>On regardera cette évolution selon 6 axes :
+	<br>- l'evolution des langages (java, js, python,...)
+	<br>- l'evolution des scm (cvs, svn, git, )
+	<br>-l'evolution des outils de build (maven, gradle,...)
+	<br>- l'evolution des IDE
+	<br>-l'evolution des orchestrateurs (jenkins, gitlabci,...)
+	<br>- le monde exterieur (cloud, docker, mobile,...)</p>
 
-    const atelierSanJuan = `<h1>Comment hacker son mindset pour plus d'agilité</h1>
-    <p>« Pour quoi » le mindset et en quoi c’est important pour vous ? Parce que c’est la baaaase !</p>
-    <p>Que vous le vouliez ou non, vous êtes tout le temps en train de « travailler votre mindset » malheureusement, on le travaille souvent d’une façon qui, au mieux, n’aide pas et au pire, savonne généreusement la planche. Un beau mindset, bien musclé vous permettra de développer votre leadership, de faire face aux challenges, de mener à bien un projet, d’être un meilleur manager…</p>
-    <p>Comment développer son mindset ?</p>
-    <p>Je propose de partager 4 façons simples de développer son mindset. C’est à la portée de tous, il nous suffit de nous attacher à faire de petits changements chaque jour et ainsi, notre mindset plus positif nous apportera plus d’agilité pour réussir dans notre environnement pro (et perso !)</p>`;
+	<p>Un travail d'historien, avec plein de leçons à retenir.</p>
 
-    const confHeralFaure = `<h1>Je suis dans un monolithe, sortez-moi de là !</h1>
-    <p>Comment sortir du monolithe grâce à la transformation produit en accompagnant une équipe au quotidien.</p>
-    <p>#découplage #testabilité #accelerate #limitedewip #mobprogramming #cicd</p>`;
-
-    const confUrvoas = `<h1>La permaculture humaine, une solution pour une transformation agile plus durable</h1>
-    <p>Beaucoup de transformations agiles échouent …. dans le temps</p>
-    <p>Jardinier agile chez Lectra depuis 15 ans, à force d’expérimentations et d’itérations, je suis arrivé à la conclusion que la permaculture humaine peut permettre d’élaborer un système de façon respectueux et plus durable. Un système bon pour l’entreprise, bon pour les collaborateurs produisant des produits de qualité, satisfaisants les clients tout en étant économe en ressources.</p>
-    <p>Je propose de partager avec vous cette histoire … et mes recettes de jardinier.</p>`;
-
-    const confRouhaud = `<h1>4 workshops to destroy silos</h1>
-    <p>2019 was a big year at Vestiaire Collective and we changed a lot of things to be more agile in the way we work. We had some pretty good results too but silos are still here and we don't like it!</p>
-    <p>To change that we defined a 4 workshops process to go from an idea to it's implementation including persons from each perspective (business, product and IT):</p>
-    <p>1. Lighting session: presentation of the problem we're trying to solve or the initiative we wish to implement</p>
-    <p>2. Event Storming: create a map of the current process/system specific to the topic</p>
-    <p>3. Story Mapping: define solutions all together by focusing on persona, epics and User Stories drafts (think behavior, not deliverables)</p>
-    <p>4. Example Mapping: deep dive in the US and make them bullet proof (ou presque ;)</p>
-    <p>Good results so far but a few challenges (in part because of the current situation of confinement). We didn't invent anything but are always willing to share our experience and the results we had :)</p>`;
-
-    const confMetais = `<h1>Après tout ça, a-t-on encore envie de parler d'agilité ?</h1>
-    <p>La crise que nous venons de traverser (et traversons encore...) a ébranlé en profondeur nos repères et nos convictions.</p>
-    <p>Quid de nos convictions autour de l'agilité ? Que sont-elles devenues "après tout ça" ? Sommes-nous abattus ou au contraire convaincus comme jamais ?</p>
-    <p>Je vous propose de poser à plat ce qui s'est passé : ce qui a été mis à mal, bousculé. Puis nous ferons un zoom sur comment l'agilité s'est comportée (et se comporte encore) durant cette crise. Quelles sont ses forces ? Ses faiblesses ? A-t-elle mutée ? Enfin, après un suspense insoutenable, je vous avouerai si oui ou non, j'y crois encore.</p>`;
-
-    const atelierBeraudSudreau = `<h1>Welcome to happy company (Serious Game)</h1>
-    <p>Comment tirer bénéfice du hasard dans la transformation d'un système complexe ?</p>`;
-
-    const confVeyron = `<h1>Excursion cosmique vers la transformation agile</h1>
-    <p>La transformation agile, vous connaissez ? Et avez-vous remarqué le lien avec la naissance des étoiles ? Tout comme la formation d’une galaxie, celle-ci commence par le regroupement des bonnes particules, avant de former sa première étoile jusqu’à atteindre une galaxie de projets.</p>
-    <p>Embarquez pour un voyage cosmique au cours duquel vous découvrirez comment s’adapter dans un univers qui se digitalise, en boostant l’efficacité de vos étoiles et de votre galaxie. Suite à cette conférence intergalactique, vous aurez en main toutes les clés pour que votre transformation agile brille telle une étoile.</p>
-    <p>En Voyageant au travers d’une conférence oubliez vos préjugés sur la transformation agile et découvrez la sous un autre angle. Les objectifs à travers cette conférences sont :</p>
-    <p>- Découvrir toutes les étapes d’une transformation agile sous un autre angle à travers le voyage</p>
-    <p>- Plonger dans un univers différent et ressortir avec toutes les clés pour bien comprendre et démarrer une transformation agile</p>
-    <p>- Éviter les pièges de la transformation</p>
-    <p>La conférence abordera les sujets suivants :</p>
-    <p>- Qu’est ce qu’une transformation agile et pourquoi en faire une ?</p>
-    <p>- L’initialisation de la transformation</p>
-    <p>- Co-création du plan de transformation et conduite du changement</p>
-    <p>- Création de la première équipe agile</p>
-    <p>- Stabilité de la première équipe agile</p>
-    <p>- Rayonnement de l’équipe (mise en place de cercles de partage, rex, …)</p>
-    <p>- Conclusion sur les différents types de galaxies (entreprises) ainsi que leur culture d’entreprise.</p>
-    <p>Prochain voyage pour l’agilité à l’échelle ?</p>`;
-
-    const confLamarque = `<h1>Kata: Gilded Rose Inn</h1>
-    <p>L'auberge de Gilded-Rose est situé au cœur de Hurlevent, et propose aux voyageurs de tout Azeroth des armes rares, et des mets délicats.    
-Leur système informatique de gestion des stocks et de prix est OK, il a été codé il y a 10 ans par un gnome stagiaire, qui est depuis passé sous un troll.   
-Le code fonctionne. Par contre le code est très très moche, y amener le moindre changement est compliqué, les tentatives d'évolutions ont entrainé des régressions critiques pour l'économie de l'auberge et se sont toutes faites dans la douleur.
-Ma mission, si je l'accepte : nettoyer suffisamment le code pour qu'en faire une évolution soit facile, en s'assurant de ne pas introduire de régression fonctionnelle.</p>`;
-
-    const confBailly = `<h1>TDD et TDD sont dans un bateau</h1>
-    <p>Le TDD (Type-Driven Development) ou Développement Dirigé par les Tests est un des piliers du développement agile : les tests sont une forme de spécification exécutable concrète, basée sur des exemples, qui guident la conception et le développement du code. Les langages modernes et plus particulièrement les langages fonctionnels permettent d'appliquer ce principe en amont du processus, avant même que le code ne soit exécuté, lors de la compilation : d'où l'idée du TDD comme Type-Driven Development, développement dirigé par les types.</p>
-    <p>Cette session est une démonstration pratique, au travers d'exemples dans divers langages, de la manière dont les deux formes de TDD peuvent s'articuler et comment le Type DD peut améliorer la conception du code.</p>`;
-
-    const confMigot = `<h1>Prendre le temps d’aller plus loin - le mantra des organisations apprenantes</h1>
-    <p>Donner satisfaction à un client requiert du temps. Du temps pour produire évidemment. Du temps pour apprendre surtout. C’est en l’écoutant, en l’observant puis en expérimentant qu’une organisation peut répondre aux besoins de ses utilisateurs. C’est également en accordant du temps à ses collaborateurs afin de leur permettre de réfléchir, d’émettre des hypothèses et de collaborer qu’une organisation peut être innovante tout en conservant ses talents. Sans cette prise de recul, impossible de s’améliorer et de prospérer.</p>
-    <p>Nous verrons au sein de cette conférence comment octroyer et occuper ce temps à travers différents conseils, retours d’expérience et exemples concrets.</p>`;
-
-    const confBarreau = `<h1>Donnons de l'agilité à la Data Science</h1>
-    <p>La Data Science est une discipline regroupant des domaines de la modélisation mathématique et de l'analyse de données, que nous appellerons recherche, ainsi que du traitement de données et de la mise à disposition des modèles, que nous appellerons développement. Les entreprises pratiquant déjà l'agilité, avec des frameworks comme Scrum, vont naturellement l'utiliser pour ces équipes Data Science. Est-ce pertinent, justifié ? Possiblement. Pour notre équipe, cela posait des difficultés pour mener à bien des travaux de recherche d'un côté et de développement de l'autre.</p>
-    <p>Je vous invite à découvrir le cheminement de notre équipe à AT Internet pour faire coexister la recherche et le développement, en synergie, dans un objectif commun : délivrer de la valeur.</p>
-    <p>Nous allons aborder des principes qui vous parleront déjà comme le Scrumban, mais aussi d'autres moins connues avec le Squad Health Check Model ainsi que le Shape Up.</p>`;
-
-    const confPloquin = `<h1>Apprendre à apprendre</h1>
-    <p>D'après le World Economic Forum, la première des compétences à maîtriser dans nos entreprises en 2020 est la "Résolution de problèmes complexes".</p>
-    <p>Le Lean est une démarche d’amélioration continue qui place la résolution de problèmes comme point de départ de l’apprentissage (i.e. de l’amélioration). Mais l’apprentissage est-il un concept si simple que cela ?</p>
-    <p>Je vous propose de partager avec vous mon aventure du Lean et comment ce dernier m’a appris à apprendre. On parlera de dissonances, de biais, mais aussi de problèmes, de management et d’outils.</p>`;
-
-    const confDusseaut = `<h1>Keynote de Jean-Baptiste Dusseaut</h1>
-    <p>La sagesse populaire veut que l'agilité soit morte, paix à son âme.</p>
-    <p>Ceci étant dit, l'agilité s'était donné comme épouvantail le cycle en V, et proposait une autre approche.</p>
-    <p>Si l'agilité est vraiment morte, par quoi la remplacer ? De qui est-elle l'épouvantail ?</p>`;
-
+	<p>L'idée est d'en tirer des bonnes pratiques et une liste de piège à éviter quand nous nous lançons dans l'automatisation de notre projet ...</p>`;
+	
+	const tableRonde = `<h1>Table ronde : 20 ans du manifeste</h1>
+    <p>Bruno Orsier (distanciel) , Christophe Deniau, Claude Aubry,  Laurent Bossavit , (François Beauregard, Nathalie Gilbert)</p>`;
+	
     const openSpace = `<h1>Open space</h1>
     <p>L'Open Space (ou Forum Ouvert) crée un espace dans lequel des personnes peuvent s'organiser elles-mêmes et résoudre leurs problèmes en groupe. Il n'y a pas de thème imposé. Chacun peut faire avancer ce qui lui tient à cœur. La méthode permet une large participation et une compréhension mutuelle.</p>
     <p>Il repose sur le respect d'une loi, étayée par quatre principes.</p>
@@ -149,29 +179,28 @@ Ma mission, si je l'accepte : nettoyer suffisamment le code pour qu'en faire une
     <a href="https://fr.wikipedia.org/wiki/M%C3%A9thodologie_Forum_Ouvert">Fiche Wikipedia</a>`;
 
     var descriptions = {
-        'conf-lambert': confLambert,
-        'conf-neis': confNeis,
-        'conf-dubois-cabanne': confDuboisCabanne,
-        'conf-charon': confCharon,
-        'atelier-roudaut': atelierRoudaut,
-        'conf-landry-topcu': confLandryTopcu,
-        'conf-froville': confFroville,
-        'conf-lemaire': confLemaire,
-        'conf-kol': confKol,
-        'atelier-san-juan': atelierSanJuan,
-        'conf-heral-faure': confHeralFaure,
-        'conf-urvoas': confUrvoas,
-        'conf-rouhaud': confRouhaud,
-        'conf-metais': confMetais,
-        'atelier-beraud-sudreau': atelierBeraudSudreau,
-        'conf-veyron': confVeyron,
-        'conf-lamarque': confLamarque,
-        'conf-bailly': confBailly,
-        'conf-migot': confMigot,
-        'conf-barreau': confBarreau,
-        'conf-ploquin': confPloquin,
-        'conf-dusseaut': confDusseaut,
-
+        'conf-aubry': confAubry,
+        'conf-graveaud': confGraveaud,
+        'conf-chanson': confChanson,
+		'conf-evers': confEvers,
+		'conf-sanglan-charlier': confSanglanCharlier,
+		'conf-andrieux': confAndrieux,
+		'conf-cabanne': confCabanne,
+		'conf-mira': confMira,
+		'conf-bossavit': confBossavit,
+		'conf-gerbaud': confGerbaud,
+		'conf-ploquin': confPloquin,
+		'conf-jeremie': confJeremie,
+		'conf-urvoas': confUrvoas,
+		'conf-barralon': confBarralon,
+		'conf-sutherland': confSutherland,
+		'conf-hemery': confHemery,
+		'conf-veyron': confVeyron,		
+		'conf-ray': confRay,
+		'conf-jorre': confJorre,
+		'conf-magne': confMagne,
+		'conf-tardif': confTardif,
+		'table-ronde': tableRonde,
         'open-space': openSpace
     };
 

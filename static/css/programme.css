@@ -2,6 +2,34 @@
 /* bleu clair : #4478b2*/
 /* bleu nuit : #0d1d31*/
 
+
+#sessionize a:link,
+#sessionize a:visited,
+#sessionize a:hover {
+   color: white;
+}
+
+#sessionize.sessionize-wrapper .sz-day__title {
+	font-size: 40px;
+}
+
+#sessionize.sessionize-wrapper .sz-tabs__item--active {
+	background-color: #2C495A;
+}
+
+#sessionize.sessionize-wrapper .sz-tabs__link {
+	background-color: #babbbc;
+}
+
+#sessionize.sessionize-wrapper .sz-cssgrid .sz-cssgrid__track-label {
+	background-color: #2C495A;
+}
+
+#sessionize.sessionize-wrapper .sz-session__room {
+	background-color: #2C495A;
+}
+
+
 table {
     margin-top: 1.2em;
 }
