@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
     theme.initCountDown();
     theme.initSponsorsSlider();
     theme.initTestimonials();
-    theme.initGoogleMap();
+    //theme.initGoogleMap();
 });
 jQuery(window).load(function () {
     theme.initAnimation();
