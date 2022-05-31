@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.row img {
+	margin-top: 8px;
+	margin-right : 25px;
+}
