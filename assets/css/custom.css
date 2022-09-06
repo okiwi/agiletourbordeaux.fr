@@ -1,3 +1,13 @@
+#main-slider .caption-subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+}
+
 .shrink .logo a img {
     height: 31px;
 }
@@ -80,48 +90,25 @@ ul.equipe {
     border: 5px solid white;
 }
 
-.sponsors-carousel .owl-carousel div a {display: block; text-align: center; background-color: #ffffff; border-radius: 10px; padding: 10px;}
-.sponsors-carousel .owl-carousel div a img {display: inline-block; max-width: 100%; }
-.sponsors-carousel .owl-carousel .owl-item img {width: auto;}
-.sponsors-carousel .owl-theme .owl-controls {}
-.sponsors-carousel .owl-theme .owl-controls .owl-nav {position: absolute; right: 0; top: -80px;}
-@media (max-width: 767px) {
-    .sponsors-carousel .owl-theme .owl-controls .owl-nav {position: inherit !important; margin-top: 30px;}
-}
-.sponsors-carousel .owl-theme .owl-controls .owl-nav [class*="owl-"] {
-    background-color: transparent;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-}
-.sponsors-carousel .owl-prev,
-.sponsors-carousel .owl-next {
-    border: solid 1px #435469;
-    border-radius: 10px !important;
-    color: #435469;
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    text-align: center;
-}
-.sponsors-carousel .owl-next {margin-left: 10px !important;}
-.sponsors-carousel .owl-prev .fa,
-.sponsors-carousel .owl-next .fa {
-    color: #435469;
-    font-size: 33px !important;
-    line-height: 50px;
-}
-.sponsors-carousel .owl-prev:hover ,
-.sponsors-carousel .owl-next:hover  {
-    border-color: #dc143c;
-    color: #dc143c;
-}
-.sponsors-carousel .owl-prev:hover .fa,
-.sponsors-carousel .owl-next:hover  .fa {
-    color: #dc143c;
+#center_sponsor {
+	width: 150px;
+	height: 119px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#sponsors .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+#sponsors img {
+	margin-top: 8px;
+	margin-right : 25px;
+}
 
 .header.shrink {
     background-color: #2C495A;
