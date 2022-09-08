@@ -1,10 +1,10 @@
 /*
  * Swiper 2.2 - Mobile Touch Slider
- * http://www.idangero.us/sliders/swiper/
+ * https://www.idangero.us/sliders/swiper/
  *
  * Copyright 2012-2013, Vladimir Kharlampidi
  * The iDangero.us
- * http://www.idangero.us/
+ * https://www.idangero.us/
  *
  * Licensed under GPL & MIT
  *

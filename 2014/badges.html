@@ -32,7 +32,7 @@ title: badges des participants
   	<div class="info">
       <p class="fullname">{{ inscrit.prenom | capitalize }} {{ inscrit.nom | capitalize }}</p>
       {% if inscrit.twitter %}
-    	<p class="twitter">@{{ inscrit.twitter | remove:'https://twitter.com/' | remove:'http://www.twitter.com/' | remove:'@' }}</p>
+    	<p class="twitter">@{{ inscrit.twitter | remove:'https://twitter.com/' | remove:'https://www.twitter.com/' | remove:'@' }}</p>
       {% endif %}
       {% capture site_web_size %}{{ inscrit.site_web | size | minus:32 }}{% endcapture %}
     	<p class="site_web{% unless site_web_size contains '-' %} small{% endunless %}">{{ inscrit.site_web }}</p>
