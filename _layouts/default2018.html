@@ -63,7 +63,40 @@
                 <!-- /Logo -->
 
                 <!-- Navigation -->
-                {% include navigation.html %}
+                {% if page.url != "/2018/index.html" %}
+                    {% assign pageUrl = "/2018/index.html" %}
+                {% endif %}
+                <div id="mobile-menu"></div>
+				<nav class="navigation closed clearfix">
+					<a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
+					<ul class="sf-menu nav">
+						<li><a href="/2018/programme.html">Programme</a></li>
+                        <li><a href="{{pageUrl}}#contact">Contact</a></li>
+                        <li>
+                            <select id="selectEditions" onselect="onSelect()">
+                                <option value="/2012/index.html">Edition 2012</option>
+									<option value="/2013/index.html">Edition 2013</option>
+									<option value="/2014/index.html">Edition 2014</option>
+									<option value="/2015/index.html">Edition 2015</option>
+									<option value="/2017/index.html">Edition 2017</option>
+									<option value="/2018/index.html">Edition 2018</option>
+									<option value="/2019/index.html">Edition 2019</option>
+									<option value="/2020/index.html">Edition 2020</option>
+									<option value="/2021/index.html">Edition 2021</option>
+									<option value="/index.html">Edition 2022</option>
+                            </select>
+                            <script>
+                                $(document).ready(function () {
+                                    document.getElementById('selectEditions').value = '/2018/index.html';
+                                });
+                            
+                                document.getElementById('selectEditions').addEventListener("change", function(event) {
+                                    document.location = this.value;
+                                });
+                            </script>
+                        </li>
+					</ul>
+				</nav>
                 <!-- /Navigation -->
 
             </div>
