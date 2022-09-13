@@ -1,11 +1,27 @@
 #main-slider .caption-subtitle {
-    font-family: 'Raleway', sans-serif;
-    font-size: 50px;
-    font-weight: 300;
+    font-family: 'Arial';
+	font-size: 2.4em;
+	font-weight: 300;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+	text-transform: initial;
+	margin: 20px 0 0 0;
+}
+
+#main-slider .caption-title {
+    font-family: 'Raleway';
     color: #ffffff;
+    font-weight:bold;
     text-shadow: 1px 1px #000000;
-    text-transform: uppercase;
-    margin: 20px 0 0 0;
+}
+
+@media (max-width: 767px) {
+	#main-slider .caption-subtitle {
+		font-size: 1.7em;
+	}
+	.h2 {
+		font-size: 1.2em;
+	}
 }
 
 .shrink .logo a img {
