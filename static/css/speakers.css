@@ -1,0 +1,31 @@
+#sessionize a:link, #sessionize a:visited, #sessionize a:hover {
+	color: #435469;
+}
+
+#sessionize.sessionize-wrapper .sz-speaker.sz-speaker--compact .sz-speaker__tagline {
+	color: #6d7a83;
+}
+
+#sessionize.sessionize-wrapper .sz-speaker.sz-speaker--full .sz-speaker__name {
+	color: #ffffff;
+}
+
+#sessionize.sessionize-wrapper .sz-speaker.sz-speaker--full .sz-speaker__tagline {
+	color: #ffffff;
+}
+
+#sessionize a:link, #sessionize a:visited, #sessionize a:hover {
+	color: #435469;
+}
+
+#sessionize.sessionize-wrapper .sz-modal {
+	background-color: #8ea3b1;
+}
+
+#sessionize.sessionize-wrapper .sz-session__description {
+	color: black;
+}
+
+#sessionize.sessionize-wrapper .sz-session.sz-session--full .sz-session__title {
+	color: white;
+}

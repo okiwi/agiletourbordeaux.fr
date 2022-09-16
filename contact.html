@@ -1,0 +1,74 @@
+---
+layout: default2022
+title: Contactez-nous
+meta-description: Prenz contact avec nous et déposez nous votre message
+js:
+- /static/js/contact.js
+---
+<div>
+	<br><br><br><br>
+	<!-- PAGE CONTACT -->
+<section class="page-section color" id="contact">
+    <div class="container">
+
+        <h2 class="section-title">
+            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
+            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Contactez-nous</span>
+        </h2>
+
+        <!-- Contact form -->
+        <form name="af-form" method="post" action="http://formspree.io/contact@agiletourbordeaux.fr" class="af-form row" id="af-form">
+
+            <input type="hidden" name="_subject" value="Formulaire de contact agiletourbordeaux.fr" />
+            <input type="hidden" name="_next" value="/" />
+            <input type="text" name="_gotcha" style="display:none" />
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <input
+                            type="text" name="name" id="name" placeholder="Votre nom..." value="" size="30"
+                            data-toggle="tooltip" title="Le nom est obligatoire"
+                            class="form-control placeholder"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <input
+                            type="text" name="_replyto" id="email" placeholder="Votre email..." value="" size="30"
+                            data-toggle="tooltip" title="L'email est obligatoire"
+                            class="form-control placeholder"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <input
+                            type="text" name="_subject" id="subject" placeholder="Le sujet de votre message..." value="" size="30"
+                            data-toggle="tooltip" title="Le sujet du message est obligatoire"
+                            class="form-control placeholder" />
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required">
+                <div class="form-group af-inner">
+                    <textarea
+                            name="message" id="input-message" placeholder="Votre message..." rows="4" cols="50"
+                            data-toggle="tooltip" title="Le message est obligatoire"
+                            class="form-control placeholder"></textarea>
+                </div>
+            </div>
+
+            <div class="col-sm-12 af-outer af-required text-center">
+                <div class="form-group af-inner">
+                    <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Envoyer" />
+                </div>
+            </div>
+
+        </form>
+        <!-- /Contact form -->
+
+    </div>
+</section>
+<!-- /PAGE CONTACT -->
+</div>
