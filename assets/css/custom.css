@@ -1,6 +1,6 @@
 #main-slider .caption-subtitle {
     font-family: 'Arial';
-	font-size: 2.4em;
+	font-size: 2.2em;
 	font-weight: 300;
 	color: #ffffff;
 	text-shadow: 1px 1px #000000;
@@ -15,12 +15,16 @@
     text-shadow: 1px 1px #000000;
 }
 
+h2, .h2 {
+		font-size: 1.3em;
+	}
+
 @media (max-width: 767px) {
 	#main-slider .caption-subtitle {
-		font-size: 1.7em;
+		font-size: 1.5em;
 	}
 	.h2 {
-		font-size: 1.2em;
+		font-size: 0.9em;
 	}
 }
 
