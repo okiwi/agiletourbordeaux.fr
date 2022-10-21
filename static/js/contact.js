@@ -3,5 +3,5 @@ jQuery(document).ready(function () {
     theme.init();
 
     // add active class to blog menu
-    jQuery('ul.sf-menu li:nth-child(4)').addClass('active');
+    jQuery('ul.sf-menu li:nth-child(5)').addClass('active');
 });

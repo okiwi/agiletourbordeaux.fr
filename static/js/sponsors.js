@@ -3,5 +3,5 @@ jQuery(document).ready(function () {
     theme.init();
 
     // add active class to sponsors menu
-    jQuery('ul.sf-menu li:nth-child(3)').addClass('active');
+    jQuery('ul.sf-menu li:nth-child(4)').addClass('active');
 });
