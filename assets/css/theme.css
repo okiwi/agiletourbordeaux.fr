@@ -1088,7 +1088,7 @@ textarea {
     font-size: 14px;
     margin: 30px 0 0 0;
 }
-#main-slider .caption-text .btn:first-child {margin-right: 30px;}
+/* #main-slider .caption-text .btn:first-child {margin-right: 30px;} */
 @media (max-width: 991px) {
     #main-slider .caption-subtitle,
     #main-slider .caption-text {
