@@ -11,3 +11,8 @@
 .large-space {
 	margin-bottom: 100px;
 }
+
+.page-link:hover{
+	color: #365f8d;
+	text-decoration: underline;
+}
