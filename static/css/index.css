@@ -12,7 +12,12 @@
 	margin-bottom: 100px;
 }
 
-.page-link:hover{
+.page-link:focus {
+	color: #365f8d;
+	text-decoration: none;
+}
+
+.page-link:hover {
 	color: #365f8d;
 	text-decoration: underline;
 }
